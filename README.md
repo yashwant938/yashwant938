@@ -72,8 +72,8 @@
 
 ## 🌍 Connect With Me  
 
-- 💼 LinkedIn: *Add your link here*  
-- 📫 Email: *your-email@example.com*  
+- 💼 LinkedIn: *[Add your link here](https://www.linkedin.com/in/yash-rana-3a7252265/)*  
+- 📫 Email: *ranayash2022@gmail.com*  
 
 ---
 
