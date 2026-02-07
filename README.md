@@ -60,7 +60,7 @@
 👉 Check out my pinned repositories below!
 
 ---
-
+<!-- 
 ## 📊 GitHub Stats  
 
 <p align="center">
@@ -76,6 +76,7 @@
 - 📫 Email: *ranayash2022@gmail.com*  
 
 ---
+--!>
 
 ## ✨ Quote I Believe In  
 
