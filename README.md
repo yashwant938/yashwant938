@@ -61,6 +61,7 @@
 
 ---
 <!-- 
+
 ## 📊 GitHub Stats  
 
 <p align="center">
@@ -78,9 +79,43 @@
 ---
 --!>
 
-## ✨ Quote I Believe In  
+## ✨ Mindset & Discipline
 
-> _"Building secure systems, one commit at a time."_ 🔐⚙️
+<div align="center" style="
+  border: 2px solid #444;
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  box-shadow: 0px 0px 15px rgba(0,255,255,0.2);
+">
+
+<h3 style="color:#00ffe1; font-family: monospace;">
+⚔️ Walk Forward. Become Unstoppable.
+</h3>
+
+<p style="color:white; font-size:16px; font-style:italic; line-height:1.6;">
+Time to become the man you want to be.  
+Stop delaying. Stop acting.  
+Own yourself. Walk forward with courage.
+</p>
+
+<hr style="border: 1px solid #333; width: 60%;">
+
+<p style="color:#ffcc00; font-size:15px;">
+🔥 <b>"If you're going to try, go all the way — otherwise don’t even start."</b>
+</p>
+
+<p style="color:#ff6b6b; font-size:15px;">
+⚡ <b>"The magic you seek is hidden inside the work you avoid."</b>
+</p>
+
+<p style="color:#00ff99; font-size:15px;">
+🏆 <b>"I hate losing — I’d rather earn the win."</b>
+</p>
+
+</div>
+
 
 ---
 
