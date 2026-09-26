@@ -1,124 +1,31 @@
-<!-- Banner -->
-<h1 align="center">Hi 👋, I'm Yashwant</h1>
-<h3 align="center">⚙️ IBM Z Compiler Backend Developer | 🔐 Security Enthusiast | 🚀 Full-Stack & Android Builder</h3>
+# Yashwant
 
----
+**Systems software engineering · Compiler backends · C++**
 
-## 🌟 About Me  
+I have experience in **compiler backend optimization at IBM, working on IBM Z**. My primary focus is systems software: compilers, program correctness, and performance. I also explore applied AI and full-stack development through public projects.
 
-- ⚙️ Working as a **Compiler Backend Developer** on **IBM Z**
-- 🔐 Passionate about **Security, Secure Rendering, and System Safety**
-- 💻 Strong foundation in **C++ Systems Programming**
-- 🌐 Exploring **Full-Stack Development** and **Android Applications**
-- 🚀 Always learning, building, and contributing to impactful software
+## Start here
 
----
+| Project | What it demonstrates | Stack |
+| --- | --- | --- |
+| **[LLVMBugSquad](https://github.com/yashwant938/LLVMBugSquad)** | An LLVM investigation workspace prototype with persistent runs, resumable event streams, cancellation, and exportable evidence. | Python, FastAPI, SQLite, Next.js |
+| **[MoodPet](https://github.com/yashwant938/MoodPet)** | A native Windows companion with activity tracking, focus timers, durable session history, streaks, and a Qt dashboard. | Python, PySide6, SQLite, Windows APIs |
+| **[CompilerCppTopics](https://github.com/yashwant938/CompilerCppTopics)** · [Demo](https://yashwant938.github.io/CompilerCppTopics/) | Interactive C++ and STL explanations with memory visualizations, quizzes, Monaco editing, and remote code execution. | React, JavaScript, Vite, Monaco |
 
-## 🛠️ Tech Stack  
+**Explore the engineering:** [LLVMBugSquad architecture](https://github.com/yashwant938/LLVMBugSquad#readme) · [API regression tests](https://github.com/yashwant938/LLVMBugSquad/blob/main/backend/tests/test_api.py) · [MoodPet storage and UI tests](https://github.com/yashwant938/MoodPet/tree/main/tests)
 
-### Languages  
-![C++](https://img.shields.io/badge/C%2B%2B-blue?style=for-the-badge&logo=c%2B%2B)
-![Python](https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python)
-![Java](https://img.shields.io/badge/Java-red?style=for-the-badge&logo=java)
-![JavaScript](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript)
+LLVMBugSquad includes synthetic replay demos; live compiler and routing integrations still require validation against real services. Its [acceptance notes](https://github.com/yashwant938/LLVMBugSquad/blob/main/docs/acceptance.md) distinguish implemented behavior from work in progress.
 
----
+## AI and full-stack explorations
 
-### Development  
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=node.js)
-![Flutter](https://img.shields.io/badge/Flutter-blue?style=for-the-badge&logo=flutter)
-![Android](https://img.shields.io/badge/Android-darkgreen?style=for-the-badge&logo=android)
+- **[NewsScript](https://github.com/yashwant938/NewsScript)** — A news-to-video-script prototype with RSS aggregation, optional Gemini/OpenAI generation, saved articles, and text/PDF exports. Built with Next.js, TypeScript, Prisma, and SQLite.
+- **[YashQuizX](https://github.com/yashwant938/quizzesbyiron)** — A multiplayer quiz app with room codes, QR joining, timed C++/compiler questions, server-side scoring, and live leaderboards. Built with React, Node.js, Express, and Socket.IO.
+- **[GPT-2 review summarization](https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107)** — An academic project exploring GPT-2 fine-tuning and ROUGE evaluation on Amazon Fine Food Reviews using Hugging Face Transformers.
 
----
+## Technical interests
 
-### Security & Tools  
-![Linux](https://img.shields.io/badge/Linux-black?style=for-the-badge&logo=linux)
-![Git](https://img.shields.io/badge/Git-orange?style=for-the-badge&logo=git)
-![Security](https://img.shields.io/badge/Security-red?style=for-the-badge&logo=hackthebox)
+- **Core:** C++, compiler backend optimization, debugging, correctness, and performance.
+- **Developer tooling:** Python, APIs, persistent state, reproducible investigations, and regression testing.
+- **Additional experience:** React/Next.js applications and applied AI experiments.
 
----
-
-## 🚀 Current Focus  
-
-- ⚙️ Compiler Backend Engineering (IBM Z)  
-- 🔐 Secure Web Rendering & DOM-XSS Prevention  
-- 📱 Flutter + Android App Development  
-- 🌐 Full-Stack Projects with Modern Frameworks  
-
----
-
-## 📌 Featured Projects  
-
-✨ Some of my highlighted work:
-
-- 👕 **Fashion Recommendation System (Flutter + AI)**  
-- 🔐 **Client-side HTML Sanitization Utility**  
-- ⚙️ **Compiler Backend Contributions**  
-- 📱 **Android Productivity Apps**
-
-👉 Check out my pinned repositories below!
-
----
-<!-- 
-
-## 📊 GitHub Stats  
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight" height="170"/>
-  <img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=tokyonight" height="170"/>
-</p>
-
----
-
-## 🌍 Connect With Me  
-
-- 💼 LinkedIn: *[Add your link here](https://www.linkedin.com/in/yash-rana-3a7252265/)*  
-- 📫 Email: *ranayash2022@gmail.com*  
-
----
---!>
-
-## ✨ Mindset & Discipline
-
-<div align="center" style="
-  border: 2px solid #444;
-  border-radius: 15px;
-  padding: 20px;
-  width: 80%;
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-  box-shadow: 0px 0px 15px rgba(0,255,255,0.2);
-">
-
-<h3 style="color:#00ffe1; font-family: monospace;">
-⚔️ Walk Forward. Become Unstoppable.
-</h3>
-
-<p style="color:white; font-size:16px; font-style:italic; line-height:1.6;">
-Time to become the man you want to be.  
-Stop delaying. Stop acting.  
-Own yourself. Walk forward with courage.
-</p>
-
-<hr style="border: 1px solid #333; width: 60%;">
-
-<p style="color:#ffcc00; font-size:15px;">
-🔥 <b>"If you're going to try, go all the way — otherwise don’t even start."</b>
-</p>
-
-<p style="color:#ff6b6b; font-size:15px;">
-⚡ <b>"The magic you seek is hidden inside the work you avoid."</b>
-</p>
-
-<p style="color:#00ff99; font-size:15px;">
-🏆 <b>"I hate losing — I’d rather earn the win."</b>
-</p>
-
-</div>
-
-
----
-
-<p align="center">
-  🚀 Thanks for visiting my profile! Feel free to explore my projects and connect.
-</p>
+I'm interested in **systems software engineering and compiler development roles**, with room to build useful developer tools and explore AI-assisted workflows.
