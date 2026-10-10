@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/header-mobile.svg" />
-    <img src="./assets/header.svg" alt="Yashwant — Systems software engineer. C++, Linux, compilers, and developer tools." width="100%" />
+    <img src="./assets/header.svg" alt="Yashwant — Systems × GenAI. C++, Linux and LLVM; RAG, LLM applications and AI tooling." width="100%" />
   </picture>
 </p>
 
@@ -10,82 +10,85 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/yash-rana-3a7252265/"><strong>LinkedIn ↗</strong></a> &nbsp; · &nbsp;
-  <a href="#merged-upstream-work">Open-source contributions</a> &nbsp; · &nbsp;
-  <a href="#selected-projects">Selected projects</a>
+  <a href="#selected-work">Projects</a> &nbsp; / &nbsp;
+  <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">Merged contributions</a> &nbsp; / &nbsp;
+  <a href="https://www.linkedin.com/in/yash-rana-3a7252265/"><strong>Let's connect ↗</strong></a>
 </p>
 
-I work on C/C++ systems and build developer tools. I enjoy turning a failure into a small reproducer, understanding the root cause, and writing a regression test that keeps it fixed.
+I build across **systems engineering and generative AI**—from C++ linker fixes and Linux concurrency to retrieval-backed assistants and LLM-powered developer tools.
 
-My public work spans **linker correctness, Linux concurrency, backend systems, and AI-assisted tooling**.
+I care about what happens around the core algorithm: **reproducible failures, useful evidence, reliable APIs, and a product people can inspect and use.**
 
-## Merged upstream work
-
-Contributions to **[Qualcomm ELD](https://github.com/qualcomm/eld)**, an ELF linker built on LLVM:
-
-| Merged PR | Contribution |
-| :--- | :--- |
-| **[#2065](https://github.com/qualcomm/eld/pull/2065)** | **ELF header layout correctness.** Fixed a crash caused by assigning addresses to headers outside the output layout. Added regression coverage for `PHDRS` / `FILEHDR` cases. |
-| **[#2011](https://github.com/qualcomm/eld/pull/2011)** | **GNU-compatible command-line handling.** Accepted numeric `-O` levels as ignored compatibility options, with validation for malformed values. |
-
-Both contributions include focused regression testing across **six architecture configurations**: ARM, AArch64, Hexagon, RISC-V 32/64, and x86-64. Each PR records the validation scope.
-
-<details>
-<summary><strong>More ELD work: LTO, build guidance, and maintainer discussion</strong></summary>
-
-- **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129)** — Keep `--save-temps` on the native-object path. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed.
-- **[Build guidance · #2127](https://github.com/qualcomm/eld/pull/2127)** — Clarify the LLVM `main` baseline and recommend paths without spaces.
-- **[Contributor-experience discussion](https://github.com/qualcomm/eld/discussions/887#discussioncomment-18761658)** — Reported LLVM compatibility and lit path issues encountered while building under Ubuntu/WSL; the maintainer invited the README update.
-
-The two PRs above were open as of October 9, 2026. Local verification used focused tests, not the full ELD suite.
-
-</details>
-
-## Selected projects
+## Selected work
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3><a href="https://github.com/yashwant938/OOPD-Project">C++ Filesystem &amp; Concurrency Lab</a></h3>
-<p>Sequential and threaded filesystem commands, recursive directory traversal, and workload timing scripts. A practical study of concurrency and I/O tradeoffs.</p>
-<p><code>C++17</code> <code>Linux</code> <code>std::filesystem</code></p>
-<a href="https://github.com/yashwant938/OOPD-Project#readme">Explore the implementation →</a>
+<sub><strong>GENAI · RAG · INFORMATION RETRIEVAL</strong></sub>
+<h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
+<p>Contributed a RAG research workspace with hybrid BM25 + MiniLM search, page-linked PDF evidence, a grounded assistant, and cited brief exports.</p>
+<p>Local question classification handles uncertainty; the assistant can fall back to source excerpts.</p>
+<p><code>Python</code> <code>FastAPI</code> <code>Next.js</code> <code>MiniLM</code></p>
+<a href="https://github.com/ZainiiiBoyx278/legal-lens#readme">Code &amp; architecture →</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My merged PRs</a>
 </td>
 <td width="50%" valign="top">
-<h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
-<p>Contributed hybrid BM25 + MiniLM retrieval, page-linked PDF evidence, research-brief export, and local question classification to a collaborative document-research app.</p>
-<p><code>Python</code> <code>FastAPI</code> <code>Next.js</code> <code>RAG</code></p>
-<a href="https://github.com/ZainiiiBoyx278/legal-lens#readme">Explore the project →</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My merged work</a>
+<sub><strong>SYSTEMS · C++ · OPEN SOURCE</strong></sub>
+<h3><a href="https://github.com/qualcomm/eld">Qualcomm ELD contributions</a></h3>
+<p><strong>Two merged fixes</strong> in an ELF linker built on LLVM:</p>
+<ul>
+<li><a href="https://github.com/qualcomm/eld/pull/2065"><strong>#2065</strong></a> — Fixed an ELF-header layout crash.</li>
+<li><a href="https://github.com/qualcomm/eld/pull/2011"><strong>#2011</strong></a> — Added GNU-compatible handling of numeric <code>-O</code> options.</li>
+</ul>
+<p>Focused regression testing across six architecture configurations. Each PR records the verification scope.</p>
+<p><code>C++</code> <code>LLVM</code> <code>Linux</code> <code>lit / FileCheck</code></p>
+<a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938">Explore the contributions →</a>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
+<sub><strong>GENAI × SYSTEMS · DEVELOPER TOOLS</strong></sub>
 <h3><a href="https://github.com/yashwant938/LLVMBugSquad">LLVM BugSquad</a></h3>
-<p>A compiler-investigation workbench with isolated workers, persistent run history, resumable event streams, and evidence exports.</p>
-<p><strong>Status:</strong> synthetic replay demo available; live model/compiler integration validation is pending.</p>
-<p><code>LLVM</code> <code>Python</code> <code>Docker</code> <code>TypeScript</code></p>
+<p>Model-assisted compiler triage with isolated workers, persistent history, resumable events, and evidence exports.</p>
+<p><strong>Status:</strong> synthetic replay demo available. Model adapter and worker implemented; live integration validation pending.</p>
+<p><code>Python</code> <code>FastAPI</code> <code>Docker</code> <code>LLM APIs</code></p>
 <a href="https://github.com/yashwant938/LLVMBugSquad#readme">Architecture &amp; implementation →</a>
 </td>
 <td width="50%" valign="top">
-<h3><a href="https://github.com/yashwant938/MoodPet">MoodPet</a></h3>
-<p>A native Windows productivity app with focus timers, durable session history, and a Qt dashboard. Regression tests cover timer, storage, and activity-tracking behavior.</p>
-<p><code>Python</code> <code>PySide6</code> <code>SQLite</code> <code>Windows</code></p>
-<a href="https://github.com/yashwant938/MoodPet#readme">Explore the desktop app →</a>
+<sub><strong>GENAI · FULL-STACK APPLICATIONS</strong></sub>
+<h3><a href="https://github.com/yashwant938/NewsScript">NewsScript</a></h3>
+<p>Turns RSS articles into structured script drafts through optional Gemini/OpenAI generation, with saved articles and text/PDF exports.</p>
+<p><strong>Status:</strong> local prototype with a template fallback. Live-provider validation and deployment hardening are pending.</p>
+<p><code>TypeScript</code> <code>Next.js</code> <code>Prisma</code> <code>LLM APIs</code></p>
+<a href="https://github.com/yashwant938/NewsScript#readme">Explore the application →</a>
 </td>
 </tr>
 </table>
 
-**Also built:** [Interactive C++ Concepts Lab](https://github.com/yashwant938/CompilerCppTopics) · [Real-time multiplayer quiz](https://github.com/yashwant938/quizzesbyiron)
+## Systems & machine-learning foundations
 
-## Tools I work with
+- **[C++ Filesystem & Concurrency Lab](https://github.com/yashwant938/OOPD-Project)** — Sequential and threaded filesystem commands, recursive traversal, and workload timing scripts. **C++17 · Linux**
+- **[GPT-2 Review Summarization](https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107)** — Coursework experiment covering fine-tuning and generation with **PyTorch / Hugging Face**. Experimental; evaluation corrections and reproduction steps are documented.
 
-| Systems & debugging | Backend & tooling | Retrieval & applications |
+**More things I've built:** [MoodPet desktop companion](https://github.com/yashwant938/MoodPet) · [Interactive C++ Concepts Lab](https://github.com/yashwant938/CompilerCppTopics) · [Real-time multiplayer quiz](https://github.com/yashwant938/quizzesbyiron)
+
+<details>
+<summary><strong>More open-source work &amp; engineering practice</strong></summary>
+
+- **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129)** — Preserve native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed.
+- **[Build guidance · #2127](https://github.com/qualcomm/eld/pull/2127)** — Document the LLVM `main` baseline and source/build path guidance following a [maintainer discussion](https://github.com/qualcomm/eld/discussions/887#discussioncomment-18761658).
+- **[DSA practice](https://github.com/yashwant938/DSA)** — Ongoing algorithms and problem-solving work.
+
+The two PRs above were open as of October 10, 2026. ELD verification used focused tests, not the full suite.
+
+</details>
+
+## Toolbox
+
+| Systems engineering | GenAI & applied ML | Backend & delivery |
 | :--- | :--- | :--- |
-| C / C++, Linux, GDB | Python, FastAPI, SQL | BM25, MiniLM, RAG |
-| LLVM, CMake, Ninja, lit | Git, Docker, REST, SSE | TypeScript, React, Next.js |
-
-I keep my ongoing algorithms practice in **[DSA](https://github.com/yashwant938/DSA)**.
+| C / C++, Linux, GDB | RAG, BM25, MiniLM, RRF | Python, FastAPI, SQL |
+| LLVM, CMake, Ninja, lit | LLM APIs, PyTorch, Hugging Face | TypeScript, Next.js, Docker |
 
 ---
 
-**Interested in C++ systems, compiler tooling, backend engineering, or AI developer tools?** [Connect with me on LinkedIn →](https://www.linkedin.com/in/yash-rana-3a7252265/)
+**Let's build at the intersection of systems and AI.** [Connect on LinkedIn →](https://www.linkedin.com/in/yash-rana-3a7252265/)

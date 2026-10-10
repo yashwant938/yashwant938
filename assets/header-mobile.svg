@@ -1,18 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="370" viewBox="0 0 600 370" role="img" aria-labelledby="title desc">
-  <title id="title">Yashwant — Systems software engineer</title>
-  <desc id="desc">C++, Linux, compilers, and developer tools. Understand the failure. Build the fix.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1426"/><stop offset="1" stop-color="#122c39"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#aec8e8" stroke-opacity=".06"/></pattern>
-  </defs>
-  <rect width="600" height="370" rx="18" fill="url(#bg)"/>
-  <rect width="600" height="370" rx="18" fill="url(#grid)"/>
-  <path d="M36 36H130" stroke="#6ee7c4" stroke-width="4" stroke-linecap="round"/>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <text x="36" y="79" fill="#9bb4cc" font-size="18" font-weight="600" letter-spacing="2">SYSTEMS SOFTWARE ENGINEER</text>
-    <text x="32" y="159" fill="#f4f8ff" font-size="70" font-weight="700" letter-spacing="-2">Yashwant</text>
-    <text x="36" y="202" fill="#c1d0e3" font-size="24">C++ · Linux · Compilers</text>
-    <text x="36" y="240" fill="#c1d0e3" font-size="24">Developer tools</text>
-    <text x="36" y="314" fill="#75e4c4" font-size="23" font-weight="500">Understand the failure. Build the fix.</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="460" viewBox="0 0 600 460" role="img" aria-labelledby="title desc">
+<title id="title">Yashwant — Systems × GenAI</title>
+<desc id="desc">Systems engineering and generative AI. C++, Linux, LLVM, RAG, LLM applications, and AI tooling.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1524"/><stop offset=".5" stop-color="#10232d"/><stop offset="1" stop-color="#24203e"/></linearGradient>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#d2dcff" opacity=".12"/></pattern>
+</defs>
+<rect width="600" height="460" rx="20" fill="url(#bg)"/>
+<rect width="600" height="460" rx="20" fill="url(#dots)"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="36" y="54" fill="#9baec5" font-size="16" font-weight="600" letter-spacing="2">ENGINEER · BUILDER · OPEN SOURCE</text>
+<text x="32" y="132" fill="#f6f8ff" font-size="68" font-weight="700" letter-spacing="-2">Yashwant</text>
+<text x="36" y="193" font-size="44" font-weight="600" letter-spacing="-1"><tspan fill="#70e5c5">Systems</tspan><tspan fill="#8392ab"> × </tspan><tspan fill="#c1abff">GenAI</tspan></text>
+<text x="36" y="239" fill="#bdcbde" font-size="22">From low-level code</text>
+<text x="36" y="270" fill="#bdcbde" font-size="22">to intelligent applications.</text>
+<path d="M36 311H564" stroke="#5c6681" stroke-opacity=".5"/>
+<text x="36" y="349" fill="#70e5c5" font-size="17" font-weight="600" letter-spacing="1">SYSTEMS</text>
+<text x="36" y="386" fill="#e3edf7" font-size="23">C++ · Linux</text>
+<text x="36" y="419" fill="#e3edf7" font-size="23">LLVM · Compilers</text>
+<text x="326" y="349" fill="#c1abff" font-size="17" font-weight="600" letter-spacing="1">GENAI</text>
+<text x="326" y="386" fill="#e3edf7" font-size="23">RAG · LLM apps</text>
+<text x="326" y="419" fill="#e3edf7" font-size="23">AI tooling</text>
+</g>
 </svg>
