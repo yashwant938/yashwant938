@@ -10,9 +10,10 @@
 </p>
 
 <p align="center">
+  <a href="https://yashwant938.github.io/portfolio-/"><strong>Explore my portfolio ↗</strong></a> &nbsp; / &nbsp;
   <a href="#selected-work">Projects</a> &nbsp; / &nbsp;
   <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">Merged contributions</a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/yash-rana-3a7252265/"><strong>Let's connect ↗</strong></a>
+  <a href="https://www.linkedin.com/in/yash-rana-3a7252265/">LinkedIn</a>
 </p>
 
 I build across **systems engineering and generative AI**—from C++ linker fixes and Linux concurrency to retrieval-backed assistants and LLM-powered developer tools.
@@ -71,14 +72,27 @@ I care about what happens around the core algorithm: **reproducible failures, us
 
 **More things I've built:** [MoodPet desktop companion](https://github.com/yashwant938/MoodPet) · [Interactive C++ Concepts Lab](https://github.com/yashwant938/CompilerCppTopics) · [Real-time multiplayer quiz](https://github.com/yashwant938/quizzesbyiron)
 
+## From issue to pull request
+
+<p align="center">
+  <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/contribution-flow-mobile.svg" />
+      <img src="./assets/contribution-flow.svg" alt="My contribution workflow: reproduce the failure, make a focused patch, verify with regression tests, and submit a pull request with evidence." width="100%" />
+    </picture>
+  </a>
+</p>
+
+**A recent example:** [ELD #2134 — preserve AArch64 feature flags](https://github.com/qualcomm/eld/pull/2134). A one-line C++ fix, a regression that failed before the change, and **18 passing focused test runs** across two AArch64 configurations. PR open for review.
+
 <details>
 <summary><strong>More open-source work &amp; engineering practice</strong></summary>
 
-- **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129)** — Preserve native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed.
+- **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129)** — Preserve native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed, followed by the updated regression on all six target configurations.
 - **[Build guidance · #2127](https://github.com/qualcomm/eld/pull/2127)** — Document the LLVM `main` baseline and source/build path guidance following a [maintainer discussion](https://github.com/qualcomm/eld/discussions/887#discussioncomment-18761658).
 - **[DSA practice](https://github.com/yashwant938/DSA)** — Ongoing algorithms and problem-solving work.
 
-The two PRs above were open as of October 10, 2026. ELD verification used focused tests, not the full suite.
+PRs #2134, #2129, and #2127 were open as of October 10, 2026. ELD verification used focused tests, not the full suite.
 
 </details>
 
@@ -91,4 +105,4 @@ The two PRs above were open as of October 10, 2026. ELD verification used focuse
 
 ---
 
-**Let's build at the intersection of systems and AI.** [Connect on LinkedIn →](https://www.linkedin.com/in/yash-rana-3a7252265/)
+**Let's build at the intersection of systems and AI.** [Visit my portfolio ↗](https://yashwant938.github.io/portfolio-/) · [Connect on LinkedIn →](https://www.linkedin.com/in/yash-rana-3a7252265/)

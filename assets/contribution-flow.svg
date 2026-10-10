@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="306" viewBox="0 0 1200 306" role="img" aria-labelledby="title desc">
+  <title id="title">From issue to pull request</title>
+  <desc id="desc">An animated illustration of my contribution workflow: reproduce, patch, verify, and open a pull request. The linked PRs provide the actual contribution status and test results.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1524"/><stop offset="1" stop-color="#201d35"/></linearGradient>
+    <linearGradient id="rail"><stop stop-color="#70e5c5"/><stop offset=".5" stop-color="#85bcff"/><stop offset="1" stop-color="#c1abff"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#b5c6e0" opacity=".13"/></pattern>
+  </defs>
+  <style>
+    .signal { animation: travel 12s ease-in-out infinite; }
+    .halo { animation: breathe 12s ease-in-out infinite; opacity: .18; transform-box: fill-box; transform-origin: center; }
+    .h2 { animation-delay: 3s; } .h3 { animation-delay: 6s; } .h4 { animation-delay: 9s; }
+    @keyframes travel {
+      0%, 6% { transform: translateX(0); opacity: 0; }
+      10% { transform: translateX(0); opacity: 1; }
+      30%, 35% { transform: translateX(300px); opacity: 1; }
+      55%, 60% { transform: translateX(600px); opacity: 1; }
+      80%, 88% { transform: translateX(900px); opacity: 1; }
+      94%, 100% { transform: translateX(900px); opacity: 0; }
+    }
+    @keyframes breathe {
+      0%, 8%, 35%, 100% { opacity: .16; transform: scale(1); }
+      18%, 25% { opacity: .62; transform: scale(1.15); }
+    }
+    @media (prefers-reduced-motion: reduce) { .signal { display: none; } .halo { animation: none; } }
+  </style>
+  <rect width="1200" height="306" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="306" rx="20" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="1199" height="305" rx="20" fill="none" stroke="#344253"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="42" y="40" fill="#8cabc1" font-size="12" font-weight="600" letter-spacing="2.5">OPEN SOURCE · MY PROCESS</text>
+    <text x="40" y="79" fill="#edf4ff" font-size="28" font-weight="600" letter-spacing="-.4">Small changes. A clear trail of evidence.</text>
+  </g>
+  <path d="M150 153H1050" fill="none" stroke="#344b63" stroke-width="2"/>
+  <path d="M150 153H1050" fill="none" stroke="url(#rail)" stroke-width="2" stroke-dasharray="2 10" opacity=".55"/>
+  <g class="signal"><circle cx="150" cy="153" r="10" fill="#c1e8ff" opacity=".12"/><circle cx="150" cy="153" r="4" fill="#e0fff6"/></g>
+  <g fill="none" stroke-width="1.5">
+    <circle class="halo" cx="150" cy="153" r="34" stroke="#70e5c5"/>
+    <circle class="halo h2" cx="450" cy="153" r="34" stroke="#7ddacc"/>
+    <circle class="halo h3" cx="750" cy="153" r="34" stroke="#85bcff"/>
+    <circle class="halo h4" cx="1050" cy="153" r="34" stroke="#c1abff"/>
+  </g>
+  <g fill="#142333" stroke-width="1.5"><circle cx="150" cy="153" r="25" stroke="#70e5c5"/><circle cx="450" cy="153" r="25" stroke="#7ddacc"/><circle cx="750" cy="153" r="25" stroke="#85bcff"/><circle cx="1050" cy="153" r="25" stroke="#c1abff"/></g>
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#70e5c5"><circle cx="147" cy="150" r="7"/><path d="m152 155 7 7"/></g>
+    <g stroke="#7ddacc"><circle cx="450" cy="153" r="6"/><path d="M437 153h7m12 0h7"/></g>
+    <path d="m741 153 6 6 12-13" stroke="#85bcff"/>
+    <g stroke="#c1abff"><circle cx="1043" cy="144" r="3"/><circle cx="1043" cy="162" r="3"/><circle cx="1057" cy="162" r="3"/><path d="M1043 147v12m14 0v-9q0-6-7-6m2-3-3 3 3 3"/></g>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <g fill="#edf4ff" font-size="21" font-weight="600"><text x="150" y="216">01 / Reproduce</text><text x="450" y="216">02 / Patch</text><text x="750" y="216">03 / Verify</text><text x="1050" y="216">04 / Pull request</text></g>
+    <g fill="#a4b5cc" font-size="16"><text x="150" y="244">Isolate the failure</text><text x="450" y="244">Make a focused change</text><text x="750" y="244">Test before and after</text><text x="1050" y="244">Share code + evidence</text></g>
+  </g>
+</svg>
