@@ -29,6 +29,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 <table>
 <tr>
 <td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
 <sub><strong>GENAI · RAG · INFORMATION RETRIEVAL</strong></sub>
 <h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
 <p>Contributed hybrid BM25 + MiniLM retrieval over a 1,871-page historical IPC PDF, with reciprocal rank fusion, page-linked evidence, and cited research briefs.</p>
@@ -37,6 +38,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 <a href="https://yashwant938.github.io/portfolio-/#legal-lens">Case study →</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My project PRs</a>
 </td>
 <td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#eld"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/eld.svg" /><img src="./assets/projects/eld.svg" alt="Dimensional concept illustration for Qualcomm ELD contributions" width="100%" /></picture></a>
 <sub><strong>SYSTEMS · C++ · OPEN SOURCE</strong></sub>
 <h3><a href="https://github.com/qualcomm/eld">Qualcomm ELD contributions</a></h3>
 <p><strong>Two merged fixes</strong> in an ELF linker built on LLVM:</p>
@@ -51,6 +53,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </tr>
 <tr>
 <td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#llvm-bugsquad"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/llvm-bugsquad.svg" /><img src="./assets/projects/llvm-bugsquad.svg" alt="Dimensional concept illustration for LLVM BugSquad" width="100%" /></picture></a>
 <sub><strong>GENAI × SYSTEMS · DEVELOPER TOOLS</strong></sub>
 <h3><a href="https://github.com/yashwant938/LLVMBugSquad">LLVM BugSquad</a></h3>
 <p>Compiler investigation workspace with model-assisted routing, isolated LLVM recipes, SQLite history, resumable events, and hashed evidence exports.</p>
@@ -59,6 +62,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 <a href="https://yashwant938.github.io/portfolio-/#llvm-bugsquad">Case study →</a> · <a href="https://github.com/yashwant938/LLVMBugSquad#readme">Source &amp; setup</a>
 </td>
 <td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#newsscript"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/newsscript.svg" /><img src="./assets/projects/newsscript.svg" alt="Dimensional concept illustration for NewsScript" width="100%" /></picture></a>
 <sub><strong>GENAI · FULL-STACK APPLICATIONS</strong></sub>
 <h3><a href="https://github.com/yashwant938/NewsScript">NewsScript</a></h3>
 <p>RSS ingestion, deduplication, and heuristic ranking feed a script-drafting workspace with optional Gemini/OpenAI generation, saved articles, and text/PDF exports.</p>
@@ -69,28 +73,112 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </tr>
 </table>
 
-## More projects
+## Project gallery
 
-### Systems & AI foundations
+Each illustration opens its project case study. Explore the portfolio for interactive depth, motion, and implementation details.
 
-- **[C++ Concepts Lab](https://github.com/yashwant938/CompilerCppTopics)** — Interactive container simulations, a Wandbox coding workspace, quizzes, and an optional Gemini tutor. **React · Monaco · C++** · [Open app](https://yashwant938.github.io/CompilerCppTopics/)
-- **[C++ Filesystem & Concurrency Lab](https://github.com/yashwant938/OOPD-Project)** — Sequential and threaded filesystem commands, recursive traversal, and workload timing scripts. An educational Linux experiment. **C++17 · std::thread**
-- **[GPT-2 Review Summarization](https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107)** — Fine-tuning, checkpointing, and summary generation for review text. Coursework experiment; evaluation corrections are documented. **PyTorch · Hugging Face**
-
-### Applications & desktop tools
-
-- **[MoodPet](https://github.com/yashwant938/MoodPet)** — Windows desktop companion with focus timers, local activity history, charts, persistent streaks, and CSV export. **Python · PySide6 · SQLite**
-- **[Quizzes by Iron](https://github.com/yashwant938/quizzesbyiron)** — Host/player rooms, QR joins, timed questions, server-side scoring, and live leaderboards. Room state is held in memory. **React · Express · Socket.IO** · [Open app](https://quizzesbyiron.vercel.app)
-- **[Real Estate Aggregator](https://github.com/yashwant938/E-Commerce)** — Property marketplace prototype with listing filters, account workflows, Razorpay integration, and PDF contracts. **PHP · Slim · MySQL**
-- **[Decrypter & Analyzer](https://github.com/yashwant938/Decrypter-Analyzer)** — Educational hash-lookup demonstrations and website-configuration inspection views for authorized lab use. **PHP · JavaScript · MySQL**
-
-### Research & applied ML
-
-- **Bioinformatics Literature & Graph Explorer** — PubMed literature processing, entity cleanup, rule-based interaction labels, and an interactive chemical–gene graph. One research family: [mining pipeline](https://github.com/yashwant938/ExtremophilesData) + [graph explorer](https://github.com/yashwant938/3DKnolwedgeGraph). **Python · Streamlit · NetworkX**
-- **[Android Image Classifier](https://github.com/yashwant938/ImageClassification)** — Local inference on gallery images using a bundled quantized MobileNet model. Educational mobile prototype. **Kotlin · Compose · TensorFlow Lite**
-- **[Voice–Vision: Image Captioning](https://github.com/yashwant938/Voice-Vision-Communication)** — Image uploads become captions through InceptionV3 features and an LSTM decoder. Earlier ML prototype. **Python · Flask · TensorFlow**
-
-**[Explore implementation details and project scope in the portfolio →](https://yashwant938.github.io/portfolio-/#work)**
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#moodpet"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/moodpet.svg" /><img src="./assets/projects/moodpet.svg" alt="Dimensional concept illustration for MoodPet" width="100%" /></picture></a>
+<sub><strong>DESKTOP / PRODUCTIVITY</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#moodpet">MoodPet</a></h3>
+<p>A native Windows companion that combines an animated desktop pet with focus sessions, local activity history, persistent streaks, and a productivity dashboard.</p>
+<p><strong>Local Windows application</strong></p>
+<p><code>Python</code> <code>PySide6</code> <code>SQLite</code> <code>Windows APIs</code></p>
+<a href="https://github.com/yashwant938/MoodPet">Source &amp; setup ↗</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#cpp-concepts"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/cpp-concepts.svg" /><img src="./assets/projects/cpp-concepts.svg" alt="Dimensional concept illustration for C++ Concepts Lab" width="100%" /></picture></a>
+<sub><strong>SYSTEMS EDUCATION / INTERACTIVE WEB</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#cpp-concepts">C++ Concepts Lab</a></h3>
+<p>An interactive C++ and STL learning lab with step-through container illustrations, an editable coding workspace, quizzes, and an optional Gemini tutor.</p>
+<p><strong>Public learning interface · external compiler/model services required for those features</strong></p>
+<p><code>React</code> <code>Vite</code> <code>Monaco</code> <code>Wandbox</code> <code>Gemini</code></p>
+<a href="https://yashwant938.github.io/CompilerCppTopics/">Open app ↗</a> · <a href="https://github.com/yashwant938/CompilerCppTopics">Source ↗</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#quizzes-by-iron"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/quizzes-by-iron.svg" /><img src="./assets/projects/quizzes-by-iron.svg" alt="Dimensional concept illustration for Quizzes by Iron" width="100%" /></picture></a>
+<sub><strong>REAL-TIME / MULTIPLAYER</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#quizzes-by-iron">Quizzes by Iron</a></h3>
+<p>An event-driven multiplayer quiz with host-controlled rooms, QR-code joins, timed questions, server-side scoring, and live leaderboards.</p>
+<p><strong>Web application · room state held in one server process</strong></p>
+<p><code>React</code> <code>Node.js</code> <code>Express</code> <code>Socket.IO</code> <code>Vite</code></p>
+<a href="https://quizzesbyiron.vercel.app">Open app ↗</a> · <a href="https://github.com/yashwant938/quizzesbyiron">Source ↗</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#filesystem-lab"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/filesystem-lab.svg" /><img src="./assets/projects/filesystem-lab.svg" alt="Dimensional concept illustration for C++ Filesystem &amp; Concurrency Lab" width="100%" /></picture></a>
+<sub><strong>C++ / SYSTEMS COURSEWORK</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#filesystem-lab">C++ Filesystem &amp; Concurrency Lab</a></h3>
+<p>A C++17 command interpreter exploring the differences between sequential and threaded filesystem operations, recursive traversal, and coordinated output.</p>
+<p><strong>Educational Linux experiment</strong></p>
+<p><code>C++17</code> <code>std::filesystem</code> <code>std::thread</code> <code>GCC</code> <code>Make</code></p>
+<a href="https://github.com/yashwant938/OOPD-Project">Explore the lab ↗</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Dimensional concept illustration for GPT-2 Review Summarization" width="100%" /></picture></a>
+<sub><strong>NLP / COURSEWORK EXPERIMENT</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#gpt2-summarization">GPT-2 Review Summarization</a></h3>
+<p>A notebook experiment fine-tuning GPT-2 to turn Amazon Fine Food Reviews into short summaries, covering data preparation, training, checkpointing, and generation.</p>
+<p><strong>ML coursework · evaluation corrections documented</strong></p>
+<p><code>Python</code> <code>PyTorch</code> <code>Hugging Face</code> <code>pandas</code> <code>Jupyter</code></p>
+<a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107">Notebook &amp; findings ↗</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#real-estate"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/real-estate.svg" /><img src="./assets/projects/real-estate.svg" alt="Dimensional concept illustration for Real Estate Aggregator" width="100%" /></picture></a>
+<sub><strong>BACKEND / PROPERTY MARKETPLACE</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#real-estate">Real Estate Aggregator</a></h3>
+<p>A PHP/Slim property marketplace connecting searchable listings, account workflows, MySQL persistence, Razorpay integration, and generated PDF contracts.</p>
+<p><strong>Full-stack prototype</strong></p>
+<p><code>PHP</code> <code>Slim</code> <code>MySQL</code> <code>JavaScript</code> <code>Razorpay</code> <code>TCPDF</code></p>
+<a href="https://github.com/yashwant938/E-Commerce">Source &amp; architecture ↗</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#bio-literature"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/bio-literature.svg" /><img src="./assets/projects/bio-literature.svg" alt="Dimensional concept illustration for Bioinformatics Literature &amp; Graph Explorer" width="100%" /></picture></a>
+<sub><strong>NLP / RESEARCH VISUALIZATION</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#bio-literature">Bioinformatics Literature &amp; Graph Explorer</a></h3>
+<p>A related pair of research tools: an extremophile literature-mining pipeline and an interactive chemical–gene graph that makes prepared relationships and publication references easier to explore.</p>
+<p><strong>Research capstone · two connected repositories</strong></p>
+<p><code>Python</code> <code>pandas</code> <code>Entrez</code> <code>Streamlit</code> <code>NetworkX</code></p>
+<a href="https://github.com/yashwant938/3DKnolwedgeGraph">Graph explorer ↗</a> · <a href="https://github.com/yashwant938/ExtremophilesData">Mining pipeline ↗</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#android-classifier"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/android-classifier.svg" /><img src="./assets/projects/android-classifier.svg" alt="Dimensional concept illustration for Android Image Classifier" width="100%" /></picture></a>
+<sub><strong>APPLIED ML / ANDROID</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#android-classifier">Android Image Classifier</a></h3>
+<p>An Android app that runs a bundled quantized MobileNet model locally to classify a selected gallery image and display its predicted label.</p>
+<p><strong>Educational mobile prototype</strong></p>
+<p><code>Kotlin</code> <code>Jetpack Compose</code> <code>TensorFlow Lite</code> <code>MobileNet</code></p>
+<a href="https://github.com/yashwant938/ImageClassification">Android source ↗</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#image-captioning"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/image-captioning.svg" /><img src="./assets/projects/image-captioning.svg" alt="Dimensional concept illustration for Voice–Vision: Image Captioning" width="100%" /></picture></a>
+<sub><strong>COMPUTER VISION / LANGUAGE GENERATION</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#image-captioning">Voice–Vision: Image Captioning</a></h3>
+<p>A Flask image-captioning prototype combining InceptionV3 visual features with an LSTM language decoder to turn an uploaded image into a caption.</p>
+<p><strong>Earlier ML prototype</strong></p>
+<p><code>Python</code> <code>Flask</code> <code>TensorFlow / Keras</code> <code>InceptionV3</code> <code>LSTM</code></p>
+<a href="https://github.com/yashwant938/Voice-Vision-Communication">Explore the prototype ↗</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://yashwant938.github.io/portfolio-/#decrypter-analyzer"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/decrypter-analyzer.svg" /><img src="./assets/projects/decrypter-analyzer.svg" alt="Dimensional concept illustration for Decrypter &amp; Analyzer" width="100%" /></picture></a>
+<sub><strong>SECURITY EDUCATION / WEB TOOLS</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/#decrypter-analyzer">Decrypter &amp; Analyzer</a></h3>
+<p>An educational PHP toolkit exploring hash demonstrations and basic website configuration inspection through browser-based forms and result panels.</p>
+<p><strong>Educational prototype for authorized lab use</strong></p>
+<p><code>PHP</code> <code>JavaScript</code> <code>MySQL</code> <code>HTML / CSS</code></p>
+<a href="https://github.com/yashwant938/Decrypter-Analyzer">Source &amp; scope ↗</a>
+</td>
+</tr>
+</table>
 
 ## From issue to pull request
 
