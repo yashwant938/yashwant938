@@ -22,7 +22,7 @@ I care about what happens around the core algorithm: **reproducible failures, us
 
 At **IBM India Software Labs**, I worked on the **IBM Z C/C++ compiler**, resolved **8+ production defects**, and implemented an **MCP service for compiler-diagnostic retrieval**. Software Engineer: July 2025–September 2026; intern: January–July 2025.
 
-My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together **five featured projects**, linker contributions, implementation details, and code links. Search by technology or explore systems, AI/ML, applications, and research.
+My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together **six featured projects**, linker contributions, implementation details, and code links. Search by technology or explore systems, AI/ML, applications, and research.
 
 ## Contribution activity
 
@@ -34,7 +34,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 
 ## Selected work
 
-Five featured projects, in the same order as my [portfolio](https://yashwant938.github.io/portfolio-/#work).
+Six featured projects, with case studies and interactive demos in my [portfolio](https://yashwant938.github.io/portfolio-/#work).
 
 <table>
 <tr>
@@ -82,8 +82,8 @@ Five featured projects, in the same order as my [portfolio](https://yashwant938.
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top">
-<p><a href="https://yashwant938.github.io/portfolio-/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="520" /></a></p>
+<td width="50%" valign="top">
+<p><a href="https://yashwant938.github.io/portfolio-/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="100%" /></a></p>
 <sub><strong>C++ / SYSTEMS / INTERACTIVE LEARNING</strong></sub>
 <h3><a href="https://yashwant938.github.io/portfolio-/#cpp-systems">C++ Concepts &amp; Systems Lab</a></h3>
 <p>Interactive C++ lessons and a C++17 filesystem lab exploring containers, recursive operations, and concurrency.</p>
@@ -91,6 +91,16 @@ Five featured projects, in the same order as my [portfolio](https://yashwant938.
 <p><code>C++17</code> <code>std::filesystem</code> <code>std::thread</code> <code>Linux</code> <code>React</code> <code>Monaco</code></p>
 <p>Two complementary labs: browser teaching simulations and an educational filesystem interpreter. Includes timing scripts; no measured speedup claimed.</p>
 <a href="https://yashwant938.github.io/CompilerCppTopics/">Live demo ↗</a> · <a href="https://github.com/yashwant938/CompilerCppTopics">Concepts source ↗</a> · <a href="https://github.com/yashwant938/OOPD-Project">Systems source ↗</a> · <a href="https://yashwant938.github.io/portfolio-/#cpp-systems">Case study →</a>
+</td>
+<td width="50%" valign="top">
+<p><a href="https://yashwant938.github.io/portfolio-/labs/signal/"><img src="./assets/projects/signal-recommender.png" alt="Signal Recommendation Lab with editable fictional listener ratings, ranked headphone suggestions, and predicted scores." width="100%" /></a></p>
+<sub><strong>MACHINE LEARNING / COLLABORATIVE FILTERING</strong></sub>
+<h3><a href="https://yashwant938.github.io/portfolio-/labs/signal/">Signal · Recommendation Lab</a></h3>
+<p>An interactive lab comparing user-based and item-based collaborative filtering with a regularized popularity baseline.</p>
+<ul><li>Adjust listener ratings, compare predictions, and inspect the neighbor evidence behind each suggestion.</li><li>Explore leave-one-rating-out MAE, direct coverage, and cold-start fallbacks.</li></ul>
+<p><code>React</code> <code>TypeScript</code> <code>Vite</code> <code>Recharts</code></p>
+<p>Learning demo with fictional ratings and products; ratings stay in browser local storage.</p>
+<a href="https://yashwant938.github.io/portfolio-/labs/signal/">Live demo ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/signal">Source &amp; methods ↗</a> · <a href="https://yashwant938.github.io/portfolio-/#signal-lab">Case study →</a>
 </td>
 </tr>
 </table>
