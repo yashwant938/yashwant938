@@ -28,7 +28,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 
 <p align="center">
   <a href="https://github.com/yashwant938?tab=overview">
-    <img src="./assets/contributions-red.svg" alt="An animated neon snake slithers through Yashwant's crimson contribution calendar. Public activity refreshes daily." width="100%" />
+    <img src="./assets/contributions-red.svg" alt="A neon snake eats red contribution tiles, grows, and restarts as the grid refills. Actual public contribution counts stay accurate and refresh daily." width="100%" />
   </a>
 </p>
 

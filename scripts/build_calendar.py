@@ -119,7 +119,8 @@ def render_calendar(data: object, username: str, year: int, updated: date) -> tu
         "Columns are weeks and rows run Sunday through Saturday. "
         "Crimson shades preserve GitHub's contribution levels. Each known day has its exact count in a title. "
         "Future dates are neutral; dates absent from the input are identified as unavailable. "
-        "An animated neon snake follows empty cells without changing contribution values."
+        "A decorative neon snake eats red tiles with a growing tail and an eaten-tile counter. "
+        "The grid refills each round; the actual contribution values never change."
     )
     if missing_days:
         description += f" {missing_days} elapsed dates have no supplied data."

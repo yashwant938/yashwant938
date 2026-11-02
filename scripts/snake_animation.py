@@ -1,8 +1,11 @@
-"""A self-contained SVG snake that follows the calendar's empty cells."""
+"""A neon snake eats calendar tiles as a decorative, self-resetting SVG loop."""
 
 from collections import deque
-from datetime import timedelta
 from math import hypot
+
+SPEED = 140.0
+LEAD_IN = 0.65
+SEGMENT_SPACING = 2.6
 
 
 def neighbors(point):
@@ -10,126 +13,190 @@ def neighbors(point):
     return ((x + 1, y), (x, y + 1), (x - 1, y), (x, y - 1))
 
 
-def empty_route(days, grid_start, week_count, updated):
-    """Return a closed walk in the largest connected region of empty cells."""
-    available = set()
-    calendar_year = (grid_start + timedelta(days=6)).year
-    for column in range(week_count):
-        for row in range(7):
-            day_date = grid_start + timedelta(days=column * 7 + row)
-            if day_date.year != calendar_year:
+def shortest_path(start, goals, allowed, blocked):
+    queue = deque([start])
+    parents = {start: None}
+    while queue:
+        point = queue.popleft()
+        if point in goals:
+            path = [point]
+            while parents[path[-1]] is not None:
+                path.append(parents[path[-1]])
+            return list(reversed(path))
+        for adjacent in neighbors(point):
+            if adjacent in allowed and adjacent not in blocked and adjacent not in parents:
+                parents[adjacent] = point
+                queue.append(adjacent)
+    return None
+
+
+def plan_hunt(days, grid_start, week_count, updated):
+    """Hunt nearest remaining tiles while keeping a route to the tail open."""
+    foods = {}
+    for day_date, day in days.items():
+        column, row = divmod((day_date - grid_start).days, 7)
+        if day_date <= updated and day['count'] > 0 and 0 <= column < week_count:
+            foods[(column, row)] = day_date
+    original = dict(foods)
+    allowed = {(x, y) for x in range(week_count) for y in range(7)}
+    body = [(-1 - index, 0) for index in range(5)]
+    walk, bites = [body[0]], []
+    last_bite = 0
+    for _ in range(week_count * 7 * 3):
+        if not foods:
+            if bites:
+                return walk, bites
+            break
+        preferred = shortest_path(body[0], foods, allowed, set(body[1:-1]))
+        candidates = ([preferred[1]] if preferred and len(preferred) > 1 else []) + list(neighbors(body[0]))
+        selected = None
+        for point in dict.fromkeys(candidates):
+            if point not in allowed or point in body[:-1]:
                 continue
-            day = days.get(day_date)
-            if day_date > updated or (day is not None and day['count'] == 0):
-                available.add((column, row))
-    remaining = set(available)
-    components = []
-    while remaining:
-        seed = min(remaining)
-        component = {seed}
-        queue = deque([seed])
-        remaining.remove(seed)
-        while queue:
-            for point in neighbors(queue.popleft()):
-                if point in remaining:
-                    remaining.remove(point)
-                    component.add(point)
-                    queue.append(point)
-        components.append(component)
-    if not components:
-        return []
-    available = max(components, key=len)
-    if len(available) < 12:
-        return []
+            grows = point in foods and (len(bites) + 1) % 8 == 0 and len(body) < 8
+            trial = [point] + body
+            if not grows:
+                trial.pop()
+            if all(segment in allowed for segment in trial) and len(foods) > int(point in foods):
+                if not shortest_path(trial[0], {trial[-1]}, allowed, set(trial[1:-1])):
+                    continue
+            selected, body = point, trial
+            break
+        if selected is None or len(walk) - last_bite > week_count * 7:
+            break
+        walk.append(selected)
+        if selected in foods:
+            bites.append((len(walk) - 1, selected, foods.pop(selected)))
+            last_bite = len(walk) - 1
 
-    def nearest(target):
-        return min(available, key=lambda p: (abs(p[0] - target[0]) + abs(p[1] - target[1]), p))
-
-    def connect(start, end):
-        queue = deque([start])
-        parents = {start: None}
-        while queue and end not in parents:
-            here = queue.popleft()
-            candidates = sorted(neighbors(here), key=lambda p: (abs(p[0] - end[0]) + abs(p[1] - end[1]), p))
-            for point in candidates:
-                if point in available and point not in parents:
-                    parents[point] = here
-                    queue.append(point)
-        path = [end]
-        while path[-1] != start:
-            path.append(parents[path[-1]])
-        return list(reversed(path))
-
-    left, right = 2, week_count - 3
-    targets = [(left, 1), (right, 1), (right, 5), (left, 5), (left, 3), (right - 3, 3), (right - 3, 0), (left + 5, 0)]
-    waypoints = [nearest(target) for target in targets]
-    walk = [waypoints[0]]
-    for target in waypoints[1:] + waypoints[:1]:
-        walk.extend(connect(walk[-1], target)[1:])
-    assert walk[0] == walk[-1]
-    assert all(point in available for point in walk)
-    return walk
+    # A non-intersecting sweep handles dense/awkward calendars and empty patrols.
+    walk, bites = [(-1, 0)], []
+    for row in range(7):
+        columns = range(week_count) if row % 2 == 0 else range(week_count - 1, -1, -1)
+        for column in columns:
+            point = (column, row)
+            walk.append(point)
+            if point in original:
+                bites.append((len(walk) - 1, point, original[point]))
+    return walk, bites
 
 
 def rounded_path(walk, grid_x, grid_y, step, cell):
-    """Round only inside traversed cells, preserving the obstacle-free route."""
-    points = [(grid_x + x * step + cell / 2, grid_y + y * step + cell / 2) for x, y in walk[:-1]]
-    if len(points) < 3:
-        return ''
-
-    def toward(point, other, distance=4):
-        dx, dy = other[0] - point[0], other[1] - point[1]
-        length = hypot(dx, dy)
-        return point[0] + dx * distance / length, point[1] + dy * distance / length
+    """Return a smooth open path and each visit's arc-length position."""
+    points = [(grid_x + x * step + cell / 2, grid_y + y * step + cell / 2) for x, y in walk]
 
     def pair(point):
         return f'{point[0]:g},{point[1]:g}'
 
-    path = [f'M{pair(toward(points[0], points[-1]))}']
-    for index, point in enumerate(points):
-        previous, following = points[index - 1], points[(index + 1) % len(points)]
-        entry, exit_point = toward(point, previous), toward(point, following)
+    def toward(point, other):
+        dx, dy = other[0] - point[0], other[1] - point[1]
+        length = hypot(dx, dy)
+        return point[0] + dx * 4 / length, point[1] + dy * 4 / length
+
+    path, visits, total = [f'M{pair(points[0])}'], [0.0], 0.0
+    cursor = points[0]
+    for index in range(1, len(points) - 1):
+        point = points[index]
+        entry, exit_point = toward(point, points[index - 1]), toward(point, points[index + 1])
+        total += hypot(entry[0] - cursor[0], entry[1] - cursor[1])
         path.extend([f'L{pair(entry)}', f'Q{pair(point)} {pair(exit_point)}'])
-    path.append('Z')
-    return ' '.join(path)
+        # Sample the tiny bend to synchronize bites with paced SVG motion.
+        previous, arc, halfway = entry, 0.0, 0.0
+        for sample in range(1, 33):
+            t = sample / 32
+            current = tuple((1 - t) ** 2 * entry[axis] + 2 * (1 - t) * t * point[axis] + t ** 2 * exit_point[axis] for axis in (0, 1))
+            arc += hypot(current[0] - previous[0], current[1] - previous[1])
+            if sample == 16:
+                halfway = arc
+            previous = current
+        visits.append(total + halfway)
+        total += arc
+        cursor = exit_point
+    if len(points) > 1:
+        total += hypot(points[-1][0] - cursor[0], points[-1][1] - cursor[1])
+        path.append(f'L{pair(points[-1])}')
+        visits.append(total)
+    return ' '.join(path), total, visits
+
+
+def animate(attribute, frames, period, discrete=False):
+    values = ';'.join(f'{value:g}' for _, value in frames)
+    times = ';'.join(f'{time / period:.9f}' for time, _ in frames)
+    mode = 'discrete' if discrete else 'linear'
+    return f'<animate attributeName="{attribute}" values="{values}" keyTimes="{times}" calcMode="{mode}" dur="{period:.6f}s" repeatCount="indefinite"/>'
 
 
 def snake_markup(days, grid_start, week_count, updated, grid_x, grid_y, step, cell):
-    walk = empty_route(days, grid_start, week_count, updated)
-    if not walk:
+    walk, bites = plan_hunt(days, grid_start, week_count, updated)
+    if len(walk) < 2:
         return [], []
-    path = rounded_path(walk, grid_x, grid_y, step, cell)
-    length = (len(walk) - 1) * step
-    duration = max(16, length / 100)
-    spacing_seconds = 3.2 / (length / duration)
+    path, length, visits = rounded_path(walk, grid_x, grid_y, step, cell)
+    move_end = LEAD_IN + length / SPEED
+    reset = move_end + 0.55
+    period = move_end + 1.65
+    meal_times = [LEAD_IN + visits[index] / SPEED for index, _, _ in bites]
     definitions = [
         '  <defs>',
         f'    <path id="snake-route" d="{path}"/>',
+        f'    <clipPath id="snake-grid"><rect x="{grid_x - 6}" y="{grid_y - 6}" width="{week_count * step + 8}" height="{7 * step + 8}"/></clipPath>',
         '  </defs>',
-        '  <style>@media (prefers-reduced-motion: reduce){.snake-motion,.snake-label{display:none}}</style>',
+        '  <style>@media (prefers-reduced-motion: reduce){.snake-motion,.snake-label,.snake-effects{display:none}}</style>',
     ]
-    output = [
+    output = ['    <g class="snake-effects" aria-hidden="true" pointer-events="none" clip-path="url(#snake-grid)">']
+    for (_, (column, row), day_date), when in zip(bites, meal_times):
+        x, y = grid_x + column * step, grid_y + row * step
+        output.extend([
+            f'      <rect data-food-date="{day_date.isoformat()}" data-eaten-at="{when:.6f}" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" fill="#161b22" opacity="0">',
+            '        ' + animate('opacity', [(0, 0), (when, 0), (when + 0.12, 1), (reset, 1), (period, 0)], period),
+            '      </rect>',
+            f'      <circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="3" fill="none" stroke="#ff8da7" stroke-width="1.2" opacity="0">',
+            '        ' + animate('opacity', [(0, 0), (when, 0), (when + 0.05, 0.55), (when + 0.42, 0), (period, 0)], period),
+            '        ' + animate('r', [(0, 3), (when, 3), (when + 0.42, 11), (period, 11)], period),
+            '      </circle>',
+        ])
+    output.append('    </g>')
+    label = 'NEON FEAST' if bites else 'SNAKE PATROL'
+    output.extend([
         '    <g class="snake-label" aria-hidden="true">',
-        '      <circle cx="838" cy="94" r="2.5" fill="#ff6b81"/>',
-        '      <text x="850" y="98" fill="#b78a99" font-size="10" letter-spacing="1.3">SNAKE LOOP</text>',
+        '      <circle cx="836" cy="82" r="2.5" fill="#ff6b81"/>',
+        f'      <text x="928" y="86" text-anchor="end" fill="#b78a99" font-size="10" letter-spacing="1.2">{label}</text>',
+    ])
+    for eaten in range(len(bites) + 1):
+        start = meal_times[eaten - 1] if eaten else 0
+        end = meal_times[eaten] if eaten < len(bites) else period
+        frames = [(0, int(eaten == 0))]
+        if start > 0:
+            frames.append((start, 1))
+        if end < period:
+            frames.append((end, 0))
+        frames.append((period, 0))
+        output.extend([
+            f'      <text data-eaten-value="{eaten}" x="928" y="104" text-anchor="end" font-size="11" fill="#ff9bae" opacity="{int(eaten == 0)}">{eaten:02d} / {len(bites):02d} tiles',
+            '        ' + animate('opacity', frames, period, discrete=True),
+            '      </text>',
+        ])
+    output.extend([
         '    </g>',
-        '    <g class="snake-motion" aria-label="A neon snake slithers through empty calendar cells">',
-    ]
+        '    <g class="snake-motion" aria-label="A neon snake eats red tiles; the grid refills each round" clip-path="url(#snake-grid)">',
+        '      ' + animate('opacity', [(0, 0), (0.3, 1), (move_end + 0.02, 1), (move_end + 0.28, 0), (period, 0)], period),
+    ])
 
     def motion(delay):
-        return f'<animateMotion dur="{duration:.3f}s" begin="-{delay:.4f}s" repeatCount="indefinite" rotate="auto"><mpath href="#snake-route"/></animateMotion>'
+        times = f'0;{(LEAD_IN + delay) / period:.9f};{(move_end + delay) / period:.9f};1'
+        return f'<animateMotion dur="{period:.6f}s" begin="0s" keyTimes="{times}" keyPoints="0;0;1;1" calcMode="linear" repeatCount="indefinite" rotate="auto"><mpath href="#snake-route"/></animateMotion>'
 
-    # Draw from tail to head. Delayed samples follow the same route at a
-    # constant speed, keeping the body together through every turn.
-    for index in range(23, -1, -1):
-        fraction = 1 - index / 23
-        radius = 0.9 + 2.65 * fraction
+    segment_count = 24 + 4 * min(3, len(bites) // 8)
+    for index in range(segment_count - 1, -1, -1):
+        radius = 0.9 + 2.65 * (1 - index / (segment_count - 1))
         color = '#8b5cf6' if index > 16 else ('#d946ef' if index > 10 else ('#ff4164' if index > 4 else '#ff8da7'))
+        output.append(f'      <g data-snake-segment="{index}" opacity="{int(index < 24)}">')
+        if index >= 24:
+            when = meal_times[7 + 8 * ((index - 24) // 4)]
+            output.append('        ' + animate('opacity', [(0, 0), (when, 0), (when + 0.18, 1), (move_end + 0.3, 1), (period, 0)], period))
         output.extend([
-            '      <g>',
             f'        <circle r="{radius + 2.3:.2f}" fill="{color}" opacity="0.11"/>',
             f'        <circle r="{radius:.2f}" fill="{color}"/>',
-            f'        {motion(5 - index * spacing_seconds)}',
+            '        ' + motion(index * SEGMENT_SPACING / SPEED),
             '      </g>',
         ])
     output.extend([
@@ -141,7 +208,7 @@ def snake_markup(days, grid_start, week_count, updated, grid_x, grid_y, step, ce
         '        <circle cx="2.85" cy="-2.35" r="0.5" fill="#7df9ff"/>',
         '        <circle cx="2.85" cy="1.95" r="0.5" fill="#7df9ff"/>',
         '        <path d="M7,0 H10 M10,0 L12,-1.5 M10,0 L12,1.5" fill="none" stroke="#ff6b81" stroke-width="0.8" stroke-linecap="round"/>',
-        f'        {motion(5)}',
+        '        ' + motion(0),
         '      </g>',
         '    </g>',
     ])
