@@ -15,6 +15,8 @@ from pathlib import Path
 import re
 import sys
 
+from snake_animation import snake_markup
+
 
 PALETTE = {
     "NONE": "#161b22",
@@ -116,16 +118,19 @@ def render_calendar(data: object, username: str, year: int, updated: date) -> tu
         f"GitHub's public profile reports {total:,} contributions. Updated {updated.isoformat()}. "
         "Columns are weeks and rows run Sunday through Saturday. "
         "Crimson shades preserve GitHub's contribution levels. Each known day has its exact count in a title. "
-        "Future dates are neutral; dates absent from the input are identified as unavailable."
+        "Future dates are neutral; dates absent from the input are identified as unavailable. "
+        "An animated neon snake follows empty cells without changing contribution values."
     )
     if missing_days:
         description += f" {missing_days} elapsed dates have no supplied data."
     if warnings:
         description += " " + " ".join(warnings)
+    snake_definitions, snake_elements = snake_markup(days, grid_start, week_count, updated, grid_x, grid_y, step, cell)
     svg = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="calendar-title calendar-description">',
         f'  <title id="calendar-title">{escape(title)}</title>',
         f'  <desc id="calendar-description">{escape(description)}</desc>',
+        *snake_definitions,
         '  <rect x="0.5" y="0.5" width="959" height="299" rx="18" fill="#0d1117" stroke="#30363d"/>',
         '  <path d="M33 30 H57" stroke="#ff6b81" stroke-width="3" stroke-linecap="round"/>',
         '  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">',
@@ -164,6 +169,7 @@ def render_calendar(data: object, username: str, year: int, updated: date) -> tu
                 data_attributes = f' data-count="{day["count"]}" data-level="{day["level"]}"'
             svg.append(f'      <rect {attributes} fill="{fill}"{extra} data-date="{day_date.isoformat()}"{data_attributes}><title>{escape(tooltip)}</title></rect>')
     svg.append('    </g>')
+    svg.extend(snake_elements)
     footer = f"Updated {updated.isoformat()}"
     if missing_days:
         footer += f" · {missing_days} dates unavailable"

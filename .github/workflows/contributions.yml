@@ -9,6 +9,7 @@ on:
     paths:
       - 'scripts/build_calendar.py'
       - 'scripts/update_contributions.py'
+      - 'scripts/snake_animation.py'
       - '.github/workflows/contributions.yml'
 
 permissions:

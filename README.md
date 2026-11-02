@@ -28,7 +28,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 
 <p align="center">
   <a href="https://github.com/yashwant938?tab=overview">
-    <img src="./assets/contributions-red.svg" alt="Yashwant's contribution calendar in crimson, generated from public GitHub activity and refreshed daily." width="100%" />
+    <img src="./assets/contributions-red.svg" alt="An animated neon snake slithers through Yashwant's crimson contribution calendar. Public activity refreshes daily." width="100%" />
   </a>
 </p>
 
