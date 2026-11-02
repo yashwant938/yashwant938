@@ -24,6 +24,14 @@ At **IBM India Software Labs**, I worked on the **IBM Z C/C++ compiler**, resolv
 
 My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together **five featured projects**, linker contributions, implementation details, and code links. Search by technology or explore systems, AI/ML, applications, and research.
 
+## Contribution activity
+
+<p align="center">
+  <a href="https://github.com/yashwant938?tab=overview">
+    <img src="./assets/contributions-red.svg" alt="Yashwant's contribution calendar in crimson, generated from public GitHub activity and refreshed daily." width="100%" />
+  </a>
+</p>
+
 ## Selected work
 
 Five featured projects, in the same order as my [portfolio](https://yashwant938.github.io/portfolio-/#work).
