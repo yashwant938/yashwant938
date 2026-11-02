@@ -42,12 +42,14 @@ Six featured projects, with case studies and interactive demos in my [portfolio]
 <a href="https://yashwant938.github.io/portfolio-/#eld"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/eld.svg" /><img src="./assets/projects/eld.svg" alt="Dimensional concept illustration for Qualcomm ELD contributions" width="100%" /></picture></a>
 <sub><strong>SYSTEMS · C++ · OPEN SOURCE</strong></sub>
 <h3><a href="https://github.com/qualcomm/eld">Qualcomm ELD Contributions</a></h3>
-<p><strong>Two merged fixes</strong> in an ELF linker built on LLVM:</p>
+<p><strong>Four merged fixes</strong> in an ELF linker built on LLVM:</p>
 <ul>
 <li><a href="https://github.com/qualcomm/eld/pull/2065"><strong>#2065</strong></a> — Fixed a PHDRS/FILEHDR layout crash.</li>
 <li><a href="https://github.com/qualcomm/eld/pull/2011"><strong>#2011</strong></a> — Added GNU-compatible handling of numeric <code>-O</code> options.</li>
+<li><a href="https://github.com/qualcomm/eld/pull/2129"><strong>#2129</strong></a> — Preserved native ARM/AArch64 LTO object emission with <code>--save-temps</code>.</li>
+<li><a href="https://github.com/qualcomm/eld/pull/2207"><strong>#2207</strong></a> — Added source line numbers to <code>PROVIDE</code> / <code>PROVIDE_HIDDEN</code> redeclaration warnings.</li>
 </ul>
-<p>Focused regression testing across six architecture configurations. Each PR records the verification scope.</p>
+<p>Focused regression testing across six architecture configurations. Each PR records its verification scope; the full ELD suite was not run.</p>
 <p><code>C++</code> <code>LLVM</code> <code>Linux</code> <code>lit / FileCheck</code></p>
 <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938">Explore the contributions →</a>
 </td>
@@ -213,11 +215,13 @@ Six featured projects, with case studies and interactive demos in my [portfolio]
 <details>
 <summary><strong>More open-source contributions and verification scope</strong></summary>
 
-- **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129) · Open** — Preserve native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed, followed by the updated regression on all six target configurations.
+- **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129) · Merged** — Preserved native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed, followed by the updated regression on all six target configurations.
+- **[Linker-script warning locations · #2207](https://github.com/qualcomm/eld/pull/2207) · Merged** — Added exact source line numbers to duplicate `PROVIDE` / `PROVIDE_HIDDEN` warnings. Both regressions failed before the fix and passed afterward across six target configurations: 12 passes, no skips.
+- **[YAML map assignments · #2336](https://github.com/qualcomm/eld/pull/2336) · Open** — Included assignments before `SECTIONS` in YAML output, preserving assignment order and values. The new regression failed before the fix; all 18 focused tests passed across six target configurations.
 - **[Build guidance · #2127](https://github.com/qualcomm/eld/pull/2127) · Open** — Document the LLVM `main` baseline and source/build path guidance following a [maintainer discussion](https://github.com/qualcomm/eld/discussions/887#discussioncomment-18761658).
 - **[React ChatBotify · #366](https://github.com/react-chatbotify/react-chatbotify/pull/366) · Open** — Submitted chat-history HTML sanitization, URL checks, and an optional sanitizer callback with tests.
 
-Statuses checked **13 October 2026**. ELD #2011 and #2065 are merged; #2134, #2129, and #2127 remain open. smolagents #2949 is a draft; React ChatBotify #366 remains open. Results above describe focused tests recorded in the PRs, not full-suite runs or live integration validation of every project.
+Statuses checked **2 November 2026**. ELD **#2011, #2065, #2129, and #2207 are merged**; #2127, #2134, and #2336 remain open. smolagents #2949 is a draft; React ChatBotify #366 remains open. Results above describe focused tests recorded in the PRs, not full-suite runs or live integration validation of every project.
 
 </details>
 
