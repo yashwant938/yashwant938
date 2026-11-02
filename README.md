@@ -34,8 +34,6 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 
 ## Selected work
 
-Six featured projects, with case studies and interactive demos in my [portfolio](https://yashwant938.github.io/portfolio-/#work).
-
 <table>
 <tr>
 <td width="50%" valign="top">
