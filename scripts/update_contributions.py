@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Refresh the red calendar from the same public data shown on GitHub's profile."""
+"""Refresh the calendar and all-time streaks from GitHub's public profile data."""
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
+import json
 from pathlib import Path
 import re
 import urllib.parse
 import urllib.request
 
 from build_calendar import PALETTE, render_calendar
+from streaks import calculate_streaks, render_streaks
 
 
 class PublicCalendar(HTMLParser):
@@ -72,31 +75,69 @@ def parse_calendar(html, as_of):
     }
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--username', default='yashwant938')
-    parser.add_argument('--as-of', type=date.fromisoformat, default=datetime.now(timezone.utc).date())
-    parser.add_argument('--output', type=Path, default=Path(__file__).resolve().parents[1] / 'assets' / 'contributions-red.svg')
-    args = parser.parse_args()
-    if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}', args.username):
-        parser.error('Invalid GitHub username')
-    query = urllib.parse.urlencode({'from': f'{args.as_of.year}-01-01', 'to': args.as_of.isoformat()})
-    url = f'https://github.com/users/{args.username}/contributions?{query}'
+def fetch_public(url):
     request = urllib.request.Request(url, headers={
         'User-Agent': 'GitHub-Profile-Contribution-Calendar',
         'Accept-Language': 'en-US,en;q=0.9',
     })
     with urllib.request.urlopen(request, timeout=40) as response:
-        html = response.read().decode('utf-8')
-    calendar = parse_calendar(html, args.as_of)
+        return response.read().decode('utf-8')
+
+
+def fetch_calendar(username, as_of):
+    query = urllib.parse.urlencode({'from': f'{as_of.year}-01-01', 'to': as_of.isoformat()})
+    html = fetch_public(f'https://github.com/users/{username}/contributions?{query}')
+    return parse_calendar(html, as_of)
+
+
+def fetch_history(username, as_of):
+    account = json.loads(fetch_public(f'https://api.github.com/users/{username}'))
+    first_year = date.fromisoformat(account['created_at'][:10]).year
+    if first_year > as_of.year:
+        raise ValueError('Snapshot year predates this GitHub account')
+    snapshots = [date(year, 12, 31) for year in range(first_year, as_of.year)] + [as_of]
+    # Bound requests so a missing historical year fails without replacing good assets.
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        calendars = list(executor.map(lambda end: fetch_calendar(username, end), snapshots))
+    counts = {}
+    for calendar in calendars:
+        for week in calendar['weeks']:
+            for day in week['contributionDays']:
+                key = date.fromisoformat(day['date'])
+                if key in counts:
+                    raise ValueError(f'Duplicate historical contribution date: {key}')
+                counts[key] = day['contributionCount']
+    return calendars[-1], calculate_streaks(counts, as_of)
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--username', default='yashwant938')
+    parser.add_argument('--as-of', type=date.fromisoformat, default=datetime.now(timezone.utc).date())
+    parser.add_argument('--output', type=Path, default=Path(__file__).resolve().parents[1] / 'assets' / 'contributions-red.svg')
+    args = parser.parse_args(argv)
+    if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}', args.username):
+        parser.error('Invalid GitHub username')
+    calendar, streaks = fetch_history(args.username, args.as_of)
     svg, warnings = render_calendar(calendar, args.username, args.as_of.year, args.as_of)
     if warnings:
         raise ValueError('; '.join(warnings))
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = args.output.with_suffix('.svg.tmp')
-    temporary.write_text(svg, encoding='utf-8', newline='\n')
-    temporary.replace(args.output)
-    print(f"Updated {args.output.name}: {calendar['totalContributions']} public-profile contributions through {args.as_of}")
+    outputs = {
+        args.output: svg,
+        args.output.with_name('contribution-streaks.svg'): render_streaks(streaks, args.username),
+        args.output.with_name('contribution-streaks-mobile.svg'): render_streaks(streaks, args.username, mobile=True),
+    }
+    if len(outputs) != 3:
+        parser.error('--output must not use a reserved streak image filename')
+    for output, content in outputs.items():
+        output.parent.mkdir(parents=True, exist_ok=True)
+        temporary = output.with_suffix('.svg.tmp')
+        temporary.write_text(content, encoding='utf-8', newline='\n')
+        temporary.replace(output)
+    print(
+        f"Updated {args.output.name}: {calendar['totalContributions']} public-profile contributions through {args.as_of}; "
+        f"current streak {streaks.current.length} days; longest streak {streaks.longest.length} days"
+    )
 
 
 if __name__ == '__main__':

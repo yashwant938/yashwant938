@@ -1,8 +1,8 @@
-name: Refresh contribution calendar
+name: Refresh contribution calendar and streaks
 
 on:
   schedule:
-    - cron: '17 1 * * *'
+    - cron: '17 */4 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -10,6 +10,8 @@ on:
       - 'scripts/build_calendar.py'
       - 'scripts/update_contributions.py'
       - 'scripts/snake_animation.py'
+      - 'scripts/streaks.py'
+      - 'tests/test_contributions.py'
       - '.github/workflows/contributions.yml'
 
 permissions:
@@ -29,17 +31,20 @@ jobs:
         with:
           ref: main
 
-      - name: Render the public contribution calendar
+      - name: Test contribution counts and streak rules
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Render the public contribution calendar and streaks
         run: python3 scripts/update_contributions.py
 
       - name: Publish the refreshed image
         run: |
-          git add assets/contributions-red.svg
+          git add assets/contributions-red.svg assets/contribution-streaks.svg assets/contribution-streaks-mobile.svg
           if git diff --cached --quiet; then
-            echo "Contribution calendar is already current."
+            echo "Contribution calendar and streaks are already current."
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Refresh contribution calendar'
+          git commit -m 'Refresh contribution calendar and streaks'
           git push origin HEAD:main

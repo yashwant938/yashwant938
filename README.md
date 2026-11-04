@@ -28,7 +28,16 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 
 <p align="center">
   <a href="https://github.com/yashwant938?tab=overview">
-    <img src="./assets/contributions-red.svg" alt="A neon snake eats red contribution tiles, grows, and restarts as the grid refills. Actual public contribution counts stay accurate and refresh daily." width="100%" />
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/contribution-streaks-mobile.svg" />
+      <img src="./assets/contribution-streaks.svg" alt="Current and all-time longest streaks of consecutive public GitHub contribution days, refreshed automatically." width="100%" />
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/yashwant938?tab=overview">
+    <img src="./assets/contributions-red.svg" alt="A neon snake eats red contribution tiles, grows, and restarts as the grid refills. Public contribution counts and streaks refresh every four hours." width="100%" />
   </a>
 </p>
 
