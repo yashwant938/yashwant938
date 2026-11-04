@@ -62,6 +62,46 @@ class StreakTests(unittest.TestCase):
         self.assertEqual(summary.longest.start, date(2025, 12, 29))
         self.assertEqual(summary.longest.end, date(2026, 1, 1))
 
+    def test_yearly_longest_excludes_the_2023_record(self):
+        start, as_of = date(2023, 8, 13), date(2026, 11, 4)
+        counts = history(start.isoformat(), [0] * ((as_of - start).days + 1))
+        counts.update(history('2023-08-14', [1] * 21))
+        counts.update(history('2026-10-03', [2, 1, 19, 2, 1, 1, 6, 14]))
+        counts[as_of] = 4
+        yearly = calculate_streaks(counts, as_of, longest_year=2026)
+        all_time = calculate_streaks(counts, as_of)
+        self.assertEqual(all_time.longest.length, 21)
+        self.assertEqual(yearly.longest.length, 8)
+        self.assertEqual(yearly.longest.start, date(2026, 10, 3))
+        self.assertEqual(yearly.longest.end, date(2026, 10, 10))
+        self.assertEqual(yearly.current.length, 1)
+        self.assertEqual(yearly.longest_year, 2026)
+        self.assertEqual(sum(count for day, count in counts.items() if day.year == 2026 and day.month == 8), 0)
+
+    def test_current_crosses_new_year_but_yearly_record_is_clipped(self):
+        summary = calculate_streaks(history('2025-12-29', [1, 1, 1, 1, 1]),
+                                    date(2026, 1, 2), longest_year=2026)
+        self.assertEqual(summary.current.length, 5)
+        self.assertEqual(summary.current.start, date(2025, 12, 29))
+        self.assertEqual(summary.longest.length, 2)
+        self.assertEqual(summary.longest.start, date(2026, 1, 1))
+
+    def test_year_scope_is_prominent_in_desktop_mobile_and_empty_cards(self):
+        for counts in ({}, history('2026-11-01', [1, 1, 0, 4])):
+            summary = calculate_streaks(counts, date(2026, 11, 4), longest_year=2026)
+            for mobile in (False, True):
+                with self.subTest(empty=not counts, mobile=mobile):
+                    svg = render_streaks(summary, 'yashwant938', mobile=mobile)
+                    self.assertEqual(ET.fromstring(svg).attrib['data-longest-year'], '2026')
+                    self.assertIn('LONGEST STREAK IN 2026', svg)
+                    self.assertIn('2026 calendar', svg)
+                    self.assertNotIn('All-time', svg)
+
+    def test_invalid_longest_year_is_rejected(self):
+        for year in (True, 0, 2027, '2026'):
+            with self.subTest(year=year), self.assertRaises(ValueError):
+                calculate_streaks({}, date(2026, 11, 4), longest_year=year)
+
     def test_leap_day_is_a_normal_consecutive_day(self):
         summary = calculate_streaks(history('2024-02-28', [1, 2, 3]), date(2024, 3, 1))
         self.assertEqual(summary.current.length, 3)
@@ -146,7 +186,7 @@ class PublicCalendarTests(unittest.TestCase):
 
 
 class RefreshTests(unittest.TestCase):
-    def test_fetches_all_years_and_keeps_cross_year_streak(self):
+    def test_fetches_history_but_limits_the_record_to_the_displayed_year(self):
         def fetched(username, end):
             if end.year == 2025:
                 return calendar(history('2025-12-31', [1]))
@@ -158,7 +198,9 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual(request.call_count, 2)
         self.assertEqual(latest['totalContributions'], 4)
         self.assertEqual(summary.current.length, 2)
-        self.assertEqual(summary.longest.start, date(2025, 12, 31))
+        self.assertEqual(summary.longest_year, 2026)
+        self.assertEqual(summary.longest.length, 1)
+        self.assertEqual(summary.longest.start, date(2026, 1, 1))
 
     def test_failed_history_request_preserves_all_existing_images(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -173,13 +215,15 @@ class RefreshTests(unittest.TestCase):
 
     def test_refresh_writes_calendar_and_both_streak_cards(self):
         counts = history('2026-01-01', [4, 1])
-        summary = calculate_streaks(counts, date(2026, 1, 2))
+        summary = calculate_streaks(counts, date(2026, 1, 2), longest_year=2026)
         with tempfile.TemporaryDirectory() as directory, \
                 patch('update_contributions.fetch_history', return_value=(calendar(counts), summary)):
             output = Path(directory) / 'contributions-red.svg'
             main(['--as-of', '2026-01-02', '--output', str(output)])
             for name in ('contributions-red.svg', 'contribution-streaks.svg', 'contribution-streaks-mobile.svg'):
-                ET.fromstring((Path(directory) / name).read_text(encoding='utf-8'))
+                root = ET.fromstring((Path(directory) / name).read_text(encoding='utf-8'))
+                if name != 'contributions-red.svg':
+                    self.assertEqual(root.attrib['data-longest-year'], '2026')
 
 
 if __name__ == '__main__':

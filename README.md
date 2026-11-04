@@ -30,7 +30,7 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
   <a href="https://github.com/yashwant938?tab=overview">
     <picture>
       <source media="(max-width: 600px)" srcset="./assets/contribution-streaks-mobile.svg" />
-      <img src="./assets/contribution-streaks.svg" alt="Current and all-time longest streaks of consecutive public GitHub contribution days, refreshed automatically." width="100%" />
+      <img src="./assets/contribution-streaks.svg" alt="Current public GitHub contribution streak and longest streak in the year shown on the calendar below, with exact dates and automatic refreshes." width="100%" />
     </picture>
   </a>
 </p>

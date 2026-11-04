@@ -10,8 +10,11 @@ private contribution data is used.
   contribution, yesterday's streak remains available for the unfinished day.
   A missed completed day breaks it: if yesterday was empty and today is active,
   the current streak is **1 day**.
-- The longest streak covers every year since the account was created, including
-  runs crossing December 31. If several runs tie, the most recent dates appear.
+- The **longest streak in the displayed year** uses the same calendar year as
+  the chart. The year appears directly in the card heading. Older records do not
+  affect this number. If several runs tie, the most recent dates appear.
+- The current streak still uses the full account history and can cross December
+  31. The yearly longest streak is clipped to the displayed year's dates.
 - Dates and the snapshot cutoff use the public calendar's date labels and UTC.
   The card shows its update date. GitHub determines which activity qualifies.
 - Missing dates or failed historical requests stop the refresh and preserve the

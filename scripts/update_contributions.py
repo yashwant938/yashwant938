@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the calendar and all-time streaks from GitHub's public profile data."""
+"""Refresh the calendar, current streak and calendar-year record from public data."""
 
 import argparse
 from concurrent.futures import ThreadPoolExecutor
@@ -107,7 +107,7 @@ def fetch_history(username, as_of):
                 if key in counts:
                     raise ValueError(f'Duplicate historical contribution date: {key}')
                 counts[key] = day['contributionCount']
-    return calendars[-1], calculate_streaks(counts, as_of)
+    return calendars[-1], calculate_streaks(counts, as_of, longest_year=as_of.year)
 
 
 def main(argv=None):
@@ -136,7 +136,7 @@ def main(argv=None):
         temporary.replace(output)
     print(
         f"Updated {args.output.name}: {calendar['totalContributions']} public-profile contributions through {args.as_of}; "
-        f"current streak {streaks.current.length} days; longest streak {streaks.longest.length} days"
+        f"current streak {streaks.current.length} days; longest streak in {streaks.longest_year}: {streaks.longest.length} days"
     )
 
 
