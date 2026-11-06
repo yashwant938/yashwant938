@@ -1,43 +1,114 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
-<title id="title">Yashwant — Systems × GenAI</title>
-<desc id="desc">Systems engineering and generative AI. C++, Linux, and LLVM meet RAG, LLM applications, and AI tooling.</desc>
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1524"/><stop offset=".48" stop-color="#10232d"/><stop offset="1" stop-color="#24203e"/></linearGradient>
-<linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#70e5c5"/><stop offset="1" stop-color="#b8a0ff"/></linearGradient>
-<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#d2dcff" opacity=".12"/></pattern>
-</defs>
-<rect width="1200" height="410" rx="20" fill="url(#bg)"/>
-<rect width="1200" height="410" rx="20" fill="url(#dots)"/>
-<g font-family="Segoe UI, Arial, sans-serif">
-<text x="52" y="58" fill="#9baec5" font-size="15" font-weight="600" letter-spacing="3">ENGINEER · BUILDER · OPEN SOURCE</text>
-<text x="48" y="137" fill="#f6f8ff" font-size="68" font-weight="700" letter-spacing="-2">Yashwant</text>
-<text x="51" y="204" font-size="48" font-weight="600" letter-spacing="-1"><tspan fill="#70e5c5">Systems</tspan><tspan fill="#8392ab"> × </tspan><tspan fill="#c1abff">GenAI</tspan></text>
-<text x="52" y="245" fill="#bdcbde" font-size="20">From low-level code to intelligent applications.</text>
-<rect x="52" y="290" width="520" height="1" fill="url(#line)" opacity=".5"/>
-<text x="52" y="328" fill="#9aaec2" font-size="14" font-weight="600" letter-spacing="1.5">SYSTEMS ENGINEERING</text>
-<text x="52" y="360" fill="#d0f3e8" font-size="20">C++ · Linux · LLVM</text>
-<text x="337" y="328" fill="#b0a5cb" font-size="14" font-weight="600" letter-spacing="1.5">GENERATIVE AI</text>
-<text x="337" y="360" fill="#e0d5ff" font-size="20">RAG · LLM apps · AI tooling</text>
-</g>
-<g transform="translate(704 66)">
-<rect x="0" y="0" width="440" height="278" rx="16" fill="#0c1425" fill-opacity=".65" stroke="#4c4b6e"/>
-<g fill="none" stroke-width="2">
-<path d="M99 85L220 139L99 193" stroke="#70e5c5" opacity=".5"/>
-<path d="M341 85L220 139L341 193" stroke="#b8a0ff" opacity=".5"/>
-<circle cx="220" cy="139" r="65" stroke="#8192b4" opacity=".2" stroke-dasharray="3 7"/>
-</g>
-<g font-family="Consolas, 'Courier New', monospace" text-anchor="middle">
-<rect x="43" y="61" width="112" height="48" rx="9" fill="#102f32" stroke="#366d69"/>
-<text x="99" y="92" fill="#91f0d6" font-size="20">C++</text>
-<rect x="43" y="169" width="112" height="48" rx="9" fill="#102f32" stroke="#366d69"/>
-<text x="99" y="200" fill="#91f0d6" font-size="20">LLVM</text>
-<rect x="285" y="61" width="112" height="48" rx="9" fill="#28213f" stroke="#746096"/>
-<text x="341" y="92" fill="#d8c8ff" font-size="20">RAG</text>
-<rect x="285" y="169" width="112" height="48" rx="9" fill="#28213f" stroke="#746096"/>
-<text x="341" y="200" fill="#d8c8ff" font-size="20">LLMs</text>
-<circle cx="220" cy="139" r="37" fill="#162139" stroke="#8199bb"/>
-<text x="220" y="148" fill="#eff4ff" font-size="27">&lt;/&gt;</text>
-<text x="220" y="253" fill="#93a4bf" font-size="12" letter-spacing="1.5">BUILD · INSPECT · ITERATE</text>
-</g>
-</g>
+  <title id="title">Yashwant — Systems × GenAI × Web</title>
+  <desc id="desc">Software engineer building across C++17 and Linux systems, LLVM open source, retrieval-backed Generative AI, applied ML, and full-stack web applications.</desc>
+  <defs>
+    <pattern id="studio-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#161B24" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Obsidian Studio Canvas -->
+  <rect x="1" y="1" width="1198" height="408" rx="14" fill="#0B0E14" stroke="#252C3A" stroke-width="2"/>
+  <rect x="2" y="2" width="1196" height="406" rx="13" fill="url(#studio-grid)"/>
+
+  <!-- Left Column: Hero Masthead & Dual-Pillar Spec Ledger -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <!-- Status Pill -->
+    <rect x="48" y="42" width="320" height="26" rx="13" fill="#131822" stroke="#273042"/>
+    <circle cx="64" cy="55" r="4" fill="#34D399"/>
+    <text x="76" y="59" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1.2">ENGINEER · BUILDER · OPEN SOURCE</text>
+
+    <!-- Display Name & Domain Equation -->
+    <text x="48" y="132" fill="#F8FAFC" font-size="62" font-weight="800" letter-spacing="-2">Yashwant</text>
+    <text x="48" y="184" font-size="36" font-weight="700" letter-spacing="-1">
+      <tspan fill="#60A5FA">Systems</tspan>
+      <tspan fill="#475569"> × </tspan>
+      <tspan fill="#E5A93C">GenAI</tspan>
+      <tspan fill="#475569"> × </tspan>
+      <tspan fill="#34D399">Web</tspan>
+    </text>
+
+    <!-- Grounded Summary -->
+    <text x="48" y="222" fill="#94A3B8" font-size="16">From low-level code to intelligent, user-facing applications.</text>
+    <text x="48" y="246" fill="#64748B" font-size="14.5">SWE @ IBM India Software Labs · M.Tech CSE @ IIIT Delhi</text>
+
+    <!-- Bottom 2-Column Spec Table -->
+    <g transform="translate(48, 274)">
+      <rect x="0" y="0" width="530" height="90" rx="8" fill="#121620" stroke="#242C3D" stroke-width="1.2"/>
+      <line x1="265" y1="0" x2="265" y2="90" stroke="#242C3D" stroke-width="1.2"/>
+
+      <text x="20" y="26" fill="#60A5FA" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1">SYSTEMS &amp; OPEN SOURCE</text>
+      <text x="20" y="52" fill="#F1F5F9" font-size="17" font-weight="700">C++17 · Linux · LLVM</text>
+      <text x="20" y="72" fill="#94A3B8" font-size="12.5">Concurrency, GDB &amp; upstream fixes</text>
+
+      <text x="285" y="26" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1">GENERATIVE AI &amp; PRODUCT</text>
+      <text x="285" y="52" fill="#F1F5F9" font-size="17" font-weight="700">RAG · LLM Apps · Full-Stack</text>
+      <text x="285" y="72" fill="#94A3B8" font-size="12.5">FastAPI, PyTorch, React &amp; Next.js</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Precision Circuit Hub (4 Rich Domain Nodes -> Central Core) -->
+  <g transform="translate(616, 42)">
+    <rect x="0" y="0" width="536" height="322" rx="12" fill="#10141D" stroke="#252D3D" stroke-width="1.5"/>
+
+    <!-- Orthogonal Circuit Traces & Terminal Dots -->
+    <g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 208 82 H 232 L 268 148" stroke="#60A5FA" opacity="0.65"/>
+      <path d="M 208 214 H 232 L 268 148" stroke="#2DD4BF" opacity="0.65"/>
+      <path d="M 328 82 H 304 L 268 148" stroke="#E5A93C" opacity="0.65"/>
+      <path d="M 328 214 H 304 L 268 148" stroke="#34D399" opacity="0.65"/>
+      <circle cx="268" cy="148" r="54" stroke="#334155" stroke-width="1.2" stroke-dasharray="3 6"/>
+    </g>
+    <circle cx="208" cy="82" r="3" fill="#60A5FA"/>
+    <circle cx="208" cy="214" r="3" fill="#2DD4BF"/>
+    <circle cx="328" cy="82" r="3" fill="#E5A93C"/>
+    <circle cx="328" cy="214" r="3" fill="#34D399"/>
+
+    <!-- Node 01: Top-Left (Core Systems) -->
+    <g transform="translate(24, 34)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="184" height="96" rx="8" fill="#151B28" stroke="#2E4057" stroke-width="1.2"/>
+      <rect x="0" y="0" width="4" height="96" rx="2" fill="#60A5FA"/>
+      <text x="16" y="24" fill="#60A5FA" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">01 · CORE SYSTEMS</text>
+      <text x="16" y="48" fill="#F8FAFC" font-size="16" font-weight="700">C++17 &amp; Linux</text>
+      <text x="16" y="68" fill="#94A3B8" font-size="11.5">Concurrency &amp; filesystems</text>
+      <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">std::thread · GDB</text>
+    </g>
+
+    <!-- Node 02: Bottom-Left (Open Source & LLVM) -->
+    <g transform="translate(24, 166)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="184" height="96" rx="8" fill="#151B28" stroke="#234E52" stroke-width="1.2"/>
+      <rect x="0" y="0" width="4" height="96" rx="2" fill="#2DD4BF"/>
+      <text x="16" y="24" fill="#2DD4BF" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">02 · OPEN SOURCE</text>
+      <text x="16" y="48" fill="#F8FAFC" font-size="16" font-weight="700">LLVM &amp; Tooling</text>
+      <text x="16" y="68" fill="#94A3B8" font-size="11.5">IBM Z &amp; Qualcomm ELD</text>
+      <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">C++ · CMake · lit</text>
+    </g>
+
+    <!-- Node 03: Top-Right (Generative AI & RAG) -->
+    <g transform="translate(328, 34)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="184" height="96" rx="8" fill="#151B28" stroke="#5B4324" stroke-width="1.2"/>
+      <rect x="0" y="0" width="4" height="96" rx="2" fill="#E5A93C"/>
+      <text x="16" y="24" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">03 · GENERATIVE AI</text>
+      <text x="16" y="48" fill="#F8FAFC" font-size="16" font-weight="700">RAG &amp; LLM Apps</text>
+      <text x="16" y="68" fill="#94A3B8" font-size="11.5">Hybrid search &amp; citations</text>
+      <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">BM25 · MiniLM · MCP</text>
+    </g>
+
+    <!-- Node 04: Bottom-Right (ML & Full-Stack) -->
+    <g transform="translate(328, 166)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="184" height="96" rx="8" fill="#151B28" stroke="#1E4E3A" stroke-width="1.2"/>
+      <rect x="0" y="0" width="4" height="96" rx="2" fill="#34D399"/>
+      <text x="16" y="24" fill="#34D399" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">04 · ML &amp; FULL-STACK</text>
+      <text x="16" y="48" fill="#F8FAFC" font-size="16" font-weight="700">Models &amp; Web UI</text>
+      <text x="16" y="68" fill="#94A3B8" font-size="11.5">RecSys lab &amp; web products</text>
+      <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">PyTorch · FastAPI · TS</text>
+    </g>
+
+    <!-- Central Core Badge -->
+    <circle cx="268" cy="148" r="34" fill="#0B0E14" stroke="#475569" stroke-width="2"/>
+    <text x="268" y="155" fill="#F8FAFC" font-family="Consolas, 'JetBrains Mono', monospace" font-size="20" font-weight="700" text-anchor="middle">&lt;/&gt;</text>
+
+    <!-- Bottom Caption inside Hub -->
+    <text x="268" y="296" fill="#94A3B8" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="2" text-anchor="middle">REPRODUCE · BUILD · VERIFY · SHIP</text>
+  </g>
 </svg>

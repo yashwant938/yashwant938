@@ -1,24 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="460" viewBox="0 0 600 460" role="img" aria-labelledby="title desc">
-<title id="title">Yashwant — Systems × GenAI</title>
-<desc id="desc">Systems engineering and generative AI. C++, Linux, LLVM, RAG, LLM applications, and AI tooling.</desc>
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1524"/><stop offset=".5" stop-color="#10232d"/><stop offset="1" stop-color="#24203e"/></linearGradient>
-<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#d2dcff" opacity=".12"/></pattern>
-</defs>
-<rect width="600" height="460" rx="20" fill="url(#bg)"/>
-<rect width="600" height="460" rx="20" fill="url(#dots)"/>
-<g font-family="Segoe UI, Arial, sans-serif">
-<text x="36" y="54" fill="#9baec5" font-size="16" font-weight="600" letter-spacing="2">ENGINEER · BUILDER · OPEN SOURCE</text>
-<text x="32" y="132" fill="#f6f8ff" font-size="68" font-weight="700" letter-spacing="-2">Yashwant</text>
-<text x="36" y="193" font-size="44" font-weight="600" letter-spacing="-1"><tspan fill="#70e5c5">Systems</tspan><tspan fill="#8392ab"> × </tspan><tspan fill="#c1abff">GenAI</tspan></text>
-<text x="36" y="239" fill="#bdcbde" font-size="22">From low-level code</text>
-<text x="36" y="270" fill="#bdcbde" font-size="22">to intelligent applications.</text>
-<path d="M36 311H564" stroke="#5c6681" stroke-opacity=".5"/>
-<text x="36" y="349" fill="#70e5c5" font-size="17" font-weight="600" letter-spacing="1">SYSTEMS</text>
-<text x="36" y="386" fill="#e3edf7" font-size="23">C++ · Linux</text>
-<text x="36" y="419" fill="#e3edf7" font-size="23">LLVM · Compilers</text>
-<text x="326" y="349" fill="#c1abff" font-size="17" font-weight="600" letter-spacing="1">GENAI</text>
-<text x="326" y="386" fill="#e3edf7" font-size="23">RAG · LLM apps</text>
-<text x="326" y="419" fill="#e3edf7" font-size="23">AI tooling</text>
-</g>
+  <title id="title">Yashwant — Systems × GenAI × Web</title>
+  <desc id="desc">Software engineer building across C++17 and Linux systems, LLVM open source, retrieval-backed Generative AI, applied ML, and full-stack web applications.</desc>
+  <defs>
+    <pattern id="studio-grid-m" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#161B24" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Obsidian Studio Canvas -->
+  <rect x="1" y="1" width="598" height="458" rx="14" fill="#0B0E14" stroke="#252C3A" stroke-width="2"/>
+  <rect x="2" y="2" width="596" height="456" rx="13" fill="url(#studio-grid-m)"/>
+
+  <!-- Top Hero -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <rect x="32" y="28" width="296" height="24" rx="12" fill="#131822" stroke="#273042"/>
+    <circle cx="46" cy="40" r="3.5" fill="#34D399"/>
+    <text x="58" y="44" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="1.1">ENGINEER · BUILDER · OPEN SOURCE</text>
+
+    <text x="32" y="102" fill="#F8FAFC" font-size="48" font-weight="800" letter-spacing="-1.6">Yashwant</text>
+    <text x="32" y="140" font-size="26" font-weight="700" letter-spacing="-0.6">
+      <tspan fill="#60A5FA">Systems</tspan>
+      <tspan fill="#475569"> × </tspan>
+      <tspan fill="#E5A93C">GenAI</tspan>
+      <tspan fill="#475569"> × </tspan>
+      <tspan fill="#34D399">Web</tspan>
+    </text>
+
+    <text x="32" y="170" fill="#94A3B8" font-size="14">From low-level code to intelligent applications.</text>
+    <text x="32" y="191" fill="#64748B" font-size="13">SWE @ IBM India Software Labs · M.Tech CSE @ IIIT Delhi</text>
+  </g>
+
+  <!-- Bottom Precision Circuit Hub -->
+  <g transform="translate(32, 210)">
+    <rect x="0" y="0" width="536" height="222" rx="10" fill="#10141D" stroke="#252D3D" stroke-width="1.5"/>
+
+    <!-- Circuit Traces -->
+    <g fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 206 58 H 236 L 268 102" stroke="#60A5FA" opacity="0.65"/>
+      <path d="M 206 148 H 236 L 268 102" stroke="#2DD4BF" opacity="0.65"/>
+      <path d="M 330 58 H 300 L 268 102" stroke="#E5A93C" opacity="0.65"/>
+      <path d="M 330 148 H 300 L 268 102" stroke="#34D399" opacity="0.65"/>
+      <circle cx="268" cy="102" r="42" stroke="#334155" stroke-dasharray="3 5"/>
+    </g>
+
+    <!-- Node 01 -->
+    <g transform="translate(18, 20)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="188" height="74" rx="7" fill="#151B28" stroke="#2E4057"/>
+      <rect x="0" y="0" width="4" height="74" rx="2" fill="#60A5FA"/>
+      <text x="14" y="20" fill="#60A5FA" font-family="Consolas, monospace" font-size="9.5" font-weight="700">01 · CORE SYSTEMS</text>
+      <text x="14" y="42" fill="#F8FAFC" font-size="14.5" font-weight="700">C++17 &amp; Linux</text>
+      <text x="14" y="60" fill="#94A3B8" font-family="Consolas, monospace" font-size="10">std::thread · GDB</text>
+    </g>
+
+    <!-- Node 02 -->
+    <g transform="translate(18, 110)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="188" height="74" rx="7" fill="#151B28" stroke="#234E52"/>
+      <rect x="0" y="0" width="4" height="74" rx="2" fill="#2DD4BF"/>
+      <text x="14" y="20" fill="#2DD4BF" font-family="Consolas, monospace" font-size="9.5" font-weight="700">02 · OPEN SOURCE</text>
+      <text x="14" y="42" fill="#F8FAFC" font-size="14.5" font-weight="700">LLVM &amp; Tooling</text>
+      <text x="14" y="60" fill="#94A3B8" font-family="Consolas, monospace" font-size="10">C++ · CMake · lit</text>
+    </g>
+
+    <!-- Node 03 -->
+    <g transform="translate(330, 20)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="188" height="74" rx="7" fill="#151B28" stroke="#5B4324"/>
+      <rect x="0" y="0" width="4" height="74" rx="2" fill="#E5A93C"/>
+      <text x="14" y="20" fill="#E5A93C" font-family="Consolas, monospace" font-size="9.5" font-weight="700">03 · GENERATIVE AI</text>
+      <text x="14" y="42" fill="#F8FAFC" font-size="14.5" font-weight="700">RAG &amp; LLM Apps</text>
+      <text x="14" y="60" fill="#94A3B8" font-family="Consolas, monospace" font-size="10">BM25 · MiniLM · MCP</text>
+    </g>
+
+    <!-- Node 04 -->
+    <g transform="translate(330, 110)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+      <rect x="0" y="0" width="188" height="74" rx="7" fill="#151B28" stroke="#1E4E3A"/>
+      <rect x="0" y="0" width="4" height="74" rx="2" fill="#34D399"/>
+      <text x="14" y="20" fill="#34D399" font-family="Consolas, monospace" font-size="9.5" font-weight="700">04 · ML &amp; FULL-STACK</text>
+      <text x="14" y="42" fill="#F8FAFC" font-size="14.5" font-weight="700">Models &amp; Web UI</text>
+      <text x="14" y="60" fill="#94A3B8" font-family="Consolas, monospace" font-size="10">PyTorch · FastAPI · TS</text>
+    </g>
+
+    <!-- Central Core Badge -->
+    <circle cx="268" cy="102" r="26" fill="#0B0E14" stroke="#475569" stroke-width="1.8"/>
+    <text x="268" y="108" fill="#F8FAFC" font-family="Consolas, monospace" font-size="16" font-weight="700" text-anchor="middle">&lt;/&gt;</text>
+
+    <text x="268" y="206" fill="#94A3B8" font-family="Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.6" text-anchor="middle">REPRODUCE · BUILD · VERIFY · SHIP</text>
+  </g>
 </svg>
