@@ -1,43 +1,145 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
-<title id="title">Yashwant — Systems × GenAI</title>
-<desc id="desc">Systems engineering and generative AI. C++, Linux, and LLVM meet RAG, LLM applications, and AI tooling.</desc>
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1524"/><stop offset=".48" stop-color="#10232d"/><stop offset="1" stop-color="#24203e"/></linearGradient>
-<linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#70e5c5"/><stop offset="1" stop-color="#b8a0ff"/></linearGradient>
-<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#d2dcff" opacity=".12"/></pattern>
-</defs>
-<rect width="1200" height="410" rx="20" fill="url(#bg)"/>
-<rect width="1200" height="410" rx="20" fill="url(#dots)"/>
-<g font-family="Segoe UI, Arial, sans-serif">
-<text x="52" y="58" fill="#9baec5" font-size="15" font-weight="600" letter-spacing="3">ENGINEER · BUILDER · OPEN SOURCE</text>
-<text x="48" y="137" fill="#f6f8ff" font-size="68" font-weight="700" letter-spacing="-2">Yashwant</text>
-<text x="51" y="204" font-size="48" font-weight="600" letter-spacing="-1"><tspan fill="#70e5c5">Systems</tspan><tspan fill="#8392ab"> × </tspan><tspan fill="#c1abff">GenAI</tspan></text>
-<text x="52" y="245" fill="#bdcbde" font-size="20">From low-level code to intelligent applications.</text>
-<rect x="52" y="290" width="520" height="1" fill="url(#line)" opacity=".5"/>
-<text x="52" y="328" fill="#9aaec2" font-size="14" font-weight="600" letter-spacing="1.5">SYSTEMS ENGINEERING</text>
-<text x="52" y="360" fill="#d0f3e8" font-size="20">C++ · Linux · LLVM</text>
-<text x="337" y="328" fill="#b0a5cb" font-size="14" font-weight="600" letter-spacing="1.5">GENERATIVE AI</text>
-<text x="337" y="360" fill="#e0d5ff" font-size="20">RAG · LLM apps · AI tooling</text>
-</g>
-<g transform="translate(704 66)">
-<rect x="0" y="0" width="440" height="278" rx="16" fill="#0c1425" fill-opacity=".65" stroke="#4c4b6e"/>
-<g fill="none" stroke-width="2">
-<path d="M99 85L220 139L99 193" stroke="#70e5c5" opacity=".5"/>
-<path d="M341 85L220 139L341 193" stroke="#b8a0ff" opacity=".5"/>
-<circle cx="220" cy="139" r="65" stroke="#8192b4" opacity=".2" stroke-dasharray="3 7"/>
-</g>
-<g font-family="Consolas, 'Courier New', monospace" text-anchor="middle">
-<rect x="43" y="61" width="112" height="48" rx="9" fill="#102f32" stroke="#366d69"/>
-<text x="99" y="92" fill="#91f0d6" font-size="20">C++</text>
-<rect x="43" y="169" width="112" height="48" rx="9" fill="#102f32" stroke="#366d69"/>
-<text x="99" y="200" fill="#91f0d6" font-size="20">LLVM</text>
-<rect x="285" y="61" width="112" height="48" rx="9" fill="#28213f" stroke="#746096"/>
-<text x="341" y="92" fill="#d8c8ff" font-size="20">RAG</text>
-<rect x="285" y="169" width="112" height="48" rx="9" fill="#28213f" stroke="#746096"/>
-<text x="341" y="200" fill="#d8c8ff" font-size="20">LLMs</text>
-<circle cx="220" cy="139" r="37" fill="#162139" stroke="#8199bb"/>
-<text x="220" y="148" fill="#eff4ff" font-size="27">&lt;/&gt;</text>
-<text x="220" y="253" fill="#93a4bf" font-size="12" letter-spacing="1.5">BUILD · INSPECT · ITERATE</text>
-</g>
-</g>
+  <title id="title">Yashwant Singh Rana — Compiler, Systems &amp; Applied AI Engineer</title>
+  <desc id="desc">Software engineer with IBM Z C/C++ compiler experience, four merged Qualcomm ELD LLVM linker patches, C++17 systems, and retrieval-backed AI applications.</desc>
+  <defs>
+    <pattern id="paper-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.85" fill="#151514" opacity="0.06"/>
+    </pattern>
+    <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#151514" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Warm Archival Paper Canvas -->
+  <rect x="1" y="1" width="1198" height="408" rx="12" fill="#F6F4EF" stroke="#C8C3B6" stroke-width="2"/>
+  <rect x="2" y="2" width="1196" height="406" rx="11" fill="url(#paper-grid)"/>
+
+  <!-- Top Architectural Masthead Rule -->
+  <line x1="48" y1="32" x2="632" y2="32" stroke="#D5D0C5" stroke-width="1.5"/>
+  <rect x="48" y="30.5" width="76" height="3" fill="#B83A2A"/>
+
+  <!-- Left Column: Editorial Masthead & Engineering Dossier -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <!-- Eyebrow -->
+    <circle cx="54" cy="56" r="4.5" fill="#B83A2A"/>
+    <text x="68" y="60" fill="#B83A2A" font-family="Consolas, 'JetBrains Mono', 'SFMono-Regular', monospace" font-size="12.5" font-weight="700" letter-spacing="1.4">SOFTWARE ENGINEER · COMPILERS, C++ SYSTEMS &amp; APPLIED AI</text>
+
+    <!-- Name -->
+    <text x="48" y="116" fill="#151514" font-size="50" font-weight="800" letter-spacing="-1.6">Yashwant Singh Rana</text>
+
+    <!-- Primary Subtitle -->
+    <text x="48" y="155" fill="#262523" font-size="19.5" font-weight="600" letter-spacing="-0.25">Compiler toolchains, Linux/C++ systems &amp; cited AI workflows.</text>
+
+    <!-- Grounded Summary -->
+    <text x="48" y="190" fill="#57554F" font-size="15.5" font-weight="400">Previously on the <tspan fill="#151514" font-weight="600">IBM Z C/C++ compiler</tspan> team at IBM India Software Labs.</text>
+    <text x="48" y="214" fill="#57554F" font-size="15.5" font-weight="400">Open-source contributor to <tspan fill="#151514" font-weight="600">Qualcomm’s LLVM-based ELD linker</tspan> &amp; RAG systems.</text>
+
+    <!-- Architectural Specification Ledger (Bottom Left) -->
+    <g transform="translate(48, 250)">
+      <rect x="0" y="0" width="584" height="112" rx="6" fill="#FAF9F5" stroke="#CFCAC0" stroke-width="1.2"/>
+      <line x1="196" y1="0" x2="196" y2="112" stroke="#DCD8CE" stroke-width="1"/>
+      <line x1="396" y1="0" x2="396" y2="112" stroke="#DCD8CE" stroke-width="1"/>
+
+      <!-- Col 1: IBM ISL -->
+      <text x="18" y="26" fill="#706D65" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">IBM INDIA SOFTWARE LABS</text>
+      <text x="18" y="54" fill="#151514" font-size="22" font-weight="800" letter-spacing="-0.5">8+ defects</text>
+      <text x="18" y="76" fill="#57554F" font-size="12.5">Resolved in C/C++ codegen,</text>
+      <text x="18" y="93" fill="#57554F" font-size="12.5">regalloc &amp; optimization</text>
+
+      <!-- Col 2: Qualcomm ELD -->
+      <text x="214" y="26" fill="#706D65" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">QUALCOMM / ELD LINKER</text>
+      <text x="214" y="54" fill="#151514" font-size="22" font-weight="800" letter-spacing="-0.5">4 merged PRs</text>
+      <text x="214" y="76" fill="#57554F" font-size="12.5">Upstream LLVM ELF linker</text>
+      <text x="214" y="93" fill="#57554F" font-size="12.5">fixes + 6-target tests</text>
+
+      <!-- Col 3: Applied AI & Education -->
+      <text x="414" y="26" fill="#706D65" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">FOUNDATION &amp; AI</text>
+      <text x="414" y="54" fill="#151514" font-size="22" font-weight="800" letter-spacing="-0.5">IIIT Delhi</text>
+      <text x="414" y="76" fill="#57554F" font-size="12.5">M.Tech CSE (8.37 CGPA)</text>
+      <text x="414" y="93" fill="#57554F" font-size="12.5">MCP · Hybrid RAG · RRF</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Authentic Dark Terminal / Upstream Patch Ledger Window -->
+  <g transform="translate(668, 38)" filter="url(#card-shadow)">
+    <rect x="0" y="0" width="484" height="334" rx="8" fill="#16181D" stroke="#2E323B" stroke-width="1.2"/>
+
+    <!-- Window Titlebar -->
+    <path d="M 0 8 Q 0 0 8 0 H 476 Q 484 0 484 8 V 36 H 0 Z" fill="#1F232A"/>
+    <line x1="0" y1="36" x2="484" y2="36" stroke="#2E323B" stroke-width="1"/>
+    <circle cx="18" cy="18" r="4.5" fill="#D94E34"/>
+    <circle cx="32" cy="18" r="4.5" fill="#D29922"/>
+    <circle cx="46" cy="18" r="4.5" fill="#2EA043"/>
+    <text x="66" y="22" fill="#9EA7B3" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11.5" font-weight="600">qualcomm/eld · upstream patch log</text>
+    <rect x="394" y="9" width="74" height="18" rx="3" fill="#262B33" stroke="#3B424D" stroke-width="0.8"/>
+    <text x="431" y="21.5" fill="#C9D1D9" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" text-anchor="middle">C++ / LLVM</text>
+
+    <!-- Patch Rows -->
+    <g font-family="Consolas, 'JetBrains Mono', 'SFMono-Regular', monospace">
+      <!-- PR #2207 -->
+      <g transform="translate(18, 52)">
+        <rect x="0" y="0" width="54" height="19" rx="3" fill="#122D1F" stroke="#2EA043" stroke-width="0.8"/>
+        <text x="27" y="13" fill="#56D364" font-size="10" font-weight="700" text-anchor="middle">MERGED</text>
+        <text x="64" y="13.5" fill="#E6EDF3" font-size="12.5" font-weight="700">#2207</text>
+        <text x="112" y="13.5" fill="#C9D1D9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">Linker-script PROVIDE line diagnostics</text>
+        <text x="64" y="31" fill="#8B949E" font-size="11">script.t:5: Ignoring provide symbol redeclaration</text>
+      </g>
+      <line x1="18" y1="94" x2="466" y2="94" stroke="#262B33" stroke-width="1"/>
+
+      <!-- PR #2129 -->
+      <g transform="translate(18, 105)">
+        <rect x="0" y="0" width="54" height="19" rx="3" fill="#122D1F" stroke="#2EA043" stroke-width="0.8"/>
+        <text x="27" y="13" fill="#56D364" font-size="10" font-weight="700" text-anchor="middle">MERGED</text>
+        <text x="64" y="13.5" fill="#E6EDF3" font-size="12.5" font-weight="700">#2129</text>
+        <text x="112" y="13.5" fill="#C9D1D9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">Native ARM/AArch64 LTO object emission</text>
+        <text x="64" y="31" fill="#8B949E" font-size="11">--save-temps · Full LTO, ThinLTO &amp; assembly paths</text>
+      </g>
+      <line x1="18" y1="147" x2="466" y2="147" stroke="#262B33" stroke-width="1"/>
+
+      <!-- PR #2065 -->
+      <g transform="translate(18, 158)">
+        <rect x="0" y="0" width="54" height="19" rx="3" fill="#122D1F" stroke="#2EA043" stroke-width="0.8"/>
+        <text x="27" y="13" fill="#56D364" font-size="10" font-weight="700" text-anchor="middle">MERGED</text>
+        <text x="64" y="13.5" fill="#E6EDF3" font-size="12.5" font-weight="700">#2065</text>
+        <text x="112" y="13.5" fill="#C9D1D9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">Guard PHDRS / FILEHDR address layout</text>
+        <text x="64" y="31" fill="#8B949E" font-size="11">isEhdrInLayout() &amp; isPhdrInLayout() · 164 passes</text>
+      </g>
+      <line x1="18" y1="200" x2="466" y2="200" stroke="#262B33" stroke-width="1"/>
+
+      <!-- PR #2011 -->
+      <g transform="translate(18, 211)">
+        <rect x="0" y="0" width="54" height="19" rx="3" fill="#122D1F" stroke="#2EA043" stroke-width="0.8"/>
+        <text x="27" y="13" fill="#56D364" font-size="10" font-weight="700" text-anchor="middle">MERGED</text>
+        <text x="64" y="13.5" fill="#E6EDF3" font-size="12.5" font-weight="700">#2011</text>
+        <text x="112" y="13.5" fill="#C9D1D9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">GNU numeric -O option compatibility</text>
+        <text x="64" y="31" fill="#8B949E" font-size="11">Accepts -O1/-O2/-O3 with independent --lto-O controls</text>
+      </g>
+
+      <!-- Stack & Target Footer Bar inside Terminal -->
+      <rect x="0" y="258" width="484" height="76" rx="0" fill="#121418"/>
+      <line x1="0" y1="258" x2="484" y2="258" stroke="#2E323B" stroke-width="1"/>
+      <text x="18" y="280" fill="#9EA7B3" font-size="10.5" font-weight="700" letter-spacing="0.6">STACK &amp; VERIFICATION TARGETS</text>
+
+      <!-- Stack Pills -->
+      <g transform="translate(18, 290)" font-size="11" fill="#E6EDF3">
+        <rect x="0" y="0" width="50" height="22" rx="3" fill="#21262D" stroke="#363B42"/>
+        <text x="25" y="15" text-anchor="middle">C++17</text>
+
+        <rect x="56" y="0" width="46" height="22" rx="3" fill="#21262D" stroke="#363B42"/>
+        <text x="79" y="15" text-anchor="middle">LLVM</text>
+
+        <rect x="108" y="0" width="80" height="22" rx="3" fill="#21262D" stroke="#363B42"/>
+        <text x="148" y="15" text-anchor="middle">Linux/GDB</text>
+
+        <rect x="194" y="0" width="98" height="22" rx="3" fill="#21262D" stroke="#363B42"/>
+        <text x="243" y="15" text-anchor="middle">BM25+MiniLM</text>
+
+        <rect x="298" y="0" width="64" height="22" rx="3" fill="#21262D" stroke="#363B42"/>
+        <text x="330" y="15" text-anchor="middle">FastAPI</text>
+
+        <rect x="368" y="0" width="80" height="22" rx="3" fill="#2A1A19" stroke="#8E3327"/>
+        <text x="408" y="15" fill="#FFA198" text-anchor="middle">MCP/RAG</text>
+      </g>
+    </g>
+  </g>
 </svg>
