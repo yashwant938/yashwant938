@@ -2,13 +2,12 @@
   <title id="title">From issue to pull request</title>
   <desc id="desc">My contribution workflow: reproduce the failure, patch the code, verify the tests, and submit a pull request. This is a workflow illustration, not a live activity counter.</desc>
   <defs>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.85" fill="#151514" opacity="0.06"/>
-    </pattern>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1524"/><stop offset="1" stop-color="#201d35"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#b5c6e0" opacity=".13"/></pattern>
   </defs>
   <style>
     .signal { animation: travel 12s ease-in-out infinite; }
-    .halo { animation: breathe 12s ease-in-out infinite; opacity: .16; transform-box: fill-box; transform-origin: center; }
+    .halo { animation: breathe 12s ease-in-out infinite; opacity: .18; transform-box: fill-box; transform-origin: center; }
     .h2 { animation-delay: 3s; } .h3 { animation-delay: 6s; } .h4 { animation-delay: 9s; }
     @keyframes travel {
       0%, 6% { transform: translateY(0); opacity: 0; }
@@ -18,53 +17,18 @@
       80%, 88% { transform: translateY(264px); opacity: 1; }
       94%, 100% { transform: translateY(264px); opacity: 0; }
     }
-    @keyframes breathe { 0%, 8%, 35%, 100% { opacity: .14; transform: scale(1); } 18%, 25% { opacity: .55; transform: scale(1.15); } }
+    @keyframes breathe { 0%, 8%, 35%, 100% { opacity: .16; transform: scale(1); } 18%, 25% { opacity: .62; transform: scale(1.15); } }
     @media (prefers-reduced-motion: reduce) { .signal { display: none; } .halo { animation: none; } }
   </style>
-  <rect x="1" y="1" width="598" height="488" rx="12" fill="#F6F4EF" stroke="#C8C3B6" stroke-width="2"/>
-  <rect x="2" y="2" width="596" height="486" rx="11" fill="url(#grid)"/>
-  <line x1="32" y1="22" x2="568" y2="22" stroke="#D5D0C5" stroke-width="1.5"/>
-  <rect x="32" y="20.5" width="64" height="3" fill="#B83A2A"/>
-
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
-    <circle cx="38" cy="43" r="4" fill="#B83A2A"/>
-    <text x="50" y="47" fill="#B83A2A" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="1.2">OPEN SOURCE · ENGINEERING WORKFLOW</text>
-    <text x="32" y="84" fill="#151514" font-size="27" font-weight="800" letter-spacing="-0.5">Small changes. Clear evidence.</text>
-  </g>
-
-  <path d="M68 142v264" stroke="#CFCAC0" stroke-width="2"/>
-  <path d="M68 142v264" stroke="#B83A2A" stroke-width="2" stroke-dasharray="3 9" opacity=".5"/>
-  <g class="signal"><circle cx="68" cy="142" r="10" fill="#B83A2A" opacity=".22"/><circle cx="68" cy="142" r="4" fill="#B83A2A"/></g>
-  <g fill="none" stroke-width="1.5">
-    <circle class="halo" cx="68" cy="142" r="32" stroke="#B83A2A"/>
-    <circle class="halo h2" cx="68" cy="230" r="32" stroke="#151514"/>
-    <circle class="halo h3" cx="68" cy="318" r="32" stroke="#1F5178"/>
-    <circle class="halo h4" cx="68" cy="406" r="32" stroke="#1E6B45"/>
-  </g>
-  <g fill="#FAF9F5" stroke-width="2">
-    <circle cx="68" cy="142" r="24" stroke="#B83A2A"/>
-    <circle cx="68" cy="230" r="24" stroke="#151514"/>
-    <circle cx="68" cy="318" r="24" stroke="#1F5178"/>
-    <circle cx="68" cy="406" r="24" stroke="#1E6B45"/>
-  </g>
-  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <g stroke="#B83A2A"><circle cx="65" cy="139" r="7"/><path d="m70 144 7 7"/></g>
-    <g stroke="#151514"><circle cx="68" cy="230" r="6"/><path d="M55 230h7m12 0h7"/></g>
-    <path d="m59 318 6 6 12-13" stroke="#1F5178"/>
-    <g stroke="#1E6B45"><circle cx="61" cy="397" r="3"/><circle cx="61" cy="415" r="3"/><circle cx="75" cy="415" r="3"/><path d="M61 400v12m14 0v-9q0-6-7-6m2-3-3 3 3 3"/></g>
-  </g>
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
-    <g fill="#151514" font-size="22" font-weight="800" letter-spacing="-0.3">
-      <text x="120" y="138">01 / Reproduce</text>
-      <text x="120" y="226">02 / Patch</text>
-      <text x="120" y="314">03 / Verify</text>
-      <text x="120" y="402">04 / Pull Request</text>
-    </g>
-    <g fill="#57554F" font-size="17">
-      <text x="120" y="166">Isolate the failure</text>
-      <text x="120" y="254">Make a focused change</text>
-      <text x="120" y="342">Test before and after</text>
-      <text x="120" y="430">Share code + evidence</text>
-    </g>
-  </g>
+  <rect width="600" height="490" rx="20" fill="url(#bg)"/>
+  <rect width="600" height="490" rx="20" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="599" height="489" rx="20" fill="none" stroke="#344253"/>
+  <g font-family="Segoe UI, Arial, sans-serif"><text x="32" y="39" fill="#8cabc1" font-size="14" font-weight="600" letter-spacing="2">OPEN SOURCE · MY PROCESS</text><text x="30" y="80" fill="#edf4ff" font-size="29" font-weight="600">Small changes. Clear evidence.</text></g>
+  <path d="M68 142v264" stroke="#344b63" stroke-width="2"/>
+  <path d="M68 142v264" stroke="#a4d6e3" stroke-width="2" stroke-dasharray="2 10" opacity=".4"/>
+  <g class="signal"><circle cx="68" cy="142" r="10" fill="#c1e8ff" opacity=".12"/><circle cx="68" cy="142" r="4" fill="#e0fff6"/></g>
+  <g fill="none" stroke-width="1.5"><circle class="halo" cx="68" cy="142" r="32" stroke="#70e5c5"/><circle class="halo h2" cx="68" cy="230" r="32" stroke="#7ddacc"/><circle class="halo h3" cx="68" cy="318" r="32" stroke="#85bcff"/><circle class="halo h4" cx="68" cy="406" r="32" stroke="#c1abff"/></g>
+  <g fill="#142333" stroke-width="1.5"><circle cx="68" cy="142" r="24" stroke="#70e5c5"/><circle cx="68" cy="230" r="24" stroke="#7ddacc"/><circle cx="68" cy="318" r="24" stroke="#85bcff"/><circle cx="68" cy="406" r="24" stroke="#c1abff"/></g>
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g stroke="#70e5c5"><circle cx="65" cy="139" r="7"/><path d="m70 144 7 7"/></g><g stroke="#7ddacc"><circle cx="68" cy="230" r="6"/><path d="M55 230h7m12 0h7"/></g><path d="m59 318 6 6 12-13" stroke="#85bcff"/><g stroke="#c1abff"><circle cx="61" cy="397" r="3"/><circle cx="61" cy="415" r="3"/><circle cx="75" cy="415" r="3"/><path d="M61 400v12m14 0v-9q0-6-7-6m2-3-3 3 3 3"/></g></g>
+  <g font-family="Segoe UI, Arial, sans-serif"><g fill="#edf4ff" font-size="24" font-weight="600"><text x="120" y="138">01 / Reproduce</text><text x="120" y="226">02 / Patch</text><text x="120" y="314">03 / Verify</text><text x="120" y="402">04 / Pull request</text></g><g fill="#a4b5cc" font-size="20"><text x="120" y="168">Isolate the failure</text><text x="120" y="256">Make a focused change</text><text x="120" y="344">Test before and after</text><text x="120" y="432">Share code + evidence</text></g></g>
 </svg>

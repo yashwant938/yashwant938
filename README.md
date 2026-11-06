@@ -1,23 +1,28 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/header-mobile.svg" />
-    <img src="./assets/header.svg" alt="Yashwant Singh Rana — Compiler, C++ Systems, and Applied AI Engineer. IBM Z C/C++ compiler engineering, 4 merged Qualcomm ELD LLVM linker patches, and retrieval-backed AI tooling." width="100%" />
+    <img src="./assets/header.svg" alt="Yashwant — Systems × GenAI. C++, Linux and LLVM; RAG, LLM applications and AI tooling." width="100%" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://yashwant938.github.io/portfolio-/"><strong>Portfolio &amp; Case Studies ↗</strong></a> &nbsp;·&nbsp;
-  <a href="https://yashwant938.github.io/portfolio-/#resume"><strong>Resume ↗</strong></a> &nbsp;·&nbsp;
-  <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged"><strong>Merged Qualcomm ELD PRs (4) ↗</strong></a> &nbsp;·&nbsp;
-  <a href="#selected-work"><strong>Selected Work ↓</strong></a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/yash-rana-3a7252265/"><strong>LinkedIn ↗</strong></a>
+  <strong>Software engineer · Systems × GenAI · M.Tech, IIIT Delhi</strong>
 </p>
 
-I work across **compiler toolchains, C++/Linux systems, and retrieval-backed AI tooling**, focusing on reproducible defect isolation, regression-verified patches, and inspectable evidence trails.
+<p align="center">
+  <a href="https://yashwant938.github.io/portfolio-/"><strong>Explore my portfolio &amp; project case studies ↗</strong></a> &nbsp; / &nbsp;
+  <a href="#selected-work">Projects</a> &nbsp; / &nbsp;
+  <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">Merged contributions</a> &nbsp; / &nbsp;
+  <a href="https://www.linkedin.com/in/yash-rana-3a7252265/">LinkedIn</a>
+</p>
 
-- **IBM India Software Labs** (`Jan 2025 – Sep 2026`) — Software Engineer &amp; Intern on the **IBM Z C/C++ compiler** team. Resolved **8+ production compiler defects** across code generation, register allocation, and optimization, and built an **MCP server** for compiler-diagnostic retrieval.
-- **Open-Source LLVM / Linker Engineering** — **4 merged C++ pull requests** in [Qualcomm ELD](https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged) ([`#2207`](https://github.com/qualcomm/eld/pull/2207), [`#2129`](https://github.com/qualcomm/eld/pull/2129), [`#2065`](https://github.com/qualcomm/eld/pull/2065), [`#2011`](https://github.com/qualcomm/eld/pull/2011)) covering linker-script line diagnostics, ARM/AArch64 LTO object preservation, ELF segment layout guards, and GNU flag compatibility.
-- **Applied AI &amp; Education** — **M.Tech in CSE** at **IIIT Delhi** (`8.37 CGPA`). Built hybrid BM25 + MiniLM retrieval pipelines with reciprocal rank fusion ([Legal Lens 2.0](https://yashwant938.github.io/portfolio-/#legal-lens)), compiler-triage tooling, and interactive systems/ML labs across [six featured projects](https://yashwant938.github.io/portfolio-/#work).
+I build across **systems engineering and generative AI**—from C++ linker fixes and Linux concurrency to retrieval-backed assistants and LLM-powered developer tools.
+
+I care about what happens around the core algorithm: **reproducible failures, useful evidence, reliable APIs, and a product people can inspect and use.**
+
+At **IBM India Software Labs**, I worked on the **IBM Z C/C++ compiler**, resolved **8+ production defects**, and implemented an **MCP service for compiler-diagnostic retrieval**. Software Engineer: July 2025–September 2026; intern: January–July 2025.
+
+My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together **six featured projects**, linker contributions, implementation details, and code links. Search by technology or explore systems, AI/ML, applications, and research.
 
 ## Contribution activity
 
