@@ -62,12 +62,16 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </td>
 <td width="50%" valign="top">
 <a href="https://yashwant938.github.io/portfolio-/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
-<sub><strong>GENAI · RAG · INFORMATION RETRIEVAL</strong></sub>
+<sub><strong>GENAI · RAG · RETRIEVAL &amp; ANSWER EVALUATION</strong></sub>
 <h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
-<p>Contributed hybrid BM25 + MiniLM retrieval over a 1,871-page historical IPC PDF, with reciprocal rank fusion, page-linked evidence, and cited research briefs.</p>
-<p>Local scope/intent classification and a RAG assistant with document-excerpt fallback.</p>
-<p><code>Python</code> <code>FastAPI</code> <code>Next.js</code> <code>MiniLM</code></p>
-<a href="https://yashwant938.github.io/portfolio-/#legal-lens">Case study →</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My project PRs</a>
+<p>Contributed token-aware <strong>BM25 + MiniLM hybrid retrieval</strong> over a <strong>1,871-page historical IPC corpus</strong>, with reciprocal rank fusion, page-linked evidence, and document-excerpt fallback.</p>
+<ul>
+<li>Reduced chunks exceeding the encoder limit from <strong>22.0% to 0%</strong>; verified fallback, cache invalidation, citation checks, and related behavior within <strong>46 passing offline backend tests</strong>.</li>
+<li>Evaluated <strong>80 held-out positive queries, 20 negative probes, and 60 local generation cases</strong>, with agent-authored labels, claim-level citation-support review, and abstention analysis.</li>
+</ul>
+<p><strong>Passage Hit@5:</strong> BM25 86.25% · hybrid 80.00%. These measure retrieval, not answer accuracy; the local answer audit exposed unsupported claims and incomplete answers.</p>
+<p><code>Python</code> <code>FastAPI</code> <code>BM25</code> <code>MiniLM</code> <code>RAG</code></p>
+<a href="https://github.com/ZainiiiBoyx278/legal-lens/blob/main/backend/evaluation/retrieval_v2/README.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My project PRs →</a>
 </td>
 </tr>
 <tr>
