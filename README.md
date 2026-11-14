@@ -81,13 +81,17 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 <a href="https://github.com/yashwant938/E-Commerce">Source &amp; architecture ↗</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Dimensional concept illustration for GPT-2 Review Summarization" width="100%" /></picture></a>
-<sub><strong>NLP / COURSEWORK EXPERIMENT</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/#gpt2-summarization">GPT-2 Review Summarization</a></h3>
-<p>A notebook experiment fine-tuning GPT-2 to turn Amazon Fine Food Reviews into short summaries, covering data preparation, training, checkpointing, and generation.</p>
-<p><strong>ML coursework · evaluation corrections documented</strong></p>
-<p><code>Python</code> <code>PyTorch</code> <code>Hugging Face</code> <code>pandas</code> <code>Jupyter</code></p>
-<a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107">Notebook &amp; findings ↗</a>
+<a href="https://yashwant938.github.io/portfolio-/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Concept illustration for GPT-2 and T5 review summarization" width="100%" /></picture></a>
+<sub><strong>NLP · FINE-TUNING · MODEL EVALUATION</strong></sub>
+<h3><a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107">GPT-2 &amp; T5 Review Summarization</a></h3>
+<p>Fine-tuned and compared GPT-2 and T5-small on <strong>6,000 Amazon Fine Food Reviews</strong>, using 512 validation reviews for model selection and a <strong>fresh 512-review test set</strong>.</p>
+<ul>
+<li>Summary-only loss, duplicate-aware splits, reloadable checkpoints, and <strong>22 passing offline tests</strong>.</li>
+<li>Paired ROUGE analysis and a source-grounded <strong>24-review product-detail audit</strong>, with agent-authored labels.</li>
+</ul>
+<p><strong>Test ROUGE-L F1:</strong> GPT-2 0.1275 · T5 0.1255 · lead-16 0.0974. No clear GPT-2/T5 advantage; preserving specific product details remains a limitation.</p>
+<p><code>Python</code> <code>PyTorch</code> <code>Hugging Face</code> <code>GPT-2</code> <code>T5</code></p>
+<a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/results/t5-comparison/REPORT.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/COMPARISON.md">Reproduce the experiment →</a>
 </td>
 </tr>
 <tr>
