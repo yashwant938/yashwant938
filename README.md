@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://yashwant938.github.io/portfolio-/"><strong>Explore my portfolio &amp; project case studies ↗</strong></a> &nbsp; / &nbsp;
+  <a href="https://yashwant-rana.vercel.app/"><strong>Explore my portfolio &amp; project case studies ↗</strong></a> &nbsp; / &nbsp;
   <a href="#selected-work">Projects</a> &nbsp; / &nbsp;
   <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">Merged contributions</a> &nbsp; / &nbsp;
   <a href="https://www.linkedin.com/in/yash-rana-3a7252265/">LinkedIn</a>
@@ -22,7 +22,7 @@ I care about what happens around the core algorithm: **reproducible failures, us
 
 At **IBM India Software Labs**, I worked on the **IBM Z C/C++ compiler**, resolved **8+ production defects**, and implemented an **MCP service for compiler-diagnostic retrieval**. Software Engineer: July 2025–September 2026; intern: January–July 2025.
 
-My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together **six featured projects**, linker contributions, implementation details, and code links. Search by technology or explore systems, AI/ML, applications, and research.
+My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six featured projects**, linker contributions, implementation details, and code links. Search by technology or explore systems, AI/ML, applications, and research.
 
 ## Contribution activity
 
@@ -46,22 +46,23 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/#eld"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/eld.svg" /><img src="./assets/projects/eld.svg" alt="Dimensional concept illustration for Qualcomm ELD contributions" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/#eld"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/eld.svg" /><img src="./assets/projects/eld.svg" alt="Dimensional concept illustration for Qualcomm ELD contributions" width="100%" /></picture></a>
 <sub><strong>SYSTEMS · C++ · OPEN SOURCE</strong></sub>
 <h3><a href="https://github.com/qualcomm/eld">Qualcomm ELD Contributions</a></h3>
-<p><strong>Four merged fixes</strong> in an ELF linker built on LLVM:</p>
+<p><strong>Five merged fixes</strong> in an ELF linker built on LLVM:</p>
 <ul>
 <li><a href="https://github.com/qualcomm/eld/pull/2065"><strong>#2065</strong></a> — Fixed a PHDRS/FILEHDR layout crash.</li>
 <li><a href="https://github.com/qualcomm/eld/pull/2011"><strong>#2011</strong></a> — Added GNU-compatible handling of numeric <code>-O</code> options.</li>
 <li><a href="https://github.com/qualcomm/eld/pull/2129"><strong>#2129</strong></a> — Preserved native ARM/AArch64 LTO object emission with <code>--save-temps</code>.</li>
 <li><a href="https://github.com/qualcomm/eld/pull/2207"><strong>#2207</strong></a> — Added source line numbers to <code>PROVIDE</code> / <code>PROVIDE_HIDDEN</code> redeclaration warnings.</li>
+<li><a href="https://github.com/qualcomm/eld/pull/2336"><strong>#2336</strong></a> — Included map-file assignments before <code>SECTIONS</code> in YAML output.</li>
 </ul>
 <p>Focused regression testing across six architecture configurations. Each PR records its verification scope; the full ELD suite was not run.</p>
 <p><code>C++</code> <code>LLVM</code> <code>Linux</code> <code>lit / FileCheck</code></p>
 <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938">Explore the contributions →</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
 <sub><strong>GENAI · RAG · RETRIEVAL &amp; ANSWER EVALUATION</strong></sub>
 <h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
 <p>Contributed token-aware <strong>BM25 + MiniLM hybrid retrieval</strong> over a <strong>1,871-page historical IPC corpus</strong>, with reciprocal rank fusion, page-linked evidence, and document-excerpt fallback.</p>
@@ -76,16 +77,16 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/#real-estate"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/real-estate.svg" /><img src="./assets/projects/real-estate.svg" alt="Dimensional concept illustration for Real Estate Aggregator" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/#real-estate"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/real-estate.svg" /><img src="./assets/projects/real-estate.svg" alt="Dimensional concept illustration for Real Estate Aggregator" width="100%" /></picture></a>
 <sub><strong>BACKEND / PROPERTY MARKETPLACE</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/#real-estate">Real Estate Aggregator</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/#real-estate">Real Estate Aggregator</a></h3>
 <p>A PHP/Slim property marketplace connecting searchable listings, account workflows, MySQL persistence, Razorpay integration, and generated PDF contracts.</p>
 <p><strong>Full-stack prototype</strong></p>
 <p><code>PHP</code> <code>Slim</code> <code>MySQL</code> <code>JavaScript</code> <code>Razorpay</code> <code>TCPDF</code></p>
 <a href="https://github.com/yashwant938/E-Commerce">Source &amp; architecture ↗</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Concept illustration for GPT-2 and T5 review summarization" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Concept illustration for GPT-2 and T5 review summarization" width="100%" /></picture></a>
 <sub><strong>NLP · FINE-TUNING · MODEL EVALUATION</strong></sub>
 <h3><a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107">GPT-2 &amp; T5 Review Summarization</a></h3>
 <p>Fine-tuned and compared GPT-2 and T5-small on <strong>6,000 Amazon Fine Food Reviews</strong>, using 512 validation reviews for model selection and a <strong>fresh 512-review test set</strong>.</p>
@@ -100,24 +101,24 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </tr>
 <tr>
 <td width="50%" valign="top">
-<p><a href="https://yashwant938.github.io/portfolio-/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="100%" /></a></p>
+<p><a href="https://yashwant-rana.vercel.app/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="100%" /></a></p>
 <sub><strong>C++ / SYSTEMS / INTERACTIVE LEARNING</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/#cpp-systems">C++ Concepts &amp; Systems Lab</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/#cpp-systems">C++ Concepts &amp; Systems Lab</a></h3>
 <p>Interactive C++ STL, OOP &amp; memory-internals lessons, a CppNuts C++20 multithreading &amp; concurrency studio, and a C++17 filesystem lab exploring containers, vtables, alignment, move semantics, and synchronization.</p>
 <ul><li>Step-through STL, OOP memory &amp; CppNuts multithreading simulations (greedy alignment, vtable/vptr, lvalue/rvalue, diamond virtual base, 5 thread creation ways, mutex/deadlock, condition_variable, thread pool), an editable C++20 compiler workspace, quizzes, and an optional Gemini tutor.</li><li>cd / ls / cp / mv / rm; sequential and threaded variants with synchronized output.</li></ul>
 <p><code>C++20</code> <code>C++17</code> <code>std::filesystem</code> <code>std::thread</code> <code>Linux</code> <code>React</code> <code>Monaco</code></p>
 <p>Complementary labs: browser teaching simulations (STL, OOP memory &amp; CppNuts multithreading) and an educational filesystem interpreter. Includes timing scripts; no measured speedup claimed.</p>
-<a href="https://yashwant938.github.io/portfolio-/labs/cpp-oop/">OOP &amp; memory lab ↗</a> · <a href="https://yashwant938.github.io/portfolio-/labs/cpp-threading/">Threading lab ↗</a> · <a href="https://yashwant938.github.io/portfolio-/labs/cpp-stl/">STL studio ↗</a> · <a href="https://yashwant938.github.io/CompilerCppTopics/">STL demo ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/cpp-oop">OOP &amp; threading source ↗</a> · <a href="https://github.com/yashwant938/OOPD-Project">Systems source ↗</a> · <a href="https://yashwant938.github.io/portfolio-/#cpp-systems">Case study →</a>
+<a href="https://yashwant-rana.vercel.app/labs/cpp-oop/">OOP &amp; memory lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-threading/">Threading lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-stl/">STL studio ↗</a> · <a href="https://github.com/yashwant938/CompilerCppTopics">STL source ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/cpp-oop">OOP &amp; threading source ↗</a> · <a href="https://github.com/yashwant938/OOPD-Project">Systems source ↗</a> · <a href="https://yashwant-rana.vercel.app/#cpp-systems">Case study →</a>
 </td>
 <td width="50%" valign="top">
-<p><a href="https://yashwant938.github.io/portfolio-/labs/signal/"><img src="./assets/projects/signal-recommender.png" alt="Signal Recommendation Lab with editable fictional listener ratings, ranked headphone suggestions, and predicted scores." width="100%" /></a></p>
+<p><a href="https://yashwant-rana.vercel.app/labs/signal/"><img src="./assets/projects/signal-recommender.png" alt="Signal Recommendation Lab with editable fictional listener ratings, ranked headphone suggestions, and predicted scores." width="100%" /></a></p>
 <sub><strong>MACHINE LEARNING / COLLABORATIVE FILTERING</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/labs/signal/">Signal · Recommendation Lab</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/labs/signal/">Signal · Recommendation Lab</a></h3>
 <p>An interactive lab comparing user-based and item-based collaborative filtering with a regularized popularity baseline.</p>
 <ul><li>Adjust listener ratings, compare predictions, and inspect the neighbor evidence behind each suggestion.</li><li>Explore leave-one-rating-out MAE, direct coverage, and cold-start fallbacks.</li></ul>
 <p><code>React</code> <code>TypeScript</code> <code>Vite</code> <code>Recharts</code></p>
 <p>Learning demo with fictional ratings and products; ratings stay in browser local storage.</p>
-<a href="https://yashwant938.github.io/portfolio-/labs/signal/">Live demo ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/signal">Source &amp; methods ↗</a> · <a href="https://yashwant938.github.io/portfolio-/#signal-lab">Case study →</a>
+<a href="https://yashwant-rana.vercel.app/labs/signal/">Live demo ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/signal">Source &amp; methods ↗</a> · <a href="https://yashwant-rana.vercel.app/#signal-lab">Case study →</a>
 </td>
 </tr>
 </table>
@@ -125,43 +126,43 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 <details>
 <summary><strong>Earlier projects &amp; explorations</strong></summary>
 
-<p>More prototypes and learning projects, preserved in the <a href="https://yashwant938.github.io/portfolio-/archive.html#work">portfolio archive</a>. Illustrations below are concept artwork.</p>
+<p>More prototypes and learning projects, preserved in the <a href="https://yashwant-rana.vercel.app/archive.html#work">portfolio archive</a>. Illustrations below are concept artwork.</p>
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#llvm-bugsquad"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/llvm-bugsquad.svg" /><img src="./assets/projects/llvm-bugsquad.svg" alt="Dimensional concept illustration for LLVM BugSquad" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#llvm-bugsquad"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/llvm-bugsquad.svg" /><img src="./assets/projects/llvm-bugsquad.svg" alt="Dimensional concept illustration for LLVM BugSquad" width="100%" /></picture></a>
 <sub><strong>GENAI × SYSTEMS · DEVELOPER TOOLS</strong></sub>
 <h3><a href="https://github.com/yashwant938/LLVMBugSquad">LLVM BugSquad</a></h3>
 <p>Compiler investigation workspace with model-assisted routing, isolated LLVM recipes, SQLite history, resumable events, and hashed evidence exports.</p>
 <p><strong>Status:</strong> synthetic replay demo. Live model/worker integration validation pending.</p>
 <p><code>Python</code> <code>FastAPI</code> <code>Docker</code> <code>LLM APIs</code></p>
-<a href="https://yashwant938.github.io/portfolio-/archive.html#llvm-bugsquad">Case study →</a> · <a href="https://github.com/yashwant938/LLVMBugSquad#readme">Source &amp; setup</a>
+<a href="https://yashwant-rana.vercel.app/archive.html#llvm-bugsquad">Case study →</a> · <a href="https://github.com/yashwant938/LLVMBugSquad#readme">Source &amp; setup</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#newsscript"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/newsscript.svg" /><img src="./assets/projects/newsscript.svg" alt="Dimensional concept illustration for NewsScript" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#newsscript"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/newsscript.svg" /><img src="./assets/projects/newsscript.svg" alt="Dimensional concept illustration for NewsScript" width="100%" /></picture></a>
 <sub><strong>GENAI · FULL-STACK APPLICATIONS</strong></sub>
 <h3><a href="https://github.com/yashwant938/NewsScript">NewsScript</a></h3>
 <p>RSS ingestion, deduplication, and heuristic ranking feed a script-drafting workspace with optional Gemini/OpenAI generation, saved articles, and text/PDF exports.</p>
 <p><strong>Status:</strong> local prototype with a template fallback. Live-provider validation and deployment hardening are pending.</p>
 <p><code>TypeScript</code> <code>Next.js</code> <code>Prisma</code> <code>LLM APIs</code></p>
-<a href="https://yashwant938.github.io/portfolio-/archive.html#newsscript">Case study →</a> · <a href="https://github.com/yashwant938/NewsScript#readme">Source &amp; setup</a>
+<a href="https://yashwant-rana.vercel.app/archive.html#newsscript">Case study →</a> · <a href="https://github.com/yashwant938/NewsScript#readme">Source &amp; setup</a>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#moodpet"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/moodpet.svg" /><img src="./assets/projects/moodpet.svg" alt="Dimensional concept illustration for MoodPet" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#moodpet"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/moodpet.svg" /><img src="./assets/projects/moodpet.svg" alt="Dimensional concept illustration for MoodPet" width="100%" /></picture></a>
 <sub><strong>DESKTOP / PRODUCTIVITY</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/archive.html#moodpet">MoodPet</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/archive.html#moodpet">MoodPet</a></h3>
 <p>A native Windows companion that combines an animated desktop pet with focus sessions, local activity history, persistent streaks, and a productivity dashboard.</p>
 <p><strong>Local Windows application</strong></p>
 <p><code>Python</code> <code>PySide6</code> <code>SQLite</code> <code>Windows APIs</code></p>
 <a href="https://github.com/yashwant938/MoodPet">Source &amp; setup ↗</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#quizzes-by-iron"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/quizzes-by-iron.svg" /><img src="./assets/projects/quizzes-by-iron.svg" alt="Dimensional concept illustration for Quizzes by Iron" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#quizzes-by-iron"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/quizzes-by-iron.svg" /><img src="./assets/projects/quizzes-by-iron.svg" alt="Dimensional concept illustration for Quizzes by Iron" width="100%" /></picture></a>
 <sub><strong>REAL-TIME / MULTIPLAYER</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/archive.html#quizzes-by-iron">Quizzes by Iron</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/archive.html#quizzes-by-iron">Quizzes by Iron</a></h3>
 <p>An event-driven multiplayer quiz with host-controlled rooms, QR-code joins, timed questions, server-side scoring, and live leaderboards.</p>
 <p><strong>Web application · room state held in one server process</strong></p>
 <p><code>React</code> <code>Node.js</code> <code>Express</code> <code>Socket.IO</code> <code>Vite</code></p>
@@ -170,18 +171,18 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#bio-literature"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/bio-literature.svg" /><img src="./assets/projects/bio-literature.svg" alt="Dimensional concept illustration for Bioinformatics Literature &amp; Graph Explorer" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#bio-literature"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/bio-literature.svg" /><img src="./assets/projects/bio-literature.svg" alt="Dimensional concept illustration for Bioinformatics Literature &amp; Graph Explorer" width="100%" /></picture></a>
 <sub><strong>NLP / RESEARCH VISUALIZATION</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/archive.html#bio-literature">Bioinformatics Literature &amp; Graph Explorer</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/archive.html#bio-literature">Bioinformatics Literature &amp; Graph Explorer</a></h3>
 <p>A related pair of research tools: an extremophile literature-mining pipeline and an interactive chemical–gene graph that makes prepared relationships and publication references easier to explore.</p>
 <p><strong>Research capstone · two connected repositories</strong></p>
 <p><code>Python</code> <code>pandas</code> <code>Entrez</code> <code>Streamlit</code> <code>NetworkX</code></p>
 <a href="https://github.com/yashwant938/3DKnolwedgeGraph">Graph explorer ↗</a> · <a href="https://github.com/yashwant938/ExtremophilesData">Mining pipeline ↗</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#android-classifier"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/android-classifier.svg" /><img src="./assets/projects/android-classifier.svg" alt="Dimensional concept illustration for Android Image Classifier" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#android-classifier"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/android-classifier.svg" /><img src="./assets/projects/android-classifier.svg" alt="Dimensional concept illustration for Android Image Classifier" width="100%" /></picture></a>
 <sub><strong>APPLIED ML / ANDROID</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/archive.html#android-classifier">Android Image Classifier</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/archive.html#android-classifier">Android Image Classifier</a></h3>
 <p>An Android app that runs a bundled quantized MobileNet model locally to classify a selected gallery image and display its predicted label.</p>
 <p><strong>Educational mobile prototype</strong></p>
 <p><code>Kotlin</code> <code>Jetpack Compose</code> <code>TensorFlow Lite</code> <code>MobileNet</code></p>
@@ -190,18 +191,18 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#image-captioning"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/image-captioning.svg" /><img src="./assets/projects/image-captioning.svg" alt="Dimensional concept illustration for Voice–Vision: Image Captioning" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#image-captioning"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/image-captioning.svg" /><img src="./assets/projects/image-captioning.svg" alt="Dimensional concept illustration for Voice–Vision: Image Captioning" width="100%" /></picture></a>
 <sub><strong>COMPUTER VISION / LANGUAGE GENERATION</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/archive.html#image-captioning">Voice–Vision: Image Captioning</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/archive.html#image-captioning">Voice–Vision: Image Captioning</a></h3>
 <p>A Flask image-captioning prototype combining InceptionV3 visual features with an LSTM language decoder to turn an uploaded image into a caption.</p>
 <p><strong>Earlier ML prototype</strong></p>
 <p><code>Python</code> <code>Flask</code> <code>TensorFlow / Keras</code> <code>InceptionV3</code> <code>LSTM</code></p>
 <a href="https://github.com/yashwant938/Voice-Vision-Communication">Explore the prototype ↗</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://yashwant938.github.io/portfolio-/archive.html#decrypter-analyzer"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/decrypter-analyzer.svg" /><img src="./assets/projects/decrypter-analyzer.svg" alt="Dimensional concept illustration for Decrypter &amp; Analyzer" width="100%" /></picture></a>
+<a href="https://yashwant-rana.vercel.app/archive.html#decrypter-analyzer"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/decrypter-analyzer.svg" /><img src="./assets/projects/decrypter-analyzer.svg" alt="Dimensional concept illustration for Decrypter &amp; Analyzer" width="100%" /></picture></a>
 <sub><strong>SECURITY EDUCATION / WEB TOOLS</strong></sub>
-<h3><a href="https://yashwant938.github.io/portfolio-/archive.html#decrypter-analyzer">Decrypter &amp; Analyzer</a></h3>
+<h3><a href="https://yashwant-rana.vercel.app/archive.html#decrypter-analyzer">Decrypter &amp; Analyzer</a></h3>
 <p>An educational PHP toolkit exploring hash demonstrations and basic website configuration inspection through browser-based forms and result panels.</p>
 <p><strong>Educational prototype for authorized lab use</strong></p>
 <p><code>PHP</code> <code>JavaScript</code> <code>MySQL</code> <code>HTML / CSS</code></p>
@@ -225,18 +226,20 @@ My [portfolio](https://yashwant938.github.io/portfolio-/#work) brings together *
 
 **A recent example:** [ELD #2134 — preserve AArch64 feature flags](https://github.com/qualcomm/eld/pull/2134). A one-line C++ fix, a regression that failed before the change, and **18 passing focused test runs** across two AArch64 configurations. PR open for review.
 
-**AI tooling:** [Hugging Face smolagents #2949](https://github.com/huggingface/smolagents/pull/2949) — **Draft** AST-validation fix for unpacking aliases in context managers, with tool export/reload regression coverage. The PR records **70 focused pytest passes**; scope acceptance and contributor review are pending.
+**AI tooling:** [Haystack NVIDIA integration #4233](https://github.com/deepset-ai/haystack-core-integrations/pull/4233) — **Merged** upstream fix in `deepset-ai/haystack-core-integrations` (`NvidiaRanker`, fixing [#4232](https://github.com/deepset-ai/haystack-core-integrations/issues/4232)) so metadata values such as `0`, `0.0`, `False`, and empty strings are checked against `None` instead of truthiness and preserved in NVIDIA NIM ranking passages. Backed by a parameterized HTTP-boundary regression test (`191 passed, 15 integration tests deselected` via `requests_mock`, lint and `mypy` clean; live NVIDIA service tests not run).
 
 <details>
 <summary><strong>More open-source contributions and verification scope</strong></summary>
 
 - **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129) · Merged** — Preserved native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed, followed by the updated regression on all six target configurations.
 - **[Linker-script warning locations · #2207](https://github.com/qualcomm/eld/pull/2207) · Merged** — Added exact source line numbers to duplicate `PROVIDE` / `PROVIDE_HIDDEN` warnings. Both regressions failed before the fix and passed afterward across six target configurations: 12 passes, no skips.
-- **[YAML map assignments · #2336](https://github.com/qualcomm/eld/pull/2336) · Open** — Included assignments before `SECTIONS` in YAML output, preserving assignment order and values. The new regression failed before the fix; all 18 focused tests passed across six target configurations.
+- **[YAML map assignments · #2336](https://github.com/qualcomm/eld/pull/2336) · Merged** — Included assignments before `SECTIONS` in YAML output, preserving assignment order and values. The new regression failed before the fix; all 18 focused tests passed across six target configurations.
+- **[Haystack NVIDIA ranker metadata · #4233](https://github.com/deepset-ai/haystack-core-integrations/pull/4233) · Merged** — Changed `NvidiaRanker` metadata filtering from truthiness to `is not None` (matching `NvidiaDocumentEmbedder`) so falsy values pass through while `None` and missing fields remain skipped (`191 passed, 15 integration tests deselected`, HTTP mocked via `requests_mock`).
+- **[Remapped linker scripts · #2437](https://github.com/qualcomm/eld/pull/2437) · Open** — Deferred remapped linker-script path validation to `Input::resolvePath()` so `--remap-inputs` and `-L` search paths apply before failing (`48 focused lit test cases` passed across six target configurations).
 - **[Build guidance · #2127](https://github.com/qualcomm/eld/pull/2127) · Open** — Document the LLVM `main` baseline and source/build path guidance following a [maintainer discussion](https://github.com/qualcomm/eld/discussions/887#discussioncomment-18761658).
 - **[React ChatBotify · #366](https://github.com/react-chatbotify/react-chatbotify/pull/366) · Open** — Submitted chat-history HTML sanitization, URL checks, and an optional sanitizer callback with tests.
 
-Statuses checked **2 November 2026**. ELD **#2011, #2065, #2129, and #2207 are merged**; #2127, #2134, and #2336 remain open. smolagents #2949 is a draft; React ChatBotify #366 remains open. Results above describe focused tests recorded in the PRs, not full-suite runs or live integration validation of every project.
+Statuses checked **18 November 2026**. ELD **#2011, #2065, #2129, #2207, and #2336** and Haystack NVIDIA integration **#4233** are merged; ELD #2127, #2134, and #2437 plus React ChatBotify #366 remain open (smolagents #2949 closed without merge on 15 November 2026). Results above describe focused tests recorded in the PRs, not full-suite runs or live integration validation of every project.
 
 </details>
 
@@ -257,4 +260,4 @@ Statuses checked **2 November 2026**. ELD **#2011, #2065, #2129, and #2207 are m
 
 ---
 
-**Let's build at the intersection of systems and AI.** [Visit my portfolio ↗](https://yashwant938.github.io/portfolio-/) · [Connect on LinkedIn →](https://www.linkedin.com/in/yash-rana-3a7252265/)
+**Let's build at the intersection of systems and AI.** [Visit my portfolio ↗](https://yashwant-rana.vercel.app/) · [Connect on LinkedIn →](https://www.linkedin.com/in/yash-rana-3a7252265/)
