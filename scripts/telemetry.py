@@ -25,6 +25,7 @@ UPSTREAM_REPOS = (
 )
 
 ARCHGUARD_HEALTH_URL = 'https://arch-guard-mcp.yashwant938.workers.dev/health'
+CONTEXTFORGE_HEALTH_URL = 'https://context-forge-mcp.yashwant938.workers.dev/health'
 SYSDESIGN_URL = 'https://system-design-guide.yashwant938.workers.dev'
 MCP_REGISTRY_URL = (
     'https://registry.modelcontextprotocol.io/v0.1/servers/'
@@ -243,6 +244,21 @@ def probe_edge_infra() -> tuple[tuple[EdgeProbe, ...], RegistryStatus]:
         except Exception:
             pass
 
+    # Probe ContextForge MCP Worker
+    cf_code, cf_ms, cf_body = _http_probe(CONTEXTFORGE_HEALTH_URL)
+    cf_ok = cf_code == 200
+    cf_detail = 'Streamable HTTP · Token Compressor & RAG Packer'
+    if cf_ok and cf_body:
+        try:
+            data = json.loads(cf_body)
+            proto = data.get('protocolVersion', '2025-03-26')
+            tools = data.get('tools', 6)
+            res = data.get('resources', 4)
+            prompts = data.get('prompts', 3)
+            cf_detail = f'MCP {proto} · {tools} HTTP tools · {res} res · {prompts} prompts'
+        except Exception:
+            pass
+
     # Probe System Design Atlas Worker
     sd_code, sd_ms, _ = _http_probe(SYSDESIGN_URL)
     sd_ok = sd_code == 200
@@ -257,6 +273,15 @@ def probe_edge_infra() -> tuple[tuple[EdgeProbe, ...], RegistryStatus]:
             latency_ms=ag_ms,
             detail=ag_detail,
             accent='#34D399',
+        ),
+        EdgeProbe(
+            name='ContextForge MCP Worker',
+            host='context-forge-mcp.yashwant938.workers.dev/mcp',
+            ok=cf_ok,
+            status_code=cf_code,
+            latency_ms=cf_ms,
+            detail=cf_detail,
+            accent='#E5A93C',
         ),
         EdgeProbe(
             name='System Design Atlas',
@@ -381,10 +406,10 @@ def _render_desktop(snapshot: TelemetrySnapshot, synced_label: str) -> str:
             f'</g>'
         )
 
-    # Right column: Production Edge Workers + Official MCP Registry
+    # Right column: Production Edge Workers (3) + Official MCP Registry
     probe_cards: list[str] = []
     for idx, p in enumerate(snapshot.probes):
-        py = 114 + idx * 102
+        py = 112 + idx * 76
         badge_bg = '#0F2B22' if p.ok else '#2F1518'
         badge_stroke = '#1E5D47' if p.ok else '#7F2329'
         badge_fg = '#34D399' if p.ok else '#F87171'
@@ -392,14 +417,14 @@ def _render_desktop(snapshot: TelemetrySnapshot, synced_label: str) -> str:
         dot_fill = '#34D399' if p.ok else '#F87171'
         probe_cards.append(
             f'<g transform="translate(744, {py})">'
-            f'<rect x="0" y="0" width="416" height="88" rx="9" fill="#131926" stroke="#253047" stroke-width="1.2"/>'
-            f'<rect x="0" y="0" width="4" height="88" rx="2" fill="{p.accent}"/>'
-            f'<circle cx="20" cy="24" r="4" fill="{dot_fill}" class="pulse"/>'
-            f'<text x="32" y="28" fill="#F8FAFC" font-size="14" font-weight="700">{escape(p.name)}</text>'
-            f'<rect x="272" y="12" width="130" height="22" rx="11" fill="{badge_bg}" stroke="{badge_stroke}"/>'
-            f'<text x="337" y="27" fill="{badge_fg}" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10.5" font-weight="700" text-anchor="middle">{escape(status_txt)}</text>'
-            f'<text x="20" y="51" fill="#60A5FA" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10.5">{escape(p.host)}</text>'
-            f'<text x="20" y="72" fill="#94A3B8" font-size="11.5">{escape(p.detail)}</text>'
+            f'<rect x="0" y="0" width="416" height="68" rx="8" fill="#131926" stroke="#253047" stroke-width="1.1"/>'
+            f'<rect x="0" y="0" width="4" height="68" rx="2" fill="{p.accent}"/>'
+            f'<circle cx="18" cy="20" r="3.5" fill="{dot_fill}" class="pulse"/>'
+            f'<text x="29" y="24" fill="#F8FAFC" font-size="13" font-weight="700">{escape(p.name)}</text>'
+            f'<rect x="278" y="9" width="126" height="20" rx="10" fill="{badge_bg}" stroke="{badge_stroke}"/>'
+            f'<text x="341" y="23" fill="{badge_fg}" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10" font-weight="700" text-anchor="middle">{escape(status_txt)}</text>'
+            f'<text x="18" y="42" fill="#60A5FA" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10">{escape(p.host)}</text>'
+            f'<text x="18" y="58" fill="#94A3B8" font-size="10.5">{escape(p.detail)}</text>'
             f'</g>'
         )
 
@@ -410,15 +435,15 @@ def _render_desktop(snapshot: TelemetrySnapshot, synced_label: str) -> str:
     reg_pill = f'{reg.status} · v{reg.version}' if reg.ok else 'UNREACHABLE'
 
     registry_card = (
-        f'<g transform="translate(744, 318)">'
-        f'<rect x="0" y="0" width="416" height="88" rx="9" fill="#131926" stroke="#362A59" stroke-width="1.2"/>'
-        f'<rect x="0" y="0" width="4" height="88" rx="2" fill="#A78BFA"/>'
-        f'<circle cx="20" cy="24" r="4" fill="#A78BFA" class="pulse"/>'
-        f'<text x="32" y="28" fill="#F8FAFC" font-size="14" font-weight="700">Official MCP Registry</text>'
-        f'<rect x="272" y="12" width="130" height="22" rx="11" fill="{reg_bg}" stroke="{reg_stroke}"/>'
-        f'<text x="337" y="27" fill="{reg_fg}" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10.5" font-weight="700" text-anchor="middle">{escape(reg_pill)}</text>'
-        f'<text x="20" y="51" fill="#C4B5FD" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10.5">{escape(reg.server_id)}</text>'
-        f'<text x="20" y="72" fill="#94A3B8" font-size="11.5">Transport: {escape(reg.transport)} · registry.modelcontextprotocol.io</text>'
+        f'<g transform="translate(744, 340)">'
+        f'<rect x="0" y="0" width="416" height="68" rx="8" fill="#131926" stroke="#362A59" stroke-width="1.1"/>'
+        f'<rect x="0" y="0" width="4" height="68" rx="2" fill="#A78BFA"/>'
+        f'<circle cx="18" cy="20" r="3.5" fill="#A78BFA" class="pulse"/>'
+        f'<text x="29" y="24" fill="#F8FAFC" font-size="13" font-weight="700">Official MCP Registry</text>'
+        f'<rect x="278" y="9" width="126" height="20" rx="10" fill="{reg_bg}" stroke="{reg_stroke}"/>'
+        f'<text x="341" y="23" fill="{reg_fg}" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10" font-weight="700" text-anchor="middle">{escape(reg_pill)}</text>'
+        f'<text x="18" y="42" fill="#C4B5FD" font-family="Consolas, \'JetBrains Mono\', monospace" font-size="10">{escape(reg.server_id)}</text>'
+        f'<text x="18" y="58" fill="#94A3B8" font-size="10.5">Transport: {escape(reg.transport)} · registry.modelcontextprotocol.io</text>'
         f'</g>'
     )
 
@@ -494,7 +519,7 @@ def _render_desktop(snapshot: TelemetrySnapshot, synced_label: str) -> str:
 
 
 def _render_mobile(snapshot: TelemetrySnapshot, synced_label: str) -> str:
-    w, h = 600, 690
+    w, h = 600, 768
     diff_summary = (
         f'+{_fmt_num(snapshot.total_additions)} / -{_fmt_num(snapshot.total_deletions)}'
         if snapshot.any_diff_available
@@ -576,7 +601,7 @@ def _render_mobile(snapshot: TelemetrySnapshot, synced_label: str) -> str:
     <text x="28" y="420" fill="#34D399" font-family="Consolas, monospace" font-size="10" font-weight="700">EDGE WORKERS &amp; OFFICIAL MCP REGISTRY</text>
     {''.join(probe_svg)}
 
-    <g transform="translate(28, 588)">
+    <g transform="translate(28, 666)">
       <rect x="0" y="0" width="544" height="74" rx="8" fill="#131926" stroke="#362A59"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#A78BFA"/>
       <text x="16" y="24" fill="#F8FAFC" font-size="13.5" font-weight="700">Official MCP Registry</text>

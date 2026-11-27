@@ -78,17 +78,17 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant-rana.vercel.app/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
-<sub><strong>GENAI · RAG · RETRIEVAL &amp; ANSWER EVALUATION</strong></sub>
-<h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
-<p>Contributed token-aware <strong>BM25 + MiniLM hybrid retrieval</strong> over a <strong>1,871-page historical IPC corpus</strong>, with reciprocal rank fusion, page-linked evidence, and document-excerpt fallback.</p>
+<a href="https://context-forge-mcp.yashwant938.workers.dev"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/context-forge-mcp.svg" /><img src="./assets/projects/context-forge-mcp.svg" alt="Dimensional concept illustration for ContextForge MCP" width="100%" /></picture></a>
+<sub><strong>AGENTIC AI · CONTEXT ENGINEERING · MCP SERVER</strong></sub>
+<h3><a href="https://github.com/yashwant938/context-forge-mcp">ContextForge MCP</a></h3>
+<p>Zero-dependency <strong>deterministic token compressor &amp; context-window compiler</strong> (MCP <code>2025-03-26</code>) hosted live on Cloudflare Workers with local <code>stdio</code> repo packing and zero LLM API calls.</p>
 <ul>
-<li>Reduced chunks exceeding the encoder limit from <strong>22.0% to 0%</strong>; verified fallback, cache invalidation, citation checks, and related behavior within <strong>46 passing offline backend tests</strong>.</li>
-<li>Evaluated <strong>80 held-out positive queries, 20 negative probes, and 60 local generation cases</strong>, with agent-authored labels, claim-level citation-support review, and abstention analysis.</li>
+<li>Multi-language <strong>code skeletonizer</strong> (JS/TS, Python, C++, Go, Rust, Java) with <code>Lstart-Lend</code> ranges, <strong>Drain-style log/trace clusterer</strong> (&gt;75% savings), and <strong>JSON / OpenAPI 3.x compactor</strong> (&gt;85% savings).</li>
+<li><strong>RAG encoder-overflow auditor</strong> (MiniLM 256 / BGE 512 → 0% truncation + Jaccard dedup + <strong>Lost-in-the-Middle U-ordering</strong>), code-aware <strong>BM25 repo packer</strong>, and 8-model token/cost simulator.</li>
 </ul>
-<p><strong>Passage Hit@5:</strong> BM25 86.25% · hybrid 80.00%. These measure retrieval, not answer accuracy; the local answer audit exposed unsupported claims and incomplete answers.</p>
-<p><code>Python</code> <code>FastAPI</code> <code>BM25</code> <code>MiniLM</code> <code>RAG</code></p>
-<a href="https://github.com/ZainiiiBoyx278/legal-lens/blob/main/backend/evaluation/retrieval_v2/README.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My project PRs →</a>
+<p>Verified by <strong>8 passing tests</strong> across all engines, live <code>stdio</code> MCP, and Cloudflare Worker Streamable HTTP; self-packing compresses the repo by <strong>91.6%</strong>.</p>
+<p><code>JavaScript</code> <code>MCP 2025-03-26</code> <code>BM25</code> <code>RAG</code> <code>Cloudflare Workers</code></p>
+<a href="https://context-forge-mcp.yashwant938.workers.dev">Live playground ↗</a> · <a href="https://github.com/yashwant938/context-forge-mcp">Source &amp; setup →</a>
 </td>
 <td width="50%" valign="top">
 <a href="https://system-design-guide.yashwant938.workers.dev"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/system-design-atlas.svg" /><img src="./assets/projects/system-design-atlas.svg" alt="Dimensional concept illustration for System Design Mastery Atlas" width="100%" /></picture></a>
@@ -106,6 +106,19 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 </tr>
 <tr>
 <td width="50%" valign="top">
+<a href="https://yashwant-rana.vercel.app/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
+<sub><strong>GENAI · RAG · RETRIEVAL &amp; ANSWER EVALUATION</strong></sub>
+<h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
+<p>Contributed token-aware <strong>BM25 + MiniLM hybrid retrieval</strong> over a <strong>1,871-page historical IPC corpus</strong>, with reciprocal rank fusion, page-linked evidence, and document-excerpt fallback.</p>
+<ul>
+<li>Reduced chunks exceeding the encoder limit from <strong>22.0% to 0%</strong>; verified fallback, cache invalidation, citation checks, and related behavior within <strong>46 passing offline backend tests</strong>.</li>
+<li>Evaluated <strong>80 held-out positive queries, 20 negative probes, and 60 local generation cases</strong>, with agent-authored labels, claim-level citation-support review, and abstention analysis.</li>
+</ul>
+<p><strong>Passage Hit@5:</strong> BM25 86.25% · hybrid 80.00%. These measure retrieval, not answer accuracy; the local answer audit exposed unsupported claims and incomplete answers.</p>
+<p><code>Python</code> <code>FastAPI</code> <code>BM25</code> <code>MiniLM</code> <code>RAG</code></p>
+<a href="https://github.com/ZainiiiBoyx278/legal-lens/blob/main/backend/evaluation/retrieval_v2/README.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My project PRs →</a>
+</td>
+<td width="50%" valign="top">
 <p><a href="https://yashwant-rana.vercel.app/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="100%" /></a></p>
 <sub><strong>C++ / SYSTEMS / INTERACTIVE LEARNING</strong></sub>
 <h3><a href="https://yashwant-rana.vercel.app/#cpp-systems">C++ Concepts &amp; Systems Lab</a></h3>
@@ -115,28 +128,24 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 <p>Complementary labs: browser teaching simulations (STL, OOP memory &amp; CppNuts multithreading) and an educational filesystem interpreter. Includes timing scripts; no measured speedup claimed.</p>
 <a href="https://yashwant-rana.vercel.app/labs/cpp-oop/">OOP &amp; memory lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-threading/">Threading lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-stl/">STL studio ↗</a> · <a href="https://github.com/yashwant938/CompilerCppTopics">STL source ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/cpp-oop">OOP &amp; threading source ↗</a> · <a href="https://github.com/yashwant938/OOPD-Project">Systems source ↗</a> · <a href="https://yashwant-rana.vercel.app/#cpp-systems">Case study →</a>
 </td>
-<td width="50%" valign="top">
-<a href="https://yashwant-rana.vercel.app/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Concept illustration for GPT-2 and T5 review summarization" width="100%" /></picture></a>
-<sub><strong>NLP · FINE-TUNING · MODEL EVALUATION</strong></sub>
-<h3><a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107">GPT-2 &amp; T5 Review Summarization</a></h3>
-<p>Fine-tuned and compared GPT-2 and T5-small on <strong>6,000 Amazon Fine Food Reviews</strong>, using 512 validation reviews for model selection and a <strong>fresh 512-review test set</strong>.</p>
-<ul>
-<li>Summary-only loss, duplicate-aware splits, reloadable checkpoints, and <strong>22 passing offline tests</strong>.</li>
-<li>Paired ROUGE analysis and a source-grounded <strong>24-review product-detail audit</strong>, with agent-authored labels.</li>
-</ul>
-<p><strong>Test ROUGE-L F1:</strong> GPT-2 0.1275 · T5 0.1255 · lead-16 0.0974. No clear GPT-2/T5 advantage; preserving specific product details remains a limitation.</p>
-<p><code>Python</code> <code>PyTorch</code> <code>Hugging Face</code> <code>GPT-2</code> <code>T5</code></p>
-<a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/results/t5-comparison/REPORT.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/COMPARISON.md">Reproduce the experiment →</a>
-</td>
 </tr>
 </table>
 
 <details>
-<summary><strong>Earlier projects &amp; explorations</strong></summary>
+<summary><strong>Earlier projects, NLP research &amp; explorations</strong></summary>
 
-<p>More prototypes and learning projects, preserved in the <a href="https://yashwant-rana.vercel.app/archive.html#work">portfolio archive</a>. Illustrations below are concept artwork unless noted as a live capture.</p>
+<p>Additional ML research, prototypes, and learning projects preserved in the <a href="https://yashwant-rana.vercel.app/archive.html#work">portfolio archive</a>. Illustrations below are concept artwork unless noted as a live capture.</p>
 
 <table>
+<tr>
+<td colspan="2" valign="top">
+<sub><strong>NLP · FINE-TUNING · MODEL EVALUATION</strong></sub>
+<h3><a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107">GPT-2 &amp; T5 Review Summarization</a></h3>
+<p>Fine-tuned and compared GPT-2 and T5-small on <strong>6,000 Amazon Fine Food Reviews</strong> (512 validation + fresh <strong>512-review test set</strong>) with summary-only loss, duplicate-aware splits, reloadable checkpoints, <strong>22 passing offline tests</strong>, paired ROUGE analysis, and a 24-review product-detail audit. <strong>Test ROUGE-L F1:</strong> GPT-2 0.1275 · T5 0.1255 · lead-16 0.0974.</p>
+<p><code>Python</code> <code>PyTorch</code> <code>Hugging Face</code> <code>GPT-2</code> <code>T5</code></p>
+<a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/results/t5-comparison/REPORT.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/COMPARISON.md">Reproduce the experiment →</a>
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 <p><a href="https://yashwant-rana.vercel.app/labs/signal/"><img src="./assets/projects/signal-recommender.png" alt="Signal Recommendation Lab with editable fictional listener ratings, ranked headphone suggestions, and predicted scores." width="100%" /></a></p>
@@ -265,19 +274,23 @@ This profile repository doubles as a **live Systems × GenAI runtime**. Trigger 
 </p>
 
 <details>
-<summary><strong>Or connect Claude / Cursor / Antigravity directly to my live ArchGuard MCP (5s, zero auth)</strong></summary>
+<summary><strong>Or connect Claude / Cursor / Antigravity directly to BOTH live hosted MCP servers (5s, zero auth)</strong></summary>
 
 ```json
 {
   "mcpServers": {
     "arch-guard": {
       "url": "https://arch-guard-mcp.yashwant938.workers.dev/mcp"
+    },
+    "context-forge": {
+      "url": "https://context-forge-mcp.yashwant938.workers.dev/mcp"
     }
   }
 }
 ```
 
-Official MCP Registry: [`io.github.yashwant938/arch-guard-mc@1.0.0`](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.yashwant938%2Farch-guard-mc/versions/latest) · Explorer: [arch-guard-mcp.yashwant938.workers.dev ↗](https://arch-guard-mcp.yashwant938.workers.dev)
+- **ArchGuard MCP:** [`io.github.yashwant938/arch-guard-mc@1.0.0`](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.yashwant938%2Farch-guard-mc/versions/latest) · [arch-guard-mcp.yashwant938.workers.dev ↗](https://arch-guard-mcp.yashwant938.workers.dev)
+- **ContextForge MCP:** [context-forge-mcp.yashwant938.workers.dev ↗](https://context-forge-mcp.yashwant938.workers.dev) · [Source &amp; Skills ↗](https://github.com/yashwant938/context-forge-mcp)
 
 </details>
 

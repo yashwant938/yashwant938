@@ -27,6 +27,7 @@ class TelemetryRenderTests(unittest.TestCase):
             ),
             probes=(
                 telemetry.EdgeProbe('ArchGuard MCP Worker', 'arch-guard-mcp.yashwant938.workers.dev/mcp', True, 200, 34, 'MCP 2025-03-26 · 6 HTTP tools · 4 res · 3 prompts', '#34D399'),
+                telemetry.EdgeProbe('ContextForge MCP Worker', 'context-forge-mcp.yashwant938.workers.dev/mcp', True, 200, 29, 'MCP 2025-03-26 · 6 HTTP tools · 4 res · 3 prompts', '#E5A93C'),
                 telemetry.EdgeProbe('System Design Atlas', 'system-design-guide.yashwant938.workers.dev', True, 200, 52, 'Cloudflare Edge · 14 modules · 100 lessons · 6 labs', '#60A5FA'),
             ),
             registry=telemetry.RegistryStatus('io.github.yashwant938/arch-guard-mc', '1.0.0', 'ACTIVE', 'streamable-http', True),

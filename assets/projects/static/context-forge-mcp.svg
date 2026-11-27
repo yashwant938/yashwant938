@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="cf-title cf-desc" class="standalone">
+<title id="cf-title">ContextForge MCP: deterministic token compressor and context compiler</title><desc id="cf-desc">Heavy raw logs, code files, and RAG chunks enter a floating isometric compression prism and emerge as a dense token-budgeted XML context pack with U-shaped attention ordering.</desc>
+<defs>
+<radialGradient id="cf-bg" cx="48%" cy="43%" r="75%"><stop stop-color="#1d2f3a"/><stop offset=".55" stop-color="#111f28"/><stop offset="1" stop-color="#0b1218"/></radialGradient>
+<radialGradient id="cf-halo"><stop stop-color="#8ec5ff" stop-opacity=".18"/><stop offset="1" stop-color="#8ec5ff" stop-opacity="0"/></radialGradient>
+<pattern id="cf-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8aa8b8" stroke-width=".6" opacity=".14"/></pattern>
+<linearGradient id="cf-top-lime" x2="0.8" y2="1"><stop stop-color="#d8f3a1"/><stop offset="1" stop-color="#72984f"/></linearGradient>
+<linearGradient id="cf-front-lime" x2="0.8" y2="1"><stop stop-color="#748a59"/><stop offset="1" stop-color="#283b28"/></linearGradient>
+<linearGradient id="cf-side-lime" x2="0.8" y2="1"><stop stop-color="#385243"/><stop offset="1" stop-color="#182821"/></linearGradient>
+<linearGradient id="cf-top-teal" x2="0.8" y2="1"><stop stop-color="#9ce5d2"/><stop offset="1" stop-color="#3f7c80"/></linearGradient>
+<linearGradient id="cf-front-teal" x2="0.8" y2="1"><stop stop-color="#4e8987"/><stop offset="1" stop-color="#173b40"/></linearGradient>
+<linearGradient id="cf-side-teal" x2="0.8" y2="1"><stop stop-color="#315d68"/><stop offset="1" stop-color="#152b36"/></linearGradient>
+<linearGradient id="cf-top-violet" x2="0.8" y2="1"><stop stop-color="#c9bdfc"/><stop offset="1" stop-color="#746399"/></linearGradient>
+<linearGradient id="cf-front-violet" x2="0.8" y2="1"><stop stop-color="#7b6b9e"/><stop offset="1" stop-color="#322940"/></linearGradient>
+<linearGradient id="cf-side-violet" x2="0.8" y2="1"><stop stop-color="#534465"/><stop offset="1" stop-color="#241f37"/></linearGradient>
+<linearGradient id="cf-top-blue" x2="0.8" y2="1"><stop stop-color="#93c5fd"/><stop offset="1" stop-color="#3b6ea8"/></linearGradient>
+<linearGradient id="cf-front-blue" x2="0.8" y2="1"><stop stop-color="#4b79ad"/><stop offset="1" stop-color="#1a3150"/></linearGradient>
+<linearGradient id="cf-side-blue" x2="0.8" y2="1"><stop stop-color="#2b4e78"/><stop offset="1" stop-color="#122138"/></linearGradient>
+</defs>
+
+<rect width="800" height="480" fill="url(#cf-bg)"/><rect x="40" y="40" width="720" height="400" rx="4" fill="url(#cf-grid)"/>
+<ellipse cx="400" cy="245" rx="300" ry="190" fill="url(#cf-halo)"/>
+<ellipse cx="400" cy="378" rx="275" ry="44" fill="#060f16" opacity=".58"/>
+<path d="M74 362 400 432 726 362M108 326 400 390 692 326" fill="none" stroke="#53748a" opacity=".24"/>
+
+<path d="M214 156 Q268 186 308 220 M214 238 Q264 246 302 252 M214 316 Q268 302 308 280 M494 252 H584" fill="none" stroke="#72cfb4" stroke-width="2.5" stroke-dasharray="8 10" stroke-linecap="round" class="art-flow"/>
+
+<g>
+  <polygon points="94,300 156,332 156,362 94,330" fill="url(#cf-front-violet)" stroke="#789398" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,332 218,300 218,330 156,362" fill="url(#cf-side-violet)" stroke="#4f6572" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,268 218,300 156,332 94,300" fill="url(#cf-top-violet)" stroke="#dcd3ff" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <polygon points="94,228 156,260 156,290 94,258" fill="url(#cf-front-teal)" stroke="#789398" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,260 218,228 218,258 156,290" fill="url(#cf-side-teal)" stroke="#4f6572" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,196 218,228 156,260 94,228" fill="url(#cf-top-teal)" stroke="#c2f4e7" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <polygon points="94,156 156,188 156,218 94,186" fill="url(#cf-front-blue)" stroke="#789398" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,188 218,156 218,186 156,218" fill="url(#cf-side-blue)" stroke="#4f6572" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,124 218,156 156,188 94,156" fill="url(#cf-top-blue)" stroke="#c8e1ff" stroke-width="1.2" stroke-linejoin="round"/>
+  <text x="156" y="108" fill="#93c5fd" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" text-anchor="middle">48K RAW TOKENS</text>
+</g>
+
+<g>
+  <polygon points="276,288 400,352 400,382 276,318" fill="url(#cf-front-blue)" stroke="#789398" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,352 524,288 524,318 400,382" fill="url(#cf-side-blue)" stroke="#4f6572" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,224 524,288 400,352 276,288" fill="url(#cf-top-blue)" stroke="#c8e1ff" stroke-width="1.2" stroke-linejoin="round"/>
+</g>
+
+<g class="art-float">
+  <polygon points="322,232 400,272 400,308 322,268" fill="url(#cf-front-lime)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,272 478,232 478,268 400,308" fill="url(#cf-side-lime)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,192 478,232 400,272 322,232" fill="url(#cf-top-lime)" stroke="#e4f8be" stroke-width="1.4" stroke-linejoin="round"/>
+  <polygon points="400,118 462,174 400,230 338,174" fill="#122634" stroke="#9ce5d2" stroke-width="2.4" stroke-linejoin="round"/>
+  <polygon points="400,132 446,174 400,216 354,174" fill="#193645" stroke="#d8f3a1" stroke-width="1.4" opacity=".9"/>
+  <path d="M370 174 H390 M384 168 L390 174 L384 180 M430 174 H410 M416 168 L410 174 L416 180" fill="none" stroke="#d8f3a1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="98" fill="#e9f8d3" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle">BM25 · SKELETON · DRAIN</text>
+</g>
+
+<g class="art-float">
+  <polygon points="586,232 646,263 646,322 586,291" fill="url(#cf-front-lime)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="646,263 706,232 706,291 646,322" fill="url(#cf-side-lime)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="646,201 706,232 646,263 586,232" fill="url(#cf-top-lime)" stroke="#e4f8be" stroke-width="1.4" stroke-linejoin="round"/>
+  <rect x="580" y="118" width="132" height="64" rx="11" fill="#122330" stroke="#d8f3a1" stroke-width="1.8"/>
+  <rect x="598" y="134" width="12" height="32" rx="3" fill="#d8f3a1"/>
+  <rect x="616" y="146" width="12" height="20" rx="3" fill="#9ce5d2" opacity=".8"/>
+  <rect x="634" y="154" width="12" height="12" rx="3" fill="#60a5fa" opacity=".6"/>
+  <rect x="652" y="154" width="12" height="12" rx="3" fill="#60a5fa" opacity=".6"/>
+  <rect x="670" y="144" width="12" height="22" rx="3" fill="#9ce5d2" opacity=".8"/>
+  <rect x="688" y="134" width="12" height="32" rx="3" fill="#d8f3a1"/>
+  <text x="646" y="106" fill="#d8f3a1" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" text-anchor="middle">-85% PACKED</text>
+</g>
+
+<g class="art-pulse">
+  <circle cx="264" cy="144" r="4" fill="#93c5fd"/>
+  <circle cx="536" cy="154" r="4" fill="#d8f3a1"/>
+  <circle cx="536" cy="340" r="3.5" fill="#9ce5d2"/>
+</g>
+
+<text x="156" y="408" fill="#d4ddc9" font-family="Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">CODE · LOGS · RAG</text>
+<text x="400" y="424" fill="#e9f8d3" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2.2" text-anchor="middle">CONTEXTFORGE MCP</text>
+<text x="646" y="408" fill="#d4ddc9" font-family="Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">U-ORDERED PACK</text>
+</svg>
