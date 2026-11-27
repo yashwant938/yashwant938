@@ -1,0 +1,80 @@
+name: Interactive Profile Sandbox (ArchGuard MCP & Clang++)
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: profile-sandbox
+  cancel-in-progress: false
+
+jobs:
+  run-sandbox:
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      (contains(github.event.issue.labels.*.name, 'sandbox:archguard') ||
+       contains(github.event.issue.labels.*.name, 'sandbox:clang') ||
+       startsWith(github.event.issue.title, '[ArchGuard Sandbox]') ||
+       startsWith(github.event.issue.title, '[Clang Sandbox]'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Determine sandbox mode
+        id: mode
+        env:
+          ISSUE_LABELS: ${{ toJson(github.event.issue.labels.*.name) }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          if echo "$ISSUE_LABELS" | grep -q 'sandbox:clang' || echo "$ISSUE_TITLE" | grep -q '^\[Clang Sandbox\]'; then
+            echo "kind=clang" >> "$GITHUB_OUTPUT"
+          else
+            echo "kind=archguard" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ensure clang++ is available (Clang mode only)
+        if: steps.mode.outputs.kind == 'clang'
+        run: |
+          if ! command -v clang++ >/dev/null 2>&1; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq clang
+          fi
+          clang++ --version | head -n 1
+
+      - name: Execute isolated sandbox analysis
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python3 scripts/sandbox_runner.py \
+            --kind "${{ steps.mode.outputs.kind }}" \
+            --comment-out /tmp/sandbox_reply.md
+
+      - name: Reply to visitor issue and close cleanly
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body-file /tmp/sandbox_reply.md
+          gh issue close "$ISSUE_NUMBER" --comment "Sandbox run archived — latest experiment card updated on the profile README."
+
+      - name: Update Latest Visitor Experiment SVG on README
+        run: |
+          git add assets/sandbox-latest.svg assets/sandbox-latest-mobile.svg
+          if git diff --cached --quiet; then
+            echo "No SVG ticker update needed."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Update interactive sandbox latest run (#${{ github.event.issue.number }})"
+          git pull --rebase origin main
+          git push origin HEAD:main

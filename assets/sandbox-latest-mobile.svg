@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="316" viewBox="0 0 600 316" role="img" aria-labelledby="sbm-title sbm-desc">
+  <title id="sbm-title">Latest Interactive Profile Sandbox Experiment</title>
+  <desc id="sbm-desc">ARCHGUARD MCP · SQL DDL: Audited postgres DDL · 3 critical lock(s) flagged.</desc>
+  <rect x="1" y="1" width="598" height="314" rx="14" fill="#0B0E14" stroke="#252C3A" stroke-width="2"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <rect x="22" y="18" width="556" height="34" rx="8" fill="#101520" stroke="#242D40"/>
+    <circle cx="38" cy="35" r="3.5" fill="#34D399"/>
+    <text x="50" y="39" fill="#E2E8F0" font-family="Consolas, monospace" font-size="10.5" font-weight="700">SANDBOX // LATEST VISITOR RUN</text>
+    <text x="564" y="39" fill="#64748B" font-family="Consolas, monospace" font-size="9.5" text-anchor="end">2026-11-27 18:58 UTC</text>
+
+    <rect x="22" y="64" width="556" height="114" rx="10" fill="#111724" stroke="#253047"/>
+    <rect x="22" y="64" width="4" height="114" rx="2" fill="#E5A93C"/>
+    <text x="38" y="88" fill="#E5A93C" font-family="Consolas, monospace" font-size="10" font-weight="700">ARCHGUARD MCP · SQL DDL</text>
+    <text x="562" y="88" fill="#34D399" font-family="Consolas, monospace" font-size="10" font-weight="700" text-anchor="end">BLOCK_DEPLOY · 3 CRITICAL</text>
+    <text x="38" y="120" fill="#F8FAFC" font-size="14.5" font-weight="700">Audited postgres DDL · 3 critical lock(s) flagged</text>
+    <text x="38" y="148" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">Triggered by @yashwant938 · Baseline Run</text>
+
+    <rect x="22" y="190" width="556" height="108" rx="10" fill="#0A0E16" stroke="#232D42"/>
+    <text x="40" y="224" fill="#34D399" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5">$ mcp call check_migration_safety (postgres)</text><text x="40" y="243" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5">verdict: BLOCK_DEPLOY | critical=3 high=0 med=1</text><text x="40" y="262" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5">[MIG-007] Missing SET lock_timeout guard before DDL</text><text x="40" y="281" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5">[MIG-001] Blocking CREATE INDEX without CONCURRENTLY</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+name: "⚡ Sandbox: Audit SQL DDL or Dependency Graph (ArchGuard MCP)"
+description: "Run my live Cloudflare-hosted ArchGuard MCP server on your SQL migration or module graph (~15s bot reply)."
+title: "[ArchGuard Sandbox] Audit my SQL DDL / dependency graph"
+labels: ["sandbox:archguard"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Interactive ArchGuard MCP Sandbox
+        Submit this issue to run a live **JSON-RPC 2.0 `tools/call`** against [`arch-guard-mcp.yashwant938.workers.dev/mcp`](https://arch-guard-mcp.yashwant938.workers.dev).
+        In ~15 seconds, GitHub Actions will reply with lock-level findings + a **3-phase Expand-Contract SQL plan** (or a **Tarjan O(V+E) SCC Mermaid diagram + Ca/Ce/I coupling report**) and update the **Latest Visitor Experiment** ticker on my profile README.
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Audit Mode
+      description: Choose SQL migration lock/safety verification or module dependency graph & code reliability audit.
+      options:
+        - "SQL DDL Migration Audit (Expand-Contract)"
+        - "Architecture Dependency Graph & Code Audit (Tarjan SCC)"
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dialect
+    attributes:
+      label: SQL Dialect (for SQL mode)
+      options:
+        - postgres
+        - mysql
+        - sqlite
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: payload
+    attributes:
+      label: SQL DDL or Dependency Edges / Code Snippet
+      description: |
+        - **SQL Mode:** Paste DDL statements (`CREATE INDEX`, `ALTER TABLE`, etc.).
+        - **Architecture Mode:** Either write edges (`src/auth.js -> src/users.js`) OR multi-file code separated by `// file: src/orders.js`.
+      value: |
+        CREATE INDEX idx_orders_user_id ON orders(user_id);
+        ALTER TABLE orders ADD COLUMN tenant_id UUID NOT NULL;
+        ALTER TABLE orders DROP COLUMN legacy_status;
+    validations:
+      required: true

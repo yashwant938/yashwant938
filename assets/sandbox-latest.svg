@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="224" viewBox="0 0 1200 224" role="img" aria-labelledby="sb-title sb-desc">
+  <title id="sb-title">Latest Interactive Profile Sandbox Experiment</title>
+  <desc id="sb-desc">ARCHGUARD MCP · SQL DDL triggered by @yashwant938 · Baseline Run: Audited postgres DDL · 3 critical lock(s) flagged.</desc>
+  <defs>
+    <pattern id="sb-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#161B24" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="1" y="1" width="1198" height="222" rx="14" fill="#0B0E14" stroke="#252C3A" stroke-width="2"/>
+  <rect x="2" y="2" width="1196" height="220" rx="13" fill="url(#sb-grid)"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <!-- Top Header Strip -->
+    <rect x="28" y="20" width="1144" height="36" rx="8" fill="#101520" stroke="#242D40"/>
+    <circle cx="46" cy="38" r="4" fill="#34D399"/>
+    <text x="60" y="42" fill="#E2E8F0" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.2">INTERACTIVE PROFILE SANDBOX // LATEST VISITOR RUN</text>
+    <text x="1154" y="42" fill="#64748B" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" text-anchor="end">2026-11-27 18:58 UTC</text>
+
+    <!-- Left Metadata Card -->
+    <rect x="28" y="68" width="584" height="134" rx="10" fill="#111724" stroke="#253047"/>
+    <rect x="28" y="68" width="4" height="134" rx="2" fill="#E5A93C"/>
+    <rect x="46" y="84" width="214" height="22" rx="11" fill="#182235" stroke="#E5A93C" stroke-opacity="0.6"/>
+    <text x="153" y="99" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">ARCHGUARD MCP · SQL DDL</text>
+    <rect x="372" y="84" width="224" height="22" rx="11" fill="#2A1D12" stroke="#7C4D1E"/>
+    <text x="484" y="99" fill="#FBBF24" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">BLOCK_DEPLOY · 3 CRITICAL</text>
+
+    <text x="46" y="138" fill="#F8FAFC" font-size="16" font-weight="700">Audited postgres DDL · 3 critical lock(s) flagged</text>
+    <text x="46" y="164" fill="#94A3B8" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11.5">Triggered by @yashwant938 · Baseline Run</text>
+    <text x="46" y="186" fill="#64748B" font-size="11.5">Click a sandbox button below to trigger your own live ArchGuard MCP or Clang++ run (~15s).</text>
+
+    <!-- Right Terminal Preview Card -->
+    <rect x="626" y="68" width="546" height="134" rx="10" fill="#0A0E16" stroke="#232D42"/>
+    <circle cx="646" cy="84" r="3.5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="659" cy="84" r="3.5" fill="#E5A93C" opacity="0.8"/>
+    <circle cx="672" cy="84" r="3.5" fill="#34D399" opacity="0.8"/>
+    <text x="1156" y="88" fill="#475569" font-family="Consolas, 'JetBrains Mono', monospace" font-size="9.5" text-anchor="end">LIVE OUTPUT PREVIEW</text>
+    <line x1="626" y1="96" x2="1172" y2="96" stroke="#1B2335"/>
+    <text x="644" y="114" fill="#34D399" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11">$ mcp call check_migration_safety (postgres)</text><text x="644" y="136" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11">verdict: BLOCK_DEPLOY | critical=3 high=0 med=1</text><text x="644" y="158" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11">[MIG-007] Missing SET lock_timeout guard before DDL</text><text x="644" y="180" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="11">[MIG-001] Blocking CREATE INDEX without CONCURRENTLY</text>
+  </g>
+</svg>

@@ -6,6 +6,15 @@
       <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#161B24" stroke-width="1"/>
     </pattern>
   </defs>
+  <style>
+    .live-dot { animation: hdr-pulse 2.6s ease-in-out infinite; }
+    .trace-flow { stroke-dasharray: 6 6; animation: hdr-flow 3.2s linear infinite; }
+    .orbit-ring { animation: hdr-spin 24s linear infinite; transform-origin: 268px 148px; }
+    @keyframes hdr-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.38; } }
+    @keyframes hdr-flow { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
+    @keyframes hdr-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .live-dot, .trace-flow, .orbit-ring { animation: none; } }
+  </style>
 
   <!-- Deep Obsidian Studio Canvas -->
   <rect x="1" y="1" width="1198" height="408" rx="14" fill="#0B0E14" stroke="#252C3A" stroke-width="2"/>
@@ -14,9 +23,9 @@
   <!-- Left Column: Hero Masthead & Dual-Pillar Spec Ledger -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
     <!-- Status Pill -->
-    <rect x="48" y="42" width="320" height="26" rx="13" fill="#131822" stroke="#273042"/>
-    <circle cx="64" cy="55" r="4" fill="#34D399"/>
-    <text x="76" y="59" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1.2">ENGINEER · BUILDER · OPEN SOURCE</text>
+    <rect x="48" y="42" width="356" height="26" rx="13" fill="#131822" stroke="#273042"/>
+    <circle cx="64" cy="55" r="4" fill="#34D399" class="live-dot"/>
+    <text x="76" y="59" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1.2">ENGINEER · OPEN SOURCE · LIVE MCP EDGE</text>
 
     <!-- Display Name & Domain Equation -->
     <text x="48" y="132" fill="#F8FAFC" font-size="62" font-weight="800" letter-spacing="-2">Yashwant</text>
@@ -25,12 +34,12 @@
       <tspan fill="#475569"> × </tspan>
       <tspan fill="#E5A93C">GenAI</tspan>
       <tspan fill="#475569"> × </tspan>
-      <tspan fill="#34D399">Web</tspan>
+      <tspan fill="#34D399">Edge</tspan>
     </text>
 
     <!-- Grounded Summary -->
-    <text x="48" y="222" fill="#94A3B8" font-size="16">From low-level code to intelligent, user-facing applications.</text>
-    <text x="48" y="246" fill="#64748B" font-size="14.5">SWE @ IBM India Software Labs · M.Tech CSE @ IIIT Delhi</text>
+    <text x="48" y="222" fill="#94A3B8" font-size="16">From LLVM linkers &amp; C++ internals to deterministic MCP agents.</text>
+    <text x="48" y="246" fill="#64748B" font-size="14.5">Ex-IBM India Software Labs (Z Compiler) · M.Tech CSE @ IIIT Delhi</text>
 
     <!-- Bottom 2-Column Spec Table -->
     <g transform="translate(48, 274)">
@@ -39,11 +48,11 @@
 
       <text x="20" y="26" fill="#60A5FA" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1">SYSTEMS &amp; OPEN SOURCE</text>
       <text x="20" y="52" fill="#F1F5F9" font-size="17" font-weight="700">C++17 · Linux · LLVM</text>
-      <text x="20" y="72" fill="#94A3B8" font-size="12.5">Concurrency, GDB &amp; upstream fixes</text>
+      <text x="20" y="72" fill="#94A3B8" font-size="12.5">Compilers, ELF linkers &amp; upstream fixes</text>
 
-      <text x="285" y="26" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1">GENERATIVE AI &amp; PRODUCT</text>
-      <text x="285" y="52" fill="#F1F5F9" font-size="17" font-weight="700">RAG · LLM Apps · Full-Stack</text>
-      <text x="285" y="72" fill="#94A3B8" font-size="12.5">FastAPI, PyTorch, React &amp; Next.js</text>
+      <text x="285" y="26" fill="#E5A93C" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1">GENAI · MCP &amp; EDGE INFRA</text>
+      <text x="285" y="52" fill="#F1F5F9" font-size="17" font-weight="700">MCP · RAG · Distributed</text>
+      <text x="285" y="72" fill="#94A3B8" font-size="12.5">Cloudflare Workers, FastAPI &amp; React</text>
     </g>
   </g>
 
@@ -53,11 +62,11 @@
 
     <!-- Orthogonal Circuit Traces & Terminal Dots -->
     <g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M 208 82 H 232 L 268 148" stroke="#60A5FA" opacity="0.65"/>
-      <path d="M 208 214 H 232 L 268 148" stroke="#2DD4BF" opacity="0.65"/>
-      <path d="M 328 82 H 304 L 268 148" stroke="#E5A93C" opacity="0.65"/>
-      <path d="M 328 214 H 304 L 268 148" stroke="#34D399" opacity="0.65"/>
-      <circle cx="268" cy="148" r="54" stroke="#334155" stroke-width="1.2" stroke-dasharray="3 6"/>
+      <path d="M 208 82 H 232 L 268 148" stroke="#60A5FA" opacity="0.72" class="trace-flow"/>
+      <path d="M 208 214 H 232 L 268 148" stroke="#2DD4BF" opacity="0.72" class="trace-flow"/>
+      <path d="M 328 82 H 304 L 268 148" stroke="#E5A93C" opacity="0.72" class="trace-flow"/>
+      <path d="M 328 214 H 304 L 268 148" stroke="#34D399" opacity="0.72" class="trace-flow"/>
+      <circle cx="268" cy="148" r="54" stroke="#334155" stroke-width="1.2" stroke-dasharray="3 6" class="orbit-ring"/>
     </g>
     <circle cx="208" cy="82" r="3" fill="#60A5FA"/>
     <circle cx="208" cy="214" r="3" fill="#2DD4BF"/>
@@ -94,14 +103,14 @@
       <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">BM25 · MiniLM · MCP</text>
     </g>
 
-    <!-- Node 04: Bottom-Right (ML & Full-Stack) -->
+    <!-- Node 04: Bottom-Right (Distributed & Edge) -->
     <g transform="translate(328, 166)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
       <rect x="0" y="0" width="184" height="96" rx="8" fill="#151B28" stroke="#1E4E3A" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="96" rx="2" fill="#34D399"/>
-      <text x="16" y="24" fill="#34D399" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">04 · ML &amp; FULL-STACK</text>
-      <text x="16" y="48" fill="#F8FAFC" font-size="16" font-weight="700">Models &amp; Web UI</text>
-      <text x="16" y="68" fill="#94A3B8" font-size="11.5">RecSys lab &amp; web products</text>
-      <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">PyTorch · FastAPI · TS</text>
+      <text x="16" y="24" fill="#34D399" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">04 · EDGE &amp; DISTRIBUTED</text>
+      <text x="16" y="48" fill="#F8FAFC" font-size="16" font-weight="700">HLD · Workers</text>
+      <text x="16" y="68" fill="#94A3B8" font-size="11.5">Tarjan SCC &amp; Raft labs</text>
+      <text x="16" y="84" fill="#CBD5E1" font-family="Consolas, 'JetBrains Mono', monospace" font-size="10">Workers · React · TS</text>
     </g>
 
     <!-- Central Core Badge -->

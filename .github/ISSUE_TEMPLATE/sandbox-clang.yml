@@ -1,0 +1,40 @@
+name: "🔬 Sandbox: Diff Clang++ -O0 vs -O2 Assembly (C++20)"
+description: "Drop a short C++20 function to inspect x86-64 Intel assembly reduction via isolated clang++ -S compilation (~15s bot reply)."
+title: "[Clang Sandbox] Diff -O0 vs -O2 assembly"
+labels: ["sandbox:clang"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Interactive Clang++ Compiler Diff Sandbox
+        Submit a small C++20 snippet (no `main()` required). GitHub Actions compiles it **only to assembly** (`clang++ -std=c++20 -S -masm=intel`, never linked or executed) at `-O0` vs `-O2`/`-O3`, replies with the instruction-count reduction and x86-64 diff, and updates the **Latest Visitor Experiment** card on my profile README.
+        *Allowed headers: `<cstdint>`, `<cstddef>`, `<algorithm>`, `<array>`, `<numeric>`, `<cmath>`, `<bit>`, `<type_traits>`, `<limits>`, `<utility>`, `<span>`.*
+
+  - type: dropdown
+    id: opt_level
+    attributes:
+      label: Optimization Level to Compare Against -O0
+      options:
+        - "-O2"
+        - "-O3"
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: C++20 Function Snippet (max 80 lines)
+      description: Try a loop, branchless clamp, or bit-manipulation helper to see what LLVM optimizes away.
+      value: |
+        #include <cstdint>
+
+        uint64_t sum_to_n(uint64_t n) {
+            uint64_t total = 0;
+            for (uint64_t i = 1; i <= n; ++i) {
+                total += i;
+            }
+            return total;
+        }
+    validations:
+      required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Live ArchGuard MCP Explorer (Cloudflare Edge)
+    url: https://arch-guard-mcp.yashwant938.workers.dev
+    about: Inspect the hosted Streamable HTTP MCP 2025-03-26 server and 7 deterministic tools.
+  - name: System Design Mastery Atlas (100 2.5D Lessons)
+    url: https://system-design-guide.yashwant938.workers.dev
+    about: Explore 14 HLD/LLD modules and 6 interactive distributed-systems simulators.

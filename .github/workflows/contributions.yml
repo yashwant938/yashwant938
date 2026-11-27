@@ -11,7 +11,9 @@ on:
       - 'scripts/update_contributions.py'
       - 'scripts/snake_animation.py'
       - 'scripts/streaks.py'
+      - 'scripts/telemetry.py'
       - 'tests/test_contributions.py'
+      - 'tests/test_telemetry_and_sandbox.py'
       - '.github/workflows/contributions.yml'
 
 permissions:
@@ -31,20 +33,25 @@ jobs:
         with:
           ref: main
 
-      - name: Test contribution counts and streak rules
+      - name: Test contribution, streak, telemetry, and sandbox rules
         run: python3 -m unittest discover -s tests -v
 
       - name: Render the public contribution calendar and streaks
         run: python3 scripts/update_contributions.py
 
-      - name: Publish the refreshed image
+      - name: Render live upstream OSS and edge infrastructure telemetry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/telemetry.py
+
+      - name: Publish the refreshed images
         run: |
-          git add assets/contributions-red.svg assets/contribution-streaks.svg assets/contribution-streaks-mobile.svg
+          git add assets/contributions-red.svg assets/contribution-streaks.svg assets/contribution-streaks-mobile.svg assets/telemetry-panel.svg assets/telemetry-panel-mobile.svg
           if git diff --cached --quiet; then
-            echo "Contribution calendar and streaks are already current."
+            echo "Profile calendar, streaks, and telemetry are already current."
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Refresh contribution calendar and streaks'
+          git commit -m 'Refresh contribution calendar, streaks, and live telemetry'
           git push origin HEAD:main

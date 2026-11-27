@@ -12,7 +12,8 @@
 <p align="center">
   <a href="https://yashwant-rana.vercel.app/"><strong>Explore my portfolio &amp; project case studies ↗</strong></a> &nbsp; / &nbsp;
   <a href="#selected-work">Projects</a> &nbsp; / &nbsp;
-  <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">Merged contributions</a> &nbsp; / &nbsp;
+  <a href="#interactive-sandbox--live-mcp">Interactive sandbox</a> &nbsp; / &nbsp;
+  <a href="#live-upstream-oss--edge-telemetry">Live telemetry</a> &nbsp; / &nbsp;
   <a href="https://www.linkedin.com/in/yash-rana-3a7252265/">LinkedIn</a>
 </p>
 
@@ -241,6 +242,56 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 
 </details>
 
+## Interactive sandbox &amp; live MCP
+
+This profile repository doubles as a **live Systems × GenAI runtime**. Trigger either experiment below via a pre-filled GitHub Issue—GitHub Actions runs the isolated check in ~15 seconds, posts the full diff or Mermaid/SQL plan back on the issue, and automatically updates the **Latest Visitor Run** card:
+
+<p align="center">
+  <a href="https://github.com/yashwant938/yashwant938/issues?q=is%3Aissue+label%3Asandbox%3Aarchguard%2Csandbox%3Aclang">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/sandbox-latest-mobile.svg" />
+      <img src="./assets/sandbox-latest.svg" alt="Latest interactive profile sandbox experiment result powered by ArchGuard MCP and Clang++." width="100%" />
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/yashwant938/yashwant938/issues/new?template=sandbox-archguard.yml">
+    <img src="./assets/btn-sandbox-archguard.svg" alt="Audit SQL DDL or Dependency Graph via ArchGuard MCP" width="49%" />
+  </a>
+  <a href="https://github.com/yashwant938/yashwant938/issues/new?template=sandbox-clang.yml">
+    <img src="./assets/btn-sandbox-clang.svg" alt="Diff Clang++ -O0 vs -O2 Assembly on C++20" width="49%" />
+  </a>
+</p>
+
+<details>
+<summary><strong>Or connect Claude / Cursor / Antigravity directly to my live ArchGuard MCP (5s, zero auth)</strong></summary>
+
+```json
+{
+  "mcpServers": {
+    "arch-guard": {
+      "url": "https://arch-guard-mcp.yashwant938.workers.dev/mcp"
+    }
+  }
+}
+```
+
+Official MCP Registry: [`io.github.yashwant938/arch-guard-mc@1.0.0`](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.yashwant938%2Farch-guard-mc/versions/latest) · Explorer: [arch-guard-mcp.yashwant938.workers.dev ↗](https://arch-guard-mcp.yashwant938.workers.dev)
+
+</details>
+
+## Live upstream OSS &amp; edge telemetry
+
+<p align="center">
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Ayashwant938+-user%3Ayashwant938">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/telemetry-panel-mobile.svg" />
+      <img src="./assets/telemetry-panel.svg" alt="Auto-generated live telemetry of merged and open upstream open-source PRs, Cloudflare Workers edge latency probes, and Official MCP Registry status." width="100%" />
+    </picture>
+  </a>
+</p>
+
 ## From issue to pull request
 
 <p align="center">
@@ -252,9 +303,9 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
   </a>
 </p>
 
-**A recent example:** [ELD #2134 — preserve AArch64 feature flags](https://github.com/qualcomm/eld/pull/2134). A one-line C++ fix, a regression that failed before the change, and **18 passing focused test runs** across two AArch64 configurations. PR open for review.
+**Systems / LLVM:** [ELD #2134 — preserve AArch64 feature flags](https://github.com/qualcomm/eld/pull/2134) (one-line C++ fix, failing-before regression, **18 passing focused test runs** across two AArch64 configurations) alongside **5 merged fixes** in `qualcomm/eld` (`#2011`, `#2065`, `#2129`, `#2207`, `#2336`).
 
-**AI tooling:** [Haystack NVIDIA integration #4233](https://github.com/deepset-ai/haystack-core-integrations/pull/4233) — **Merged** upstream fix in `deepset-ai/haystack-core-integrations` (`NvidiaRanker`, fixing [#4232](https://github.com/deepset-ai/haystack-core-integrations/issues/4232)) so metadata values such as `0`, `0.0`, `False`, and empty strings are checked against `None` instead of truthiness and preserved in NVIDIA NIM ranking passages. Backed by a parameterized HTTP-boundary regression test (`191 passed, 15 integration tests deselected` via `requests_mock`, lint and `mypy` clean; live NVIDIA service tests not run).
+**GenAI / MCP tooling:** **2 merged fixes** in `deepset-ai/haystack-core-integrations` — [#4297](https://github.com/deepset-ai/haystack-core-integrations/pull/4297) (preserving empty tool-call arguments in `HuggingFaceAPIChatGenerator`) and [#4233](https://github.com/deepset-ai/haystack-core-integrations/pull/4233) (`NvidiaRanker` falsy metadata preservation, `191 passed` via `requests_mock`, lint & `mypy` clean) — plus active upstream MCP gateway and SDK PRs in [`IBM/mcp-context-forge`](https://github.com/IBM/mcp-context-forge/pulls?q=is%3Apr+author%3Ayashwant938) and [`strands-agents/harness-sdk`](https://github.com/strands-agents/harness-sdk/pull/6370).
 
 <details>
 <summary><strong>More open-source contributions and verification scope</strong></summary>
@@ -262,12 +313,14 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 - **[ARM/AArch64 LTO fix · #2129](https://github.com/qualcomm/eld/pull/2129) · Merged** — Preserved native object generation with `--save-temps`. Full LTO, ThinLTO, and explicit assembly-output coverage; 16 focused tests passed, followed by the updated regression on all six target configurations.
 - **[Linker-script warning locations · #2207](https://github.com/qualcomm/eld/pull/2207) · Merged** — Added exact source line numbers to duplicate `PROVIDE` / `PROVIDE_HIDDEN` warnings. Both regressions failed before the fix and passed afterward across six target configurations: 12 passes, no skips.
 - **[YAML map assignments · #2336](https://github.com/qualcomm/eld/pull/2336) · Merged** — Included assignments before `SECTIONS` in YAML output, preserving assignment order and values. The new regression failed before the fix; all 18 focused tests passed across six target configurations.
+- **[Haystack HuggingFace tool-call arguments · #4297](https://github.com/deepset-ai/haystack-core-integrations/pull/4297) · Merged** — Preserved empty tool-call arguments in `HuggingFaceAPIChatGenerator` with unit regression coverage.
 - **[Haystack NVIDIA ranker metadata · #4233](https://github.com/deepset-ai/haystack-core-integrations/pull/4233) · Merged** — Changed `NvidiaRanker` metadata filtering from truthiness to `is not None` (matching `NvidiaDocumentEmbedder`) so falsy values pass through while `None` and missing fields remain skipped (`191 passed, 15 integration tests deselected`, HTTP mocked via `requests_mock`).
 - **[Remapped linker scripts · #2437](https://github.com/qualcomm/eld/pull/2437) · Open** — Deferred remapped linker-script path validation to `Input::resolvePath()` so `--remap-inputs` and `-L` search paths apply before failing (`48 focused lit test cases` passed across six target configurations).
+- **[IBM MCP Context Forge PRs](https://github.com/IBM/mcp-context-forge/pulls?q=is%3Apr+author%3Ayashwant938) &amp; [Strands Harness SDK #6370](https://github.com/strands-agents/harness-sdk/pull/6370) · Open** — MCP gateway federation, stdio-to-HTTP routing, prompt argument forwarding, and MCP tool-order preservation fixes.
 - **[Build guidance · #2127](https://github.com/qualcomm/eld/pull/2127) · Open** — Document the LLVM `main` baseline and source/build path guidance following a [maintainer discussion](https://github.com/qualcomm/eld/discussions/887#discussioncomment-18761658).
 - **[React ChatBotify · #366](https://github.com/react-chatbotify/react-chatbotify/pull/366) · Open** — Submitted chat-history HTML sanitization, URL checks, and an optional sanitizer callback with tests.
 
-Statuses checked **18 November 2026**. ELD **#2011, #2065, #2129, #2207, and #2336** and Haystack NVIDIA integration **#4233** are merged; ELD #2127, #2134, and #2437 plus React ChatBotify #366 remain open (smolagents #2949 closed without merge on 15 November 2026). Results above describe focused tests recorded in the PRs, not full-suite runs or live integration validation of every project.
+PR counts, statuses, and merged diff totals in the telemetry panel above refresh automatically every 4 hours directly from the GitHub API (`scripts/telemetry.py`). Test notes describe focused regressions recorded in each PR rather than full upstream integration suites.
 
 </details>
 
