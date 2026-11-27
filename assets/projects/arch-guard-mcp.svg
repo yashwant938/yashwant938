@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="arch-guard-title arch-guard-desc" class="standalone">
+<title id="arch-guard-title">ArchGuard MCP: deterministic architecture and SQL verifier</title><desc id="arch-guard-desc">An isometric MCP guardrail processor inspects dependency cycles and blocking SQL migrations on the left, then emits an acyclic architecture graph and three-phase expand-contract steps on the right.</desc>
+<defs>
+<radialGradient id="ag-bg" cx="48%" cy="43%" r="75%"><stop stop-color="#22352c"/><stop offset=".55" stop-color="#132224"/><stop offset="1" stop-color="#0d1519"/></radialGradient>
+<radialGradient id="ag-halo"><stop stop-color="#9ce5d2" stop-opacity=".18"/><stop offset="1" stop-color="#9ce5d2" stop-opacity="0"/></radialGradient>
+<pattern id="ag-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8aa893" stroke-width=".6" opacity=".15"/></pattern>
+<linearGradient id="ag-top-lime" x2="0.8" y2="1"><stop stop-color="#d8f3a1"/><stop offset="1" stop-color="#72984f"/></linearGradient>
+<linearGradient id="ag-front-lime" x2="0.8" y2="1"><stop stop-color="#748a59"/><stop offset="1" stop-color="#283b28"/></linearGradient>
+<linearGradient id="ag-side-lime" x2="0.8" y2="1"><stop stop-color="#385243"/><stop offset="1" stop-color="#182821"/></linearGradient>
+<linearGradient id="ag-top-teal" x2="0.8" y2="1"><stop stop-color="#9ce5d2"/><stop offset="1" stop-color="#427c78"/></linearGradient>
+<linearGradient id="ag-front-teal" x2="0.8" y2="1"><stop stop-color="#518780"/><stop offset="1" stop-color="#173d3e"/></linearGradient>
+<linearGradient id="ag-side-teal" x2="0.8" y2="1"><stop stop-color="#355e64"/><stop offset="1" stop-color="#172e38"/></linearGradient>
+<linearGradient id="ag-top-violet" x2="0.8" y2="1"><stop stop-color="#c5b9fc"/><stop offset="1" stop-color="#746399"/></linearGradient>
+<linearGradient id="ag-front-violet" x2="0.8" y2="1"><stop stop-color="#7b6b9e"/><stop offset="1" stop-color="#322940"/></linearGradient>
+<linearGradient id="ag-side-violet" x2="0.8" y2="1"><stop stop-color="#534465"/><stop offset="1" stop-color="#241f37"/></linearGradient>
+<linearGradient id="ag-amber" x2="1" y2="1"><stop stop-color="#f6c77a"/><stop offset="1" stop-color="#b97738"/></linearGradient>
+</defs>
+<style>.standalone .art-float{animation:ag-float 4s ease-in-out 1}.standalone .art-pulse{animation:ag-pulse 4s ease-in-out 1}.standalone .art-flow{stroke-dasharray:8 10;animation:ag-flow 4s ease-in-out 1}@keyframes ag-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes ag-pulse{0%,100%{opacity:1}50%{opacity:.5}}@keyframes ag-flow{0%,100%{stroke-dashoffset:0}50%{stroke-dashoffset:36}}@media(prefers-reduced-motion:reduce){.standalone .art-float,.standalone .art-pulse,.standalone .art-flow{animation:none!important}}</style>
+<rect width="800" height="480" fill="url(#ag-bg)"/><rect x="40" y="40" width="720" height="400" rx="4" fill="url(#ag-grid)"/>
+<ellipse cx="400" cy="245" rx="300" ry="190" fill="url(#ag-halo)"/>
+<ellipse cx="400" cy="378" rx="275" ry="44" fill="#071315" opacity=".55"/>
+<path d="M74 362 400 432 726 362M108 326 400 390 692 326" fill="none" stroke="#557463" opacity=".24"/>
+
+<!-- Animated MCP verification bus lines -->
+<path d="M214 176 Q266 196 300 226 M214 294 Q264 292 298 278 M502 224 Q544 196 588 176 M502 278 Q544 292 586 300" fill="none" stroke="#72cfb4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="art-flow"/>
+
+<!-- Left Top: Cyclic dependency graph module (Tarjan SCC input) -->
+<g>
+  <polygon points="94,160 156,192 156,238 94,206" fill="url(#ag-front-violet)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,192 218,160 218,206 156,238" fill="url(#ag-side-violet)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,128 218,160 156,192 94,160" fill="url(#ag-top-violet)" stroke="#dcd3ff" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Highlighted SCC cycle loop on top face -->
+  <path d="M132 160 C142 146 170 146 180 160 C170 174 142 174 132 160 Z" fill="none" stroke="#f6c77a" stroke-width="2.4" stroke-dasharray="4 3"/>
+  <circle cx="132" cy="160" r="4.5" fill="#f6c77a"/>
+  <circle cx="180" cy="160" r="4.5" fill="#f6c77a"/>
+  <circle cx="156" cy="147" r="3.5" fill="#fff3d6"/>
+  <text x="156" y="114" fill="#d2c6fa" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" text-anchor="middle">SCC CYCLE</text>
+</g>
+
+<!-- Left Bottom: SQL DDL migration block -->
+<g>
+  <polygon points="98,284 156,314 156,352 98,322" fill="url(#ag-front-teal)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,314 214,284 214,322 156,352" fill="url(#ag-side-teal)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="156,254 214,284 156,314 98,284" fill="url(#ag-top-teal)" stroke="#bddda0" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Table rows + lock badge -->
+  <path d="M132 282 L156 270 L180 282 M138 291 L156 282 L174 291" fill="none" stroke="#10292d" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="148" y="274" width="16" height="12" rx="2.5" fill="url(#ag-amber)" stroke="#231c10" stroke-width="1.2"/>
+  <path d="M152 274 V270 A4 4 0 0 1 160 270 V274" fill="none" stroke="#f6c77a" stroke-width="2" stroke-linecap="round"/>
+</g>
+
+<!-- Center Base Platform: Edge MCP Protocol Chassis -->
+<g>
+  <polygon points="274,286 400,350 400,382 274,318" fill="url(#ag-front-teal)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,350 526,286 526,318 400,382" fill="url(#ag-side-teal)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,222 526,286 400,350 274,286" fill="url(#ag-top-teal)" stroke="#bddda0" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Bus pins -->
+  <path d="M300 314 l-16 8 M326 327 l-16 8 M352 340 l-16 8 M448 340 l16 8 M474 327 l16 8 M500 314 l16 8" fill="none" stroke="#c4de9b" stroke-width="3.5" stroke-linecap="round"/>
+</g>
+
+<!-- Center Floating Hero: Isometric ArchGuard Shield & Deterministic Core -->
+<g class="art-float">
+  <!-- Inner elevated lime platform -->
+  <polygon points="316,238 400,282 400,316 316,272" fill="url(#ag-front-lime)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,282 484,238 484,272 400,316" fill="url(#ag-side-lime)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="400,194 484,238 400,282 316,238" fill="url(#ag-top-lime)" stroke="#e4f8be" stroke-width="1.4" stroke-linejoin="round"/>
+  <!-- Central vertical dimensional shield -->
+  <path d="M400 106 L464 134 V196 C464 236 436 262 400 276 C364 262 336 236 336 196 V134 Z" fill="#172c2a" stroke="#c7f2aa" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M400 116 L454 140 V194 C454 228 430 250 400 264 Z" fill="#1f3b38" opacity=".85"/>
+  <!-- Deterministic verification graph + check inside shield -->
+  <path d="M366 178 L392 152 L422 164 M366 178 L394 202 L434 180 M392 152 L394 202" fill="none" stroke="#72cfb4" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="366" cy="178" r="5" fill="#c5b9fc"/>
+  <circle cx="392" cy="152" r="5.5" fill="#d8f3a1"/>
+  <circle cx="422" cy="164" r="5" fill="#9ce5d2"/>
+  <circle cx="394" cy="202" r="5" fill="#9ce5d2"/>
+  <circle cx="434" cy="180" r="5.5" fill="#d8f3a1"/>
+  <!-- Crisp approval checkmark below graph -->
+  <path d="M385 228 L396 239 L419 216" fill="none" stroke="#d8f3a1" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="92" fill="#e9f8d3" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2.2" text-anchor="middle">MCP 2025-03-26</text>
+</g>
+
+<!-- Right Top: Verified Clean Acyclic DAG Card -->
+<g class="art-float">
+  <polygon points="586,158 646,189 646,233 586,202" fill="url(#ag-front-lime)" stroke="#789368" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="646,189 706,158 706,202 646,233" fill="url(#ag-side-lime)" stroke="#4f655b" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="646,127 706,158 646,189 586,158" fill="url(#ag-top-lime)" stroke="#e4f8be" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Clean acyclic tree on top face -->
+  <path d="M624 158 L646 146 L668 158 M646 146 V170" fill="none" stroke="#183121" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="646" cy="146" r="4" fill="#183121"/>
+  <circle cx="624" cy="158" r="3.5" fill="#183121"/>
+  <circle cx="668" cy="158" r="3.5" fill="#183121"/>
+  <circle cx="646" cy="170" r="3.5" fill="#183121"/>
+  <text x="646" y="114" fill="#d8f3a1" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" text-anchor="middle">CLEAN DAG</text>
+</g>
+
+<!-- Right Bottom: 3-Phase Expand-Contract Stepped SQL Blocks -->
+<g>
+  <!-- Step 1 -->
+  <polygon points="574,300 606,316 606,342 574,326" fill="url(#ag-front-teal)" stroke="#789368" stroke-width="1.1"/>
+  <polygon points="606,316 638,300 638,326 606,342" fill="url(#ag-side-teal)" stroke="#4f655b" stroke-width="1.1"/>
+  <polygon points="606,284 638,300 606,316 574,300" fill="url(#ag-top-teal)" stroke="#bddda0" stroke-width="1.1"/>
+  <!-- Step 2 -->
+  <polygon points="614,284 646,300 646,334 614,318" fill="url(#ag-front-lime)" stroke="#789368" stroke-width="1.1"/>
+  <polygon points="646,300 678,284 678,318 646,334" fill="url(#ag-side-lime)" stroke="#4f655b" stroke-width="1.1"/>
+  <polygon points="646,268 678,284 646,300 614,284" fill="url(#ag-top-lime)" stroke="#e4f8be" stroke-width="1.1"/>
+  <!-- Step 3 -->
+  <polygon points="654,268 686,284 686,326 654,310" fill="url(#ag-front-violet)" stroke="#789368" stroke-width="1.1"/>
+  <polygon points="686,284 718,268 718,310 686,326" fill="url(#ag-side-violet)" stroke="#4f655b" stroke-width="1.1"/>
+  <polygon points="686,252 718,268 686,284 654,268" fill="url(#ag-top-violet)" stroke="#dcd3ff" stroke-width="1.1"/>
+</g>
+
+<!-- Subtle pulse telemetry dots -->
+<g class="art-pulse">
+  <circle cx="258" cy="144" r="4" fill="#f6c77a"/>
+  <circle cx="542" cy="144" r="4" fill="#d8f3a1"/>
+  <circle cx="536" cy="348" r="3.5" fill="#9ce5d2"/>
+</g>
+
+<!-- Bottom Captions -->
+<text x="156" y="408" fill="#d4ddc9" font-family="Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">GRAPH · DDL</text>
+<text x="400" y="424" fill="#e9f8d3" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2.2" text-anchor="middle">ARCHGUARD MCP</text>
+<text x="646" y="408" fill="#d4ddc9" font-family="Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">EXPAND · CONTRACT</text>
+</svg>

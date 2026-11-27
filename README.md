@@ -62,6 +62,21 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 <a href="https://github.com/qualcomm/eld/pulls?q=is%3Apr+author%3Ayashwant938">Explore the contributions →</a>
 </td>
 <td width="50%" valign="top">
+<a href="https://arch-guard-mcp.yashwant938.workers.dev"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/arch-guard-mcp.svg" /><img src="./assets/projects/arch-guard-mcp.svg" alt="Dimensional concept illustration for ArchGuard MCP" width="100%" /></picture></a>
+<sub><strong>GENAI × SYSTEMS · MCP SERVER · STATIC ANALYSIS</strong></sub>
+<h3><a href="https://github.com/yashwant938/arch-guard-mc">ArchGuard MCP</a></h3>
+<p>Zero-dependency <strong>Model Context Protocol (<code>2025-03-26</code>) server</strong> published on the <strong>Official MCP Registry</strong> (<code>io.github.yashwant938/arch-guard-mc@1.0.0</code>), with a live zero-auth Streamable HTTP endpoint on Cloudflare Workers and local <code>stdio</code> repo auditing.</p>
+<ul>
+<li>Runs <strong>Tarjan's O(V+E) SCC</strong> cycle detection, Robert C. Martin <code>Ca / Ce / I</code> coupling, 12 reliability/SOLID rules, and a <strong>3-phase Expand-Contract SQL DDL guardian</strong> (<code>MIG-001</code>–<code>MIG-008</code>).</li>
+<li>Exposes <strong>7 deterministic tools</strong> (6 remote HTTP + 1 local repo scanner), <strong>4 resources</strong>, and <strong>3 prompts</strong>, including Dynamo/Raft quorum, Jeff Dean tail-latency amplification, and FNV-1a consistent-hashing simulators.</li>
+</ul>
+<p>Zero runtime dependencies; verified by <strong>8 passing tests</strong> across engine unit checks, self-audit dogfooding, local <code>stdio</code> MCP, and Streamable HTTP Worker flows.</p>
+<p><code>JavaScript</code> <code>MCP 2025-03-26</code> <code>Cloudflare Workers</code> <code>Tarjan SCC</code> <code>SQL DDL</code></p>
+<a href="https://arch-guard-mcp.yashwant938.workers.dev">Live explorer ↗</a> · <a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.yashwant938%2Farch-guard-mc/versions/latest">Official MCP Registry ↗</a> · <a href="https://github.com/yashwant938/arch-guard-mc">Source &amp; setup →</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 <a href="https://yashwant-rana.vercel.app/#legal-lens"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/legal-lens.svg" /><img src="./assets/projects/legal-lens.svg" alt="Dimensional concept illustration for Legal Lens 2.0" width="100%" /></picture></a>
 <sub><strong>GENAI · RAG · RETRIEVAL &amp; ANSWER EVALUATION</strong></sub>
 <h3><a href="https://github.com/ZainiiiBoyx278/legal-lens">Legal Lens 2.0</a></h3>
@@ -74,16 +89,30 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 <p><code>Python</code> <code>FastAPI</code> <code>BM25</code> <code>MiniLM</code> <code>RAG</code></p>
 <a href="https://github.com/ZainiiiBoyx278/legal-lens/blob/main/backend/evaluation/retrieval_v2/README.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/ZainiiiBoyx278/legal-lens/pulls?q=is%3Apr+author%3Ayashwant938+is%3Amerged">My project PRs →</a>
 </td>
+<td width="50%" valign="top">
+<a href="https://system-design-guide.yashwant938.workers.dev"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/system-design-atlas.svg" /><img src="./assets/projects/system-design-atlas.svg" alt="Dimensional concept illustration for System Design Mastery Atlas" width="100%" /></picture></a>
+<sub><strong>DISTRIBUTED SYSTEMS · HLD &amp; LLD · INTERACTIVE LABS</strong></sub>
+<h3><a href="https://system-design-guide.yashwant938.workers.dev">System Design Mastery Atlas</a></h3>
+<p>Interactive visual engineering platform on Cloudflare Edge covering <strong>14 modules (100 animated 2.5D isometric lessons)</strong> across HLD fundamentals, Big Tech <em>In-The-Wild</em> production deep dives, and LLD machine coding.</p>
+<ul>
+<li>Ships <strong>6 live simulators</strong>: Consistent Hashing ring, Rate Limiter Arena, LRU &amp; Cache Stampede mutex, Dynamo Quorum &amp; 5-node Raft Consensus, Napkin Math Estimator, and LLD concurrency / Elevator LOOK labs.</li>
+<li>Includes Big Tech breakdowns (Shopify, Slack, Figma, Meta, Spotify, Stripe), all <strong>23 GoF patterns</strong>, SOLID comparator, 15 multi-language LLD designs, and a <strong>100-question mock exam</strong>.</li>
+</ul>
+<p>Self-contained client-side platform verified by <strong>3 passing content-integrity suites</strong> (lesson scenes, GoF/SOLID completeness, and quiz/rubric validation).</p>
+<p><code>React 19</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Cloudflare Workers</code> <code>2.5D SVG</code></p>
+<a href="https://system-design-guide.yashwant938.workers.dev">Live platform ↗</a> · <a href="https://github.com/yashwant938/System-Design-Compelte-Guide">Source &amp; curriculum →</a>
+</td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://yashwant-rana.vercel.app/#real-estate"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/real-estate.svg" /><img src="./assets/projects/real-estate.svg" alt="Dimensional concept illustration for Real Estate Aggregator" width="100%" /></picture></a>
-<sub><strong>BACKEND / PROPERTY MARKETPLACE</strong></sub>
-<h3><a href="https://yashwant-rana.vercel.app/#real-estate">Real Estate Aggregator</a></h3>
-<p>A PHP/Slim property marketplace connecting searchable listings, account workflows, MySQL persistence, Razorpay integration, and generated PDF contracts.</p>
-<p><strong>Full-stack prototype</strong></p>
-<p><code>PHP</code> <code>Slim</code> <code>MySQL</code> <code>JavaScript</code> <code>Razorpay</code> <code>TCPDF</code></p>
-<a href="https://github.com/yashwant938/E-Commerce">Source &amp; architecture ↗</a>
+<p><a href="https://yashwant-rana.vercel.app/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="100%" /></a></p>
+<sub><strong>C++ / SYSTEMS / INTERACTIVE LEARNING</strong></sub>
+<h3><a href="https://yashwant-rana.vercel.app/#cpp-systems">C++ Concepts &amp; Systems Lab</a></h3>
+<p>Interactive C++ STL, OOP &amp; memory-internals lessons, a CppNuts C++20 multithreading &amp; concurrency studio, and a C++17 filesystem lab exploring containers, vtables, alignment, move semantics, and synchronization.</p>
+<ul><li>Step-through STL, OOP memory &amp; CppNuts multithreading simulations (greedy alignment, vtable/vptr, lvalue/rvalue, diamond virtual base, 5 thread creation ways, mutex/deadlock, condition_variable, thread pool), an editable C++20 compiler workspace, quizzes, and an optional Gemini tutor.</li><li>cd / ls / cp / mv / rm; sequential and threaded variants with synchronized output.</li></ul>
+<p><code>C++20</code> <code>C++17</code> <code>std::filesystem</code> <code>std::thread</code> <code>Linux</code> <code>React</code> <code>Monaco</code></p>
+<p>Complementary labs: browser teaching simulations (STL, OOP memory &amp; CppNuts multithreading) and an educational filesystem interpreter. Includes timing scripts; no measured speedup claimed.</p>
+<a href="https://yashwant-rana.vercel.app/labs/cpp-oop/">OOP &amp; memory lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-threading/">Threading lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-stl/">STL studio ↗</a> · <a href="https://github.com/yashwant938/CompilerCppTopics">STL source ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/cpp-oop">OOP &amp; threading source ↗</a> · <a href="https://github.com/yashwant938/OOPD-Project">Systems source ↗</a> · <a href="https://yashwant-rana.vercel.app/#cpp-systems">Case study →</a>
 </td>
 <td width="50%" valign="top">
 <a href="https://yashwant-rana.vercel.app/#gpt2-summarization"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/gpt2-summarization.svg" /><img src="./assets/projects/gpt2-summarization.svg" alt="Concept illustration for GPT-2 and T5 review summarization" width="100%" /></picture></a>
@@ -99,17 +128,15 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 <a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/results/t5-comparison/REPORT.md">Benchmark &amp; evidence ↗</a> · <a href="https://github.com/yashwant938/CSE508_Winter2024_A4_MT23107/blob/main/COMPARISON.md">Reproduce the experiment →</a>
 </td>
 </tr>
+</table>
+
+<details>
+<summary><strong>Earlier projects &amp; explorations</strong></summary>
+
+<p>More prototypes and learning projects, preserved in the <a href="https://yashwant-rana.vercel.app/archive.html#work">portfolio archive</a>. Illustrations below are concept artwork unless noted as a live capture.</p>
+
+<table>
 <tr>
-<td width="50%" valign="top">
-<p><a href="https://yashwant-rana.vercel.app/#cpp-systems"><img src="./assets/projects/cpp-systems.webp" alt="Live C++ Concepts code workspace with an unordered_map example" width="100%" /></a></p>
-<sub><strong>C++ / SYSTEMS / INTERACTIVE LEARNING</strong></sub>
-<h3><a href="https://yashwant-rana.vercel.app/#cpp-systems">C++ Concepts &amp; Systems Lab</a></h3>
-<p>Interactive C++ STL, OOP &amp; memory-internals lessons, a CppNuts C++20 multithreading &amp; concurrency studio, and a C++17 filesystem lab exploring containers, vtables, alignment, move semantics, and synchronization.</p>
-<ul><li>Step-through STL, OOP memory &amp; CppNuts multithreading simulations (greedy alignment, vtable/vptr, lvalue/rvalue, diamond virtual base, 5 thread creation ways, mutex/deadlock, condition_variable, thread pool), an editable C++20 compiler workspace, quizzes, and an optional Gemini tutor.</li><li>cd / ls / cp / mv / rm; sequential and threaded variants with synchronized output.</li></ul>
-<p><code>C++20</code> <code>C++17</code> <code>std::filesystem</code> <code>std::thread</code> <code>Linux</code> <code>React</code> <code>Monaco</code></p>
-<p>Complementary labs: browser teaching simulations (STL, OOP memory &amp; CppNuts multithreading) and an educational filesystem interpreter. Includes timing scripts; no measured speedup claimed.</p>
-<a href="https://yashwant-rana.vercel.app/labs/cpp-oop/">OOP &amp; memory lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-threading/">Threading lab ↗</a> · <a href="https://yashwant-rana.vercel.app/labs/cpp-stl/">STL studio ↗</a> · <a href="https://github.com/yashwant938/CompilerCppTopics">STL source ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/cpp-oop">OOP &amp; threading source ↗</a> · <a href="https://github.com/yashwant938/OOPD-Project">Systems source ↗</a> · <a href="https://yashwant-rana.vercel.app/#cpp-systems">Case study →</a>
-</td>
 <td width="50%" valign="top">
 <p><a href="https://yashwant-rana.vercel.app/labs/signal/"><img src="./assets/projects/signal-recommender.png" alt="Signal Recommendation Lab with editable fictional listener ratings, ranked headphone suggestions, and predicted scores." width="100%" /></a></p>
 <sub><strong>MACHINE LEARNING / COLLABORATIVE FILTERING</strong></sub>
@@ -120,15 +147,16 @@ My [portfolio](https://yashwant-rana.vercel.app/#work) brings together **six fea
 <p>Learning demo with fictional ratings and products; ratings stay in browser local storage.</p>
 <a href="https://yashwant-rana.vercel.app/labs/signal/">Live demo ↗</a> · <a href="https://github.com/yashwant938/portfolio-/tree/main/projects/signal">Source &amp; methods ↗</a> · <a href="https://yashwant-rana.vercel.app/#signal-lab">Case study →</a>
 </td>
+<td width="50%" valign="top">
+<a href="https://yashwant-rana.vercel.app/#real-estate"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/real-estate.svg" /><img src="./assets/projects/real-estate.svg" alt="Dimensional concept illustration for Real Estate Aggregator" width="100%" /></picture></a>
+<sub><strong>BACKEND / PROPERTY MARKETPLACE</strong></sub>
+<h3><a href="https://yashwant-rana.vercel.app/#real-estate">Real Estate Aggregator</a></h3>
+<p>A PHP/Slim property marketplace connecting searchable listings, account workflows, MySQL persistence, Razorpay integration, and generated PDF contracts.</p>
+<p><strong>Full-stack prototype</strong></p>
+<p><code>PHP</code> <code>Slim</code> <code>MySQL</code> <code>JavaScript</code> <code>Razorpay</code> <code>TCPDF</code></p>
+<a href="https://github.com/yashwant938/E-Commerce">Source &amp; architecture ↗</a>
+</td>
 </tr>
-</table>
-
-<details>
-<summary><strong>Earlier projects &amp; explorations</strong></summary>
-
-<p>More prototypes and learning projects, preserved in the <a href="https://yashwant-rana.vercel.app/archive.html#work">portfolio archive</a>. Illustrations below are concept artwork.</p>
-
-<table>
 <tr>
 <td width="50%" valign="top">
 <a href="https://yashwant-rana.vercel.app/archive.html#llvm-bugsquad"><picture><source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/static/llvm-bugsquad.svg" /><img src="./assets/projects/llvm-bugsquad.svg" alt="Dimensional concept illustration for LLVM BugSquad" width="100%" /></picture></a>
@@ -255,8 +283,8 @@ Statuses checked **18 November 2026**. ELD **#2011, #2065, #2129, #2207, and #23
 | Systems engineering | GenAI & applied ML | Backend & delivery |
 | :--- | :--- | :--- |
 | C / C++, Linux, GDB | RAG, BM25, MiniLM, RRF | Python, FastAPI, SQL |
-| LLVM, CMake, Ninja, lit | LLM APIs, PyTorch, Hugging Face | TypeScript, Next.js, Docker |
-| Filesystems, concurrency | TensorFlow Lite, scikit-learn | PySide6, PHP, MySQL |
+| LLVM, CMake, Ninja, lit | MCP, LLM APIs, PyTorch, Hugging Face | TypeScript, React, Next.js, Docker |
+| Filesystems, concurrency, static analysis | TensorFlow Lite, scikit-learn | Cloudflare Workers, PySide6, PHP, MySQL |
 
 ---
 
